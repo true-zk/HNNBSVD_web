@@ -1,0 +1,48 @@
+digraph "Control-flow graph for function 'function_2fa3(a1)'." {
+  label="Control-flow graph for function 'function_2fa3(a1)'.";
+  node [shape=record];
+
+  Node077198F8 [label="{entry:\l  a1\l}"];
+  Node077198F8 -> Node07719940;
+  Node07719940 [label="{  v1 = __readfsqword(40)\l  v2 = 0\l  result\l}"];
+  Node07719940 -> Node07719AF0;
+  Node07719AF0 [label="{  if (*(BitCastExpr\<ptr\>(&(g46))) == 0):\l  else:\l}"];
+  Node07719AF0 -> Node0771A9D8 [label="*(BitCastExpr\<ptr\>(&(g46))) == 0"];
+  Node07719AF0 -> Node0771A750 [label="*(BitCastExpr\<ptr\>(&(g46))) != 0"];
+  Node0771A9D8 [label="{0x3018:\l  v3 = function_2580(\"/usr/sbin/gpm -v\", &(g3))\l  result = 0\l}"];
+  Node0771A9D8 -> Node077198B0;
+  Node0771A750 [label="{  goto 0x2fd8\l}"];
+  Node0771A750 -> Node07719CA0;
+  Node077198B0 [label="{  if (v3 == 0):\l  else:\l}"];
+  Node077198B0 -> Node0771A558 [label="v3 == 0"];
+  Node077198B0 -> Node0771A120 [label="v3 != 0"];
+  Node07719CA0 [label="{0x2fd8:\l  result = &(g46)\l}"];
+  Node07719CA0 -> Node0771A6C0;
+  Node0771A558 [label="{  goto 0x2fec\l}"];
+  Node0771A558 -> Node0771A1F8;
+  Node0771A120 [label="{0x3037:\l  v4\l  function_2470(&(v4), 128, v3)\l  result = 0\l}"];
+  Node0771A120 -> Node0771A168;
+  Node0771A6C0 [label="{  if (a1 != 0):\l}"];
+  Node0771A6C0 -> Node0771A630 [label="a1 != 0"];
+  Node0771A6C0 -> Node0771A708 [label="a1 == 0"];
+  Node0771A1F8 [label="{0x2fec:\l  if (v1 != __readfsqword(40)):\l}"];
+  Node0771A1F8 -> Node0771A900 [label="v1 != __readfsqword(40)"];
+  Node0771A1F8 -> Node0771A480 [label="v1 == __readfsqword(40)"];
+  Node0771A168 [label="{  if (TruncCastExpr\<int32\>(function_2400(v3)) != 0):\l  else:\l}"];
+  Node0771A168 -> Node0771A240 [label="TruncCastExpr\<int32\>(function_2400(v3)) != 0"];
+  Node0771A168 -> Node0771A288 [label="TruncCastExpr\<int32\>(function_2400(v3)) == 0"];
+  Node0771A630 [label="{0x2fe4:\l  *(IntToPtrCastExpr\<ptr\>(a1)) = g45\l  result = &(g46)\l}"];
+  Node0771A630 -> Node0771A708;
+  Node0771A708 [label="{  goto 0x2fec\l}"];
+  Node0771A708 -> Node0771A1F8;
+  Node0771A900 [label="{0x30c7:\l  return function_23e0()\l}"];
+  Node0771A900 -> Node07719A60;
+  Node0771A480 [label="{0x3003:\l  return result\l}"];
+  Node0771A480 -> Node07719A60;
+  Node0771A240 [label="{  goto 0x2fec\l}"];
+  Node0771A240 -> Node0771A1F8;
+  Node0771A288 [label="{0x3058:\l  v5\l  v6\l  function_2510(&(v4), \"%*s %s\", PtrToIntCastExpr\<int64\>(&(g46)), v6, v5)\l  v7 = function_23d0(PtrToIntCastExpr\<int64\>(&(g46)))\l  *(IntToPtrCastExpr\<ptr\>((v7 + (PtrToIntCastExpr\<int64\>(&(g46)) - 1)))) = 0\l  v8\l  v9\l  function_2510(&(g46), \"%d.%d.%d\", PtrToIntCastExpr\<int64\>(&(v8)), PtrToIntCastExpr\<int64\>(&(v9)), PtrToIntCastExpr\<int64\>(&(v2)))\l  g45 = (((100 * v9) + (10000 * v8)) + v2)\l  goto 0x2fd8\l}"];
+  Node0771A288 -> Node07719CA0;
+  Node07719A60 [label="{exit:\l}"];
+
+}

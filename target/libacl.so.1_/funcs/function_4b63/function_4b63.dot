@@ -1,0 +1,31 @@
+digraph "Control-flow graph for function 'function_4b63(a1)'." {
+  label="Control-flow graph for function 'function_4b63(a1)'.";
+  node [shape=record];
+
+  Node081A2360 [label="{entry:\l  a1\l}"];
+  Node081A2360 -> Node081A22D0;
+  Node081A22D0 [label="{0x4b63:\l  v1\l  v2\l  v3\l  v4\l  v5\l}"];
+  Node081A22D0 -> Node081A1E50;
+  Node081A1E50 [label="{  if (a1 == 0):\l}"];
+  Node081A1E50 -> Node081A1DC0 [label="a1 == 0"];
+  Node081A1E50 -> Node081A23F0 [label="a1 != 0"];
+  Node081A1DC0 [label="{0x4b82:\l  v5 = function_2200(a1, IntToPtrCastExpr\<ptr\>(v2), TruncCastExpr\<int32\>(v3), TruncCastExpr\<int32\>(v4), v1)\l  *(IntToPtrCastExpr\<ptr\>(v5)) = 22\l  return 4294967295\l}"];
+  Node081A1DC0 -> Node081A2168;
+  Node081A23F0 [label="{  v6 = (a1 - 8)\l}"];
+  Node081A23F0 -> Node081A1CE8;
+  Node081A2168 [label="{exit:\l}"];
+  Node081A1CE8 [label="{  if (*(IntToPtrCastExpr\<ptr\>(v6)) != -25237):\l}"];
+  Node081A1CE8 -> Node081A24C8 [label="*(IntToPtrCastExpr\<ptr\>(v6)) != -25237"];
+  Node081A1CE8 -> Node081A2240 [label="*(IntToPtrCastExpr\<ptr\>(v6)) == -25237"];
+  Node081A24C8 [label="{0x4b82:\l  v5 = function_2200(a1, IntToPtrCastExpr\<ptr\>(v2), TruncCastExpr\<int32\>(v3), TruncCastExpr\<int32\>(v4), v1)\l  *(IntToPtrCastExpr\<ptr\>(v5)) = 22\l  return 4294967295\l}"];
+  Node081A24C8 -> Node081A2168;
+  Node081A2240 [label="{0x4b75:\l  switch *(IntToPtrCastExpr\<ptr\>((a1 + 24))):\l  case 2:\l  case 8:\l}"];
+  Node081A2240 -> Node081A1CA0 [label="*(IntToPtrCastExpr\<ptr\>((a1 + 24))) == 8"];
+  Node081A2240 -> Node081A2438;
+  Node081A2240 -> Node081A1CA0 [label="*(IntToPtrCastExpr\<ptr\>((a1 + 24))) == 2"];
+  Node081A1CA0 [label="{0x4ba0:\l  *(IntToPtrCastExpr\<ptr\>((a1 + 40))) = TruncCastExpr\<int32\>(v2)\l  function_2630(v6)\l  return 0\l}"];
+  Node081A1CA0 -> Node081A2168;
+  Node081A2438 [label="{0x4b82:\l  v5 = function_2200(a1, IntToPtrCastExpr\<ptr\>(v2), TruncCastExpr\<int32\>(v3), TruncCastExpr\<int32\>(v4), v1)\l  *(IntToPtrCastExpr\<ptr\>(v5)) = 22\l  return 4294967295\l}"];
+  Node081A2438 -> Node081A2168;
+
+}

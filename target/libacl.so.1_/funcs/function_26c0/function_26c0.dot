@@ -1,0 +1,39 @@
+digraph "Control-flow graph for function 'function_26c0(a1, a2, a3, a4)'." {
+  label="Control-flow graph for function 'function_26c0(a1, a2, a3, a4)'.";
+  node [shape=record];
+
+  Node07C6DC40 [label="{entry:\l  a1\l  a2\l  a3\l  a4\l}"];
+  Node07C6DC40 -> Node07C6F740;
+  Node07C6F740 [label="{0x26c0:\l  v1\l  v2 = v1\l  v3\l}"];
+  Node07C6F740 -> Node07C6F7D0;
+  Node07C6F7D0 [label="{  if (v2 \< 0):\l  else:\l}"];
+  Node07C6F7D0 -> Node07C6FF20 [label="v2 \< 0"];
+  Node07C6F7D0 -> Node07C70550 [label="v2 \>= 0"];
+  Node07C6FF20 [label="{0x2730:\l  v4\l  v5 = function_2200(a1, \"system.posix_acl_access\", 0, 0, v4)\l}"];
+  Node07C6FF20 -> Node07C70430;
+  Node07C70550 [label="{0x26dd:\l  v3 = v2\l}"];
+  Node07C70550 -> Node07C705E0;
+  Node07C70430 [label="{  if (*(IntToPtrCastExpr\<ptr\>(v5)) != 61):\l}"];
+  Node07C70430 -> Node07C725F0 [label="*(IntToPtrCastExpr\<ptr\>(v5)) != 61"];
+  Node07C70430 -> Node07C704C0 [label="*(IntToPtrCastExpr\<ptr\>(v5)) == 61"];
+  Node07C705E0 [label="{  if (v2 \> 28):\l}"];
+  Node07C705E0 -> Node07C74210 [label="v2 \> 28"];
+  Node07C705E0 -> Node07C701F0 [label="v2 \<= 28"];
+  Node07C725F0 [label="{0x2706:\l  return 4294967295\l}"];
+  Node07C725F0 -> Node07C6E4B0;
+  Node07C704C0 [label="{0x2730:\l  v3 = v5\l}"];
+  Node07C704C0 -> Node07C701F0;
+  Node07C74210 [label="{0x2706:\l  return 1\l}"];
+  Node07C74210 -> Node07C6E4B0;
+  Node07C701F0 [label="{  v6 = v3\l  v7 = (v6 - 27)\l  result = (((v7 \< 0) == (((26 - v6) & v6) \< 0)) == (v7 != 0))\l}"];
+  Node07C701F0 -> Node07C6FCE0;
+  Node07C6E4B0 [label="{exit:\l}"];
+  Node07C6FCE0 [label="{  if (v6 \>= 0):\l}"];
+  Node07C6FCE0 -> Node07C6FD70 [label="v6 \>= 0"];
+  Node07C6FCE0 -> Node07C6FED8 [label="v6 \< 0"];
+  Node07C6FD70 [label="{0x2706:\l  return result\l}"];
+  Node07C6FD70 -> Node07C6E4B0;
+  Node07C6FED8 [label="{  v8 = *(IntToPtrCastExpr\<ptr\>(function_2200(a1, \"system.posix_acl_default\", 0, 0, result)))\l  return (4294967295 if (v8 != 61) else 0)\l}"];
+  Node07C6FED8 -> Node07C6E4B0;
+
+}

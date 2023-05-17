@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'Gpm_RaiseRoi(a1, a2)'." {
+  label="Control-flow graph for function 'Gpm_RaiseRoi(a1, a2)'.";
+  node [shape=record];
+
+  Node07717FA8 [label="{entry:\l  a1\l  a2\l}"];
+  Node07717FA8 -> Node07718DB8;
+  Node07718DB8 [label="{0x2d30:\l  result\l  return result\l}"];
+  Node07718DB8 -> Node07718860;
+  Node07718860 [label="{exit:\l}"];
+
+}

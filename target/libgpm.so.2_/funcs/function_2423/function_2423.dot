@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2423(fd, request, ...)'." {
+  label="Control-flow graph for function 'function_2423(fd, request, ...)'.";
+  node [shape=record];
+
+  Node07710C58 [label="{entry:\l  fd\l  request\l}"];
+  Node07710C58 -> Node07711948;
+  Node07711948 [label="{0x2423:\l  return ioctl(fd, request)\l}"];
+  Node07711948 -> Node07711900;
+  Node07711900 [label="{exit:\l}"];
+
+}

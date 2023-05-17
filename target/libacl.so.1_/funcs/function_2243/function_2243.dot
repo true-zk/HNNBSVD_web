@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2243(*base, nmemb, size, *compar)'." {
+  label="Control-flow graph for function 'function_2243(*base, nmemb, size, *compar)'.";
+  node [shape=record];
+
+  Node07C7DAC8 [label="{entry:\l  base\l  nmemb\l  size\l  compar\l}"];
+  Node07C7DAC8 -> Node07C7DB10;
+  Node07C7DB10 [label="{0x2243:\l  qsort(base, nmemb, size, compar)\l}"];
+  Node07C7DB10 -> Node07C7DBE8;
+  Node07C7DBE8 [label="{exit:\l}"];
+
+}

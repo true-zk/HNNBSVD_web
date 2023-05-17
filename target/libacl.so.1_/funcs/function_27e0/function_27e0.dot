@@ -1,0 +1,32 @@
+digraph "Control-flow graph for function 'function_27e0(a1)'." {
+  label="Control-flow graph for function 'function_27e0(a1)'.";
+  node [shape=record];
+
+  Node07C777C8 [label="{entry:\l  a1\l}"];
+  Node07C777C8 -> Node07C778A0;
+  Node07C778A0 [label="{  result = function_2310(56)\l}"];
+  Node07C778A0 -> Node07C787D0;
+  Node07C787D0 [label="{  if (result == 0):\l}"];
+  Node07C787D0 -> Node07C79AF0 [label="result == 0"];
+  Node07C787D0 -> Node07C791A8 [label="result != 0"];
+  Node07C79AF0 [label="{0x282e:\l  return result\l}"];
+  Node07C79AF0 -> Node07C77810;
+  Node07C791A8 [label="{  v1 = ((4294967296 * a1) / 4294967296)\l  *(IntToPtrCastExpr\<ptr\>(result)) = 94508\l  *(IntToPtrCastExpr\<ptr\>((result + 48))) = 0\l  *(IntToPtrCastExpr\<ptr\>((result + 16))) = result\l  *(IntToPtrCastExpr\<ptr\>((result + 8))) = result\l  *(IntToPtrCastExpr\<ptr\>((result + 24))) = result\l  v2 = v1\l}"];
+  Node07C791A8 -> Node07C77780;
+  Node07C77810 [label="{exit:\l}"];
+  Node07C77780 [label="{  if ((v2 \>= 0) != (v2 != 0)):\l}"];
+  Node07C77780 -> Node07C7A1F8 [label="(v2 \>= 0) != (v2 != 0)"];
+  Node07C77780 -> Node07C793A0 [label="(v2 \>= 0) == (v2 != 0)"];
+  Node07C7A1F8 [label="{0x281d:\l  *(IntToPtrCastExpr\<ptr\>((result + 32))) = 0\l  *(IntToPtrCastExpr\<ptr\>((result + 40))) = 0\l  return result\l}"];
+  Node07C7A1F8 -> Node07C77810;
+  Node07C793A0 [label="{  v3 = (72 * v1)\l  v4 = function_2310(v3)\l  *(IntToPtrCastExpr\<ptr\>((result + 32))) = v4\l}"];
+  Node07C793A0 -> Node07C79478;
+  Node07C79478 [label="{  if (v4 != 0):\l}"];
+  Node07C79478 -> Node07C7A678 [label="v4 != 0"];
+  Node07C79478 -> Node07C794C0 [label="v4 == 0"];
+  Node07C7A678 [label="{0x285a:\l  *(IntToPtrCastExpr\<ptr\>((result + 40))) = (v4 + v3)\l  return result\l}"];
+  Node07C7A678 -> Node07C77810;
+  Node07C794C0 [label="{0x2825:\l  *(IntToPtrCastExpr\<ptr\>((result + 40))) = 0\l  return result\l}"];
+  Node07C794C0 -> Node07C77810;
+
+}

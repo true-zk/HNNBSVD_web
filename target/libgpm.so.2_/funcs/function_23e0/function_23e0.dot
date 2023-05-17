@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_23e0()'." {
+  label="Control-flow graph for function 'function_23e0()'.";
+  node [shape=record];
+
+  Node07710D30 [label="{entry:\l}"];
+  Node07710D30 -> Node07710EE0;
+  Node07710EE0 [label="{0x23e0:\l  result\l  return result\l}"];
+  Node07710EE0 -> Node07710E98;
+  Node07710E98 [label="{exit:\l}"];
+
+}

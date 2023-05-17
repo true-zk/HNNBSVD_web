@@ -1,0 +1,23 @@
+cli 
+push r12
+xor r12d, r12d
+push rbx
+sub rsp, 8
+test edi, edi
+js 0x3d25 <function_3cf3+0x32>
+mov r12d, 1
+je 0x3d25 <function_3cf3+0x32>
+mov ebx, edi
+xor r12d, r12d
+nop 
+add r12d, 1
+mov edi, 0xa
+mov esi, r12d
+call 0x3cc0 <Gpm_x_high_y>
+cmp ebx, eax
+jge 0x3d10 <function_3cf3+0x1d>
+add rsp, 8
+mov eax, r12d
+pop rbx
+pop r12
+ret 

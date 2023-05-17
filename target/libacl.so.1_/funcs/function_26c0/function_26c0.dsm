@@ -1,0 +1,39 @@
+push rbp
+xor ecx, ecx
+xor edx, edx
+mov rbp, rdi
+push rbx
+mov rbx, rsi
+lea rsi, [rip + 0x392d]
+sub rsp, 8
+call rbx
+test eax, eax
+js 0x2730 <function_26c0+0x70>
+mov r8d, 1
+cmp eax, 0x1c
+jg 0x2706 <function_26c0+0x46>
+xor ecx, ecx
+xor edx, edx
+lea rsi, [rip + 0x3925]
+mov rdi, rbp
+call rbx
+xor r8d, r8d
+cmp eax, 0x1b
+setg r8b
+test eax, eax
+js 0x2710 <function_26c0+0x50>
+add rsp, 8
+mov eax, r8d
+pop rbx
+pop rbp
+ret 
+call 0x2200 <function_2200>
+xor r8d, r8d
+cmp dword ptr [rax], 0x3d
+setne r8b
+add rsp, 8
+neg r8d
+pop rbx
+pop rbp
+mov eax, r8d
+ret 

@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_8e0()'." {
+  label="Control-flow graph for function 'function_8e0()'.";
+  node [shape=record];
+
+  Node0730EB10 [label="{entry:\l}"];
+  Node0730EB10 -> Node0730E570;
+  Node0730E570 [label="{0x8e0:\l  return rand()\l}"];
+  Node0730E570 -> Node0730E330;
+  Node0730E330 [label="{exit:\l}"];
+
+}

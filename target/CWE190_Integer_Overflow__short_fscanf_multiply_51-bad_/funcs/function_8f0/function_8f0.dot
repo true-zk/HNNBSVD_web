@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_8f0()'." {
+  label="Control-flow graph for function 'function_8f0()'.";
+  node [shape=record];
+
+  Node0730E960 [label="{entry:\l}"];
+  Node0730E960 -> Node0730E5B8;
+  Node0730E5B8 [label="{0x8f0:\l  return __ctype_b_loc()\l}"];
+  Node0730E5B8 -> Node0730E450;
+  Node0730E450 [label="{exit:\l}"];
+
+}

@@ -1,0 +1,13 @@
+push rbp
+mov rbp, rsp
+call 0x890 <rand>
+mov edx, eax
+mov eax, edx
+sar eax, 0x1f
+shr eax, 0x1f
+add edx, eax
+and edx, 1
+sub edx, eax
+mov eax, edx
+pop rbp
+ret 

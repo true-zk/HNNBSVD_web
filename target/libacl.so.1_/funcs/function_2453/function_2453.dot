@@ -1,0 +1,25 @@
+digraph "Control-flow graph for function 'function_2453(a1, a2)'." {
+  label="Control-flow graph for function 'function_2453(a1, a2)'.";
+  node [shape=record];
+
+  Node07C7FB68 [label="{entry:\l  a1\l  a2\l}"];
+  Node07C7FB68 -> Node07C800C0;
+  Node07C800C0 [label="{  v1 = ExtCastExpr\<int64\>(*(IntToPtrCastExpr\<ptr\>((a2 + 32))))\l  v2 = ExtCastExpr\<int64\>(*(IntToPtrCastExpr\<ptr\>((a1 + 32))))\l}"];
+  Node07C800C0 -> Node07C7FFE8;
+  Node07C7FFE8 [label="{  if (v2 \< v1):\l}"];
+  Node07C7FFE8 -> Node07C80420 [label="v2 \< v1"];
+  Node07C7FFE8 -> Node07C80030 [label="v2 \>= v1"];
+  Node07C80420 [label="{0x2482:\l  return 4294967295\l}"];
+  Node07C80420 -> Node07C7FFA0;
+  Node07C80030 [label="{  result = 1\l}"];
+  Node07C80030 -> Node07C80108;
+  Node07C7FFA0 [label="{exit:\l}"];
+  Node07C80108 [label="{  if (v1 \>= v2):\l}"];
+  Node07C80108 -> Node07C7FF58 [label="v1 \>= v2"];
+  Node07C80108 -> Node07C80150 [label="v1 \< v2"];
+  Node07C7FF58 [label="{  v3 = *(IntToPtrCastExpr\<ptr\>((a2 + 48)))\l  v4 = *(IntToPtrCastExpr\<ptr\>((a1 + 48)))\l  result = (4294967295 if (v4 \< v3) else ExtCastExpr\<int64\>((v4 \> v3)))\l}"];
+  Node07C7FF58 -> Node07C80150;
+  Node07C80150 [label="{0x2482:\l  return result\l}"];
+  Node07C80150 -> Node07C7FFA0;
+
+}

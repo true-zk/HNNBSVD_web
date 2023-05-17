@@ -1,0 +1,51 @@
+digraph "Control-flow graph for function 'function_3283()'." {
+  label="Control-flow graph for function 'function_3283()'.";
+  node [shape=record];
+
+  Node0771AEA0 [label="{entry:\l}"];
+  Node0771AEA0 -> Node0771B1B8;
+  Node0771B1B8 [label="{0x3283:\l  *(g10) = 0\l}"];
+  Node0771B1B8 -> Node0771AB40;
+  Node0771AB40 [label="{  if (*(BitCastExpr\<ptr\>(g11)) == -2):\l  else:\l}"];
+  Node0771AB40 -> Node0771B008 [label="*(BitCastExpr\<ptr\>(g11)) == -2"];
+  Node0771AB40 -> Node0771ACA8 [label="*(BitCastExpr\<ptr\>(g11)) != -2"];
+  Node0771B008 [label="{0x3360:\l  function_2530(1, \"%c[?1000l\", 27)\l  v1 = IntToPtrCastExpr\<ptr\>(*(IntToPtrCastExpr\<ptr\>(28480)))\l  function_2500(*(v1))\l  function_2530(1, \"%c[?1001r\", 27)\l  function_2500(*(v1))\l}"];
+  Node0771B008 -> Node0771B2D8;
+  Node0771ACA8 [label="{  result = *(g25)\l}"];
+  Node0771ACA8 -> Node0771B128;
+  Node0771B2D8 [label="{  v9 = *(BitCastExpr\<ptr\>(g11))\l}"];
+  Node0771B2D8 -> Node0771AEE8;
+  Node0771B128 [label="{  if (result == 0):\l}"];
+  Node0771B128 -> Node0771BAB8 [label="result == 0"];
+  Node0771B128 -> Node0771ACF0 [label="result != 0"];
+  Node0771AEE8 [label="{  if (v9 \>= 0):\l}"];
+  Node0771AEE8 -> Node0771B680 [label="v9 \>= 0"];
+  Node0771AEE8 -> Node0771AB88 [label="v9 \< 0"];
+  Node0771BAB8 [label="{0x32b9:\l  return result\l}"];
+  Node0771BAB8 -> Node0771B290;
+  Node0771ACF0 [label="{  v2 = IntToPtrCastExpr\<ptr\>(g12)\l  v3 = *(v2)\l  v4 = *(IntToPtrCastExpr\<ptr\>((v3 + 16)))\l  function_2360(v3)\l  *(v2) = v4\l}"];
+  Node0771ACF0 -> Node0771AD80;
+  Node0771B680 [label="{0x330e:\l  function_2440(v9)\l}"];
+  Node0771B680 -> Node0771AB88;
+  Node0771AB88 [label="{0x3313:\l  *(BitCastExpr\<ptr\>(g11)) = -1\l  function_23a0(20, &(g70), 0)\l  function_23a0(28, &(g71), 0)\l  function_2440(*(g22))\l  *(g22) = -1\l  return 0\l}"];
+  Node0771AB88 -> Node0771B290;
+  Node0771B290 [label="{exit:\l}"];
+  Node0771AD80 [label="{  if (v4 != 0):\l}"];
+  Node0771AD80 -> Node0771B8C0 [label="v4 != 0"];
+  Node0771AD80 -> Node0771AE10 [label="v4 == 0"];
+  Node0771B8C0 [label="{  v5 = *(BitCastExpr\<ptr\>(g11))\l}"];
+  Node0771B8C0 -> Node0771B4D0;
+  Node0771AE10 [label="{  v8 = (*(g25) - 1)\l  *(g25) = v8\l}"];
+  Node0771AE10 -> Node0771B050;
+  Node0771B4D0 [label="{  if (function_23b0(v5, v4, 16) != 16):\l}"];
+  Node0771B4D0 -> Node0771B5F0 [label="function_23b0(v5, v4, 16) != 16"];
+  Node0771B4D0 -> Node0771AE10 [label="function_23b0(v5, v4, 16) == 16"];
+  Node0771B050 [label="{  if (v8 != 0):\l}"];
+  Node0771B050 -> Node0771B9E0 [label="v8 != 0"];
+  Node0771B050 -> Node0771B2D8 [label="v8 == 0"];
+  Node0771B5F0 [label="{  v6 = *(IntToPtrCastExpr\<ptr\>(function_2370(ExtCastExpr\<int64\>(v5))))\l  v7\l  gpm_report(106, \"lib/liblow.c\", 4, \"write(): %s\", function_25d0(v6), v7)\l}"];
+  Node0771B5F0 -> Node0771B290;
+  Node0771B9E0 [label="{0x32b9:\l  return 4294967295\l}"];
+  Node0771B9E0 -> Node0771B290;
+
+}

@@ -1,0 +1,18 @@
+digraph "Control-flow graph for function 'function_3d73()'." {
+  label="Control-flow graph for function 'function_3d73()'.";
+  node [shape=record];
+
+  Node0796FE68 [label="{entry:\l}"];
+  Node0796FE68 -> Node0796FE20;
+  Node0796FE20 [label="{  v1 = function_2360()\l  result = 0\l}"];
+  Node0796FE20 -> Node079700A8;
+  Node079700A8 [label="{  if (TruncCastExpr\<int32\>(v1) \< 0):\l}"];
+  Node079700A8 -> Node0796FBE0 [label="TruncCastExpr\<int32\>(v1) \< 0"];
+  Node079700A8 -> Node0796FEF8 [label="TruncCastExpr\<int32\>(v1) \>= 0"];
+  Node0796FBE0 [label="{0x3d8e:\l  v2\l  v3\l  v4\l  v5 = function_2200(v2, \"system.posix_acl_default\", TruncCastExpr\<int32\>(v3), TruncCastExpr\<int32\>(v4), (v1 & 4294967295))\l  result = (4294967295 if (*(IntToPtrCastExpr\<ptr\>(v5)) != 61) else 0)\l}"];
+  Node0796FBE0 -> Node0796FEF8;
+  Node0796FEF8 [label="{0x3d9e:\l  return result\l}"];
+  Node0796FEF8 -> Node07970060;
+  Node07970060 [label="{exit:\l}"];
+
+}

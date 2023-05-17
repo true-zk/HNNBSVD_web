@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2583(*command, *modes)'." {
+  label="Control-flow graph for function 'function_2583(*command, *modes)'.";
+  node [shape=record];
+
+  Node077135B0 [label="{entry:\l  command\l  modes\l}"];
+  Node077135B0 -> Node07713A78;
+  Node07713A78 [label="{0x2583:\l  return popen(command, modes)\l}"];
+  Node07713A78 -> Node07713688;
+  Node07713688 [label="{exit:\l}"];
+
+}

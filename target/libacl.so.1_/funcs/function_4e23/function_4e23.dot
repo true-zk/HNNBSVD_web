@@ -1,0 +1,23 @@
+digraph "Control-flow graph for function 'function_4e23(a1, a2)'." {
+  label="Control-flow graph for function 'function_4e23(a1, a2)'.";
+  node [shape=record];
+
+  Node081A3098 [label="{entry:\l  a1\l  a2\l}"];
+  Node081A3098 -> Node081A3710;
+  Node081A3710 [label="{  result = acl_check()\l  v1 = TruncCastExpr\<int32\>(result)\l}"];
+  Node081A3710 -> Node081A33B0;
+  Node081A33B0 [label="{  if (v1 == 0):\l}"];
+  Node081A33B0 -> Node081A3488 [label="v1 == 0"];
+  Node081A33B0 -> Node081A2EE8 [label="v1 != 0"];
+  Node081A3488 [label="{0x4e33:\l  return result\l}"];
+  Node081A3488 -> Node081A3680;
+  Node081A2EE8 [label="{0x4e40:\l  if (v1 \>= 1):\l}"];
+  Node081A2EE8 -> Node081A2EA0 [label="v1 \>= 1"];
+  Node081A2EE8 -> Node081A3440 [label="v1 \< 1"];
+  Node081A3680 [label="{exit:\l}"];
+  Node081A2EA0 [label="{0x4e47:\l  v2\l  v3\l  v4\l  *(IntToPtrCastExpr\<ptr\>(function_2200(a1, NULL, TruncCastExpr\<int32\>(v3), TruncCastExpr\<int32\>(v4), v2))) = 22\l}"];
+  Node081A2EA0 -> Node081A3440;
+  Node081A3440 [label="{0x4e33:\l  return 4294967295\l}"];
+  Node081A3440 -> Node081A3680;
+
+}

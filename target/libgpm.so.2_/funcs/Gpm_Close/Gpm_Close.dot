@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'Gpm_Close()'." {
+  label="Control-flow graph for function 'Gpm_Close()'.";
+  node [shape=record];
+
+  Node0771AF78 [label="{entry:\l}"];
+  Node0771AF78 -> Node0771B0E0;
+  Node0771B0E0 [label="{0x3280:\l  result\l  return result\l}"];
+  Node0771B0E0 -> Node0771B098;
+  Node0771B098 [label="{exit:\l}"];
+
+}

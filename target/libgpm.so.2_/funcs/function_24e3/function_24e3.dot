@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_24e3(nfds, *readfds, *writefds, *exceptfds, *timeout)'." {
+  label="Control-flow graph for function 'function_24e3(nfds, *readfds, *writefds, *exceptfds, *timeout)'.";
+  node [shape=record];
+
+  Node07712680 [label="{entry:\l  nfds\l  readfds\l  writefds\l  exceptfds\l  timeout\l}"];
+  Node07712680 -> Node07712488;
+  Node07712488 [label="{0x24e3:\l  return select(nfds, readfds, writefds, exceptfds, timeout)\l}"];
+  Node07712488 -> Node07712368;
+  Node07712368 [label="{exit:\l}"];
+
+}

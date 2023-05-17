@@ -1,0 +1,54 @@
+digraph "Control-flow graph for function 'function_34d3(a1, a2, a3, a4)'." {
+  label="Control-flow graph for function 'function_34d3(a1, a2, a3, a4)'.";
+  node [shape=record];
+
+  Node0771B7E8 [label="{entry:\l  a1\l  a2\l  a3\l  a4\l}"];
+  Node0771B7E8 -> Node0771BB48;
+  Node0771BB48 [label="{  v1 = a1\l  v2 = __readfsqword(40)\l  function_24d0()\l  v3 = g64\l  g64 = &(g65)\l  v4\l}"];
+  Node0771BB48 -> Node0771B950;
+  Node0771B950 [label="{  if (v3 == 0):\l  else:\l}"];
+  Node0771B950 -> Node0771B320 [label="v3 == 0"];
+  Node0771B950 -> Node0771C250 [label="v3 != 0"];
+  Node0771B320 [label="{0x3884:\l  function_2540(v1, 0, 2, 0)\l  v4 = 2\l}"];
+  Node0771B320 -> Node0771BD88;
+  Node0771C250 [label="{0x351b:\l  v4 = &(g65)\l}"];
+  Node0771C250 -> Node0771BFC8;
+  Node0771BD88 [label="{  if (*(g25) != 0):\l  else:\l}"];
+  Node0771BD88 -> Node0771BE18 [label="*(g25) != 0"];
+  Node0771BD88 -> Node0771BC68 [label="*(g25) == 0"];
+  Node0771BFC8 [label="{  if (*(g25) == 0):\l  else:\l}"];
+  Node0771BFC8 -> Node0771BEF0 [label="*(g25) == 0"];
+  Node0771BFC8 -> Node0771C298 [label="*(g25) != 0"];
+  Node0771BE18 [label="{  goto 0x352c\l}"];
+  Node0771BC68 [label="{  goto 0x38a7\l}"];
+  Node0771BC68 -> Node0771C2E0;
+  Node0771BEF0 [label="{  goto 0x38a7\l}"];
+  Node0771BEF0 -> Node0771C2E0;
+  Node0771C298 [label="{  goto 0x352c\l}"];
+  Node0771C2E0 [label="{0x38a7:\l  v8 = v4\l}"];
+  Node0771C2E0 -> Node0771BE60;
+  Node0771BE60 [label="{  if (v2 == __readfsqword(40)):\l}"];
+  Node0771BE60 -> Node0771C328 [label="v2 == __readfsqword(40)"];
+  Node0771BE60 -> Node0771C400 [label="v2 != __readfsqword(40)"];
+  Node0771C328 [label="{0x38be:\l  return function_25f0(v1)\l}"];
+  Node0771C328 -> Node0771B998;
+  Node0771C400 [label="{  goto 0x3999\l}"];
+  Node0771C400 -> Node0771C010;
+  Node0771C400 -> Node0771C010;
+  Node0771B998 [label="{exit:\l}"];
+  Node0771C010 [label="{0x3999:\l  function_23e0()\l}"];
+  Node0771C010 -> Node0771C178;
+  Node0771C178 [label="{0x39a0:\l  *(IntToPtrCastExpr\<ptr\>(((4 * ExtCastExpr\<int64\>(g66)) + PtrToIntCastExpr\<int64\>(&(g60))))) = TruncCastExpr\<int32\>(v8)\l  g66 = &(g68)\l  *(IntToPtrCastExpr\<ptr\>((PtrToIntCastExpr\<int64\>(&(g60)) + (4 * ExtCastExpr\<int64\>(PtrToIntCastExpr\<int32\>(&(g67))))))) = 91\l  v97\l  result = v97\l  goto 0x38e4\l}"];
+  Node0771C178 -> Node0771BD40;
+  Node0771C178 -> Node0771BD40;
+  Node0771BD40 [label="{0x38e4:\l  v8 = &(g68)\l}"];
+  Node0771BD40 -> Node0771C130;
+  Node0771C130 [label="{  if (v2 == __readfsqword(40)):\l}"];
+  Node0771C130 -> Node0771C448 [label="v2 == __readfsqword(40)"];
+  Node0771C130 -> Node0771BDD0 [label="v2 != __readfsqword(40)"];
+  Node0771C448 [label="{0x38fb:\l  return result\l}"];
+  Node0771C448 -> Node0771B998;
+  Node0771BDD0 [label="{  goto 0x3999\l}"];
+  Node0771BDD0 -> Node0771C010;
+
+}

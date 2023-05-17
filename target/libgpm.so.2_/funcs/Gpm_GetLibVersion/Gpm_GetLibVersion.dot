@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'Gpm_GetLibVersion()'." {
+  label="Control-flow graph for function 'Gpm_GetLibVersion()'.";
+  node [shape=record];
+
+  Node07719DC0 [label="{entry:\l}"];
+  Node07719DC0 -> Node07719F28;
+  Node07719F28 [label="{0x2f80:\l  result\l  return result\l}"];
+  Node07719F28 -> Node07719E98;
+  Node07719E98 [label="{exit:\l}"];
+
+}

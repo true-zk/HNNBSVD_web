@@ -1,0 +1,17 @@
+cli 
+push rbx
+test rdi, rdi
+je 0x4222 <function_4203+0x1f>
+cmp word ptr [rdi - 8], 0x9d6b
+mov rbx, rdi
+jne 0x4222 <function_4203+0x1f>
+mov eax, dword ptr [rdi + 0x18]
+cmp eax, 2
+je 0x4238 <function_4203+0x35>
+cmp eax, 8
+je 0x4238 <function_4203+0x35>
+call 0x2200 <function_2200>
+mov dword ptr [rax], 0x16
+xor eax, eax
+pop rbx
+ret 

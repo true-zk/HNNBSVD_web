@@ -1,0 +1,14 @@
+cli 
+mov rax, rsi
+cmp edx, -1
+je 0x2ae8 <function_2ab3+0x35>
+cmp edx, 4
+je 0x2b40 <function_2ab3+0x8d>
+jg 0x2ad8 <function_2ab3+0x25>
+cmp edx, 1
+je 0x2b38 <function_2ab3+0x85>
+cmp edx, 2
+jne 0x2ad0 <function_2ab3+0x1d>
+sub dword ptr [rsi], 1
+xor eax, eax
+ret 

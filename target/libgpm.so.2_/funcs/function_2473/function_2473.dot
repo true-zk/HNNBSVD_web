@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2473(*s, n, *stream)'." {
+  label="Control-flow graph for function 'function_2473(*s, n, *stream)'.";
+  node [shape=record];
+
+  Node077113F0 [label="{entry:\l  s\l  n\l  stream\l}"];
+  Node077113F0 -> Node07712050;
+  Node07712050 [label="{0x2473:\l  return fgets(s, n, stream)\l}"];
+  Node07712050 -> Node07711E10;
+  Node07711E10 [label="{exit:\l}"];
+
+}

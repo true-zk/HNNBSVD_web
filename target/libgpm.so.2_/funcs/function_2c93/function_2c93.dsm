@@ -1,0 +1,27 @@
+cli 
+push rbp
+push rbx
+mov rbx, rdi
+sub rsp, 8
+mov rax, qword ptr [rdi + 0x20]
+test rax, rax
+je 0x2cae <function_2c93+0x1b>
+mov rdx, qword ptr [rdi + 0x28]
+mov qword ptr [rax + 0x28], rdx
+mov rdx, qword ptr [rbx + 0x28]
+test rdx, rdx
+je 0x2cbb <function_2c93+0x28>
+mov qword ptr [rdx + 0x20], rax
+mov rbp, qword ptr [rip + 0x4316]
+cmp qword ptr [rbp], rbx
+je 0x2d20 <function_2c93+0x8d>
+cmp word ptr [rbx + 0xe], 0
+je 0x2cf0 <function_2c93+0x5d>
+mov rax, qword ptr [rip + 0x42fa]
+cmp qword ptr [rax], rbx
+je 0x2d04 <function_2c93+0x71>
+mov rax, qword ptr [rbp]
+add rsp, 8
+pop rbx
+pop rbp
+ret 

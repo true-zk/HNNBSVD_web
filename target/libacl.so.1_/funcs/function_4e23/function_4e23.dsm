@@ -1,0 +1,8 @@
+cli 
+sub rsp, 8
+xor esi, esi
+call 0x4c90 <acl_check>
+test eax, eax
+jne 0x4e40 <function_4e23+0x1d>
+add rsp, 8
+ret 

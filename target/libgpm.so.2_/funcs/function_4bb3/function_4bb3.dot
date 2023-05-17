@@ -1,0 +1,23 @@
+digraph "Control-flow graph for function 'function_4bb3()'." {
+  label="Control-flow graph for function 'function_4bb3()'.";
+  node [shape=record];
+
+  Node077217D0 [label="{entry:\l}"];
+  Node077217D0 -> Node07721A10;
+  Node07721A10 [label="{0x4bb3:\l  if (g7 == -1):\l}"];
+  Node07721A10 -> Node07721B30 [label="g7 == -1"];
+  Node07721A10 -> Node07721A58 [label="g7 != -1"];
+  Node07721B30 [label="{0x4be8:\l  return -1\l}"];
+  Node07721B30 -> Node077218F0;
+  Node07721A58 [label="{  v1 = &(g7)\l  v1 = (v1 - 8)\l  result = *(IntToPtrCastExpr\<ptr\>(v1))\l}"];
+  Node07721A58 -> Node07721AA0;
+  Node077218F0 [label="{exit:\l}"];
+  Node07721AA0 [label="{  while (result != -1):\l}"];
+  Node07721AA0 -> Node07721B78 [label="result != -1"];
+  Node07721AA0 -> Node07721AE8 [label="result == -1"];
+  Node07721B78 [label="{0x4bd8:\l  v1 = (v1 - 8)\l  result = *(IntToPtrCastExpr\<ptr\>(v1))\l}"];
+  Node07721B78 -> Node07721AA0;
+  Node07721AE8 [label="{0x4be8:\l  return result\l}"];
+  Node07721AE8 -> Node077218F0;
+
+}

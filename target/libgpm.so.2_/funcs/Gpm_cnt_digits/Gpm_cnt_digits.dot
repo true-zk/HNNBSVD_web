@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'Gpm_cnt_digits(a1)'." {
+  label="Control-flow graph for function 'Gpm_cnt_digits(a1)'.";
+  node [shape=record];
+
+  Node0771D2E8 [label="{entry:\l  a1\l}"];
+  Node0771D2E8 -> Node0771D3C0;
+  Node0771D3C0 [label="{0x3cf0:\l  result\l  return result\l}"];
+  Node0771D3C0 -> Node0771D330;
+  Node0771D330 [label="{exit:\l}"];
+
+}

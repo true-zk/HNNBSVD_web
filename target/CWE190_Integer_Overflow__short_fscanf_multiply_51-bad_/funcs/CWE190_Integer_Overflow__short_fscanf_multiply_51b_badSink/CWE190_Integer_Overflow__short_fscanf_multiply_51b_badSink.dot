@@ -1,0 +1,18 @@
+digraph "Control-flow graph for function 'CWE190_Integer_Overflow__short_fscanf_multiply_51b_badSink(a1)'." {
+  label="Control-flow graph for function 'CWE190_Integer_Overflow__short_fscanf_multiply_51b_badSink(a1)'.";
+  node [shape=record];
+
+  Node0730F140 [label="{entry:\l  a1\l}"];
+  Node0730F140 -> Node0730ED50;
+  Node0730ED50 [label="{  result = (a1 & 4294967295)\l}"];
+  Node0730ED50 -> Node0730EBE8;
+  Node0730EBE8 [label="{  if (TruncCastExpr\<int16\>(a1) \>= 1):\l}"];
+  Node0730EBE8 -> Node0730EC30 [label="TruncCastExpr\<int16\>(a1) \>= 1"];
+  Node0730EBE8 -> Node0730EF00 [label="TruncCastExpr\<int16\>(a1) \< 1"];
+  Node0730EC30 [label="{0xad7:\l  result = printIntLine(ExtCastExpr\<int64\>(((131072 * TruncCastExpr\<int32\>(a1)) / 65536)))\l}"];
+  Node0730EC30 -> Node0730EF00;
+  Node0730EF00 [label="{0xaec:\l  return result\l}"];
+  Node0730EF00 -> Node0730ED08;
+  Node0730ED08 [label="{exit:\l}"];
+
+}

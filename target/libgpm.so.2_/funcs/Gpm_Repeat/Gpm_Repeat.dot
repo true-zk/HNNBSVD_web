@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'Gpm_Repeat()'." {
+  label="Control-flow graph for function 'Gpm_Repeat()'.";
+  node [shape=record];
+
+  Node07717108 [label="{entry:\l}"];
+  Node07717108 -> Node077171E0;
+  Node077171E0 [label="{0x2a00:\l  result\l  return result\l}"];
+  Node077171E0 -> Node07716C88;
+  Node07716C88 [label="{exit:\l}"];
+
+}

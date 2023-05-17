@@ -1,0 +1,30 @@
+digraph "Control-flow graph for function 'function_3cc3(a1, a2)'." {
+  label="Control-flow graph for function 'function_3cc3(a1, a2)'.";
+  node [shape=record];
+
+  Node0771D138 [label="{entry:\l  a1\l  a2\l}"];
+  Node0771D138 -> Node0771D210;
+  Node0771D210 [label="{  v1 = a2\l}"];
+  Node0771D210 -> Node0771D258;
+  Node0771D258 [label="{  if (v1 == 0):\l}"];
+  Node0771D258 -> Node0771D180 [label="v1 == 0"];
+  Node0771D258 -> Node0771D690 [label="v1 != 0"];
+  Node0771D180 [label="{0x3ce8:\l  return 1\l}"];
+  Node0771D180 -> Node0771CF40;
+  Node0771D690 [label="{0x3ccd:\l  if (v1 \< 0):\l}"];
+  Node0771D690 -> Node0771D600 [label="v1 \< 0"];
+  Node0771D690 -> Node0771D528 [label="v1 \>= 0"];
+  Node0771CF40 [label="{exit:\l}"];
+  Node0771D600 [label="{0x3ce8:\l  return 0\l}"];
+  Node0771D600 -> Node0771CF40;
+  Node0771D528 [label="{  result = 1\l  result = ((((4294967296 * result) / 4294967296) * ((4294967296 * a1) / 4294967296)) & 4294967295)\l  v2 = (TruncCastExpr\<int32\>(a2) - 1)\l  v3 = v2\l}"];
+  Node0771D528 -> Node0771D1C8;
+  Node0771D1C8 [label="{  while (v2 != 0):\l}"];
+  Node0771D1C8 -> Node0771D2A0 [label="v2 != 0"];
+  Node0771D1C8 -> Node0771D4E0 [label="v2 == 0"];
+  Node0771D2A0 [label="{0x3ce0:\l  result = ((((4294967296 * result) / 4294967296) * ((4294967296 * a1) / 4294967296)) & 4294967295)\l  v2 = (TruncCastExpr\<int32\>(v3) - 1)\l  v3 = v2\l}"];
+  Node0771D2A0 -> Node0771D1C8;
+  Node0771D4E0 [label="{0x3ce8:\l  return result\l}"];
+  Node0771D4E0 -> Node0771CF40;
+
+}

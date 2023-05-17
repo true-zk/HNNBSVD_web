@@ -1,0 +1,4 @@
+mov eax, dword ptr [0x407028]
+test eax, eax
+je 0x401a90 <___main+0x10>
+ret 

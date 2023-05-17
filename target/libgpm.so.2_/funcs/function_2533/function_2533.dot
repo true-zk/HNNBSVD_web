@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2533(flag, *format, ...)'." {
+  label="Control-flow graph for function 'function_2533(flag, *format, ...)'.";
+  node [shape=record];
+
+  Node077134D8 [label="{entry:\l  flag\l  format\l}"];
+  Node077134D8 -> Node07713010;
+  Node07713010 [label="{0x2533:\l  return __printf_chk(flag, format)\l}"];
+  Node07713010 -> Node07712F38;
+  Node07712F38 [label="{exit:\l}"];
+
+}

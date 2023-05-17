@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_21d3(*path, *name, *value, size)'." {
+  label="Control-flow graph for function 'function_21d3(*path, *name, *value, size)'.";
+  node [shape=record];
+
+  Node07C7CBE0 [label="{entry:\l  path\l  name\l  value\l  size\l}"];
+  Node07C7CBE0 -> Node07C7CFD0;
+  Node07C7CFD0 [label="{0x21d3:\l  return getxattr(path, name, value, size)\l}"];
+  Node07C7CFD0 -> Node07C7D2E8;
+  Node07C7D2E8 [label="{exit:\l}"];
+
+}

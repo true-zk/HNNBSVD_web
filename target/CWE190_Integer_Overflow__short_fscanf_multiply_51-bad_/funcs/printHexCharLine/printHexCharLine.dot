@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'printHexCharLine(a1)'." {
+  label="Control-flow graph for function 'printHexCharLine(a1)'.";
+  node [shape=record];
+
+  Node0730FBF0 [label="{entry:\l  a1\l}"];
+  Node0730FBF0 -> Node0730FAD0;
+  Node0730FAD0 [label="{0xc26:\l  return printf(\"%02x\\n\", ((16777216 * TruncCastExpr\<int32\>(a1)) / 16777216))\l}"];
+  Node0730FAD0 -> Node0730FC38;
+  Node0730FC38 [label="{exit:\l}"];
+
+}

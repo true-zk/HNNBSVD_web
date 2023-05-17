@@ -1,0 +1,44 @@
+digraph "Control-flow graph for function 'decodeHexChars(a1, a2, a3)'." {
+  label="Control-flow graph for function 'decodeHexChars(a1, a2, a3)'.";
+  node [shape=record];
+
+  Node06FA0418 [label="{entry:\l  a1\l  a2\l  a3\l}"];
+  Node06FA0418 -> Node06FA0580;
+  Node06FA0580 [label="{  v1 = __readfsqword(40)\l  v2 = 0\l  v3 = 0\l}"];
+  Node06FA0580 -> Node06FA05C8;
+  Node06FA05C8 [label="{  if (a2 != 0):\l}"];
+  Node06FA05C8 -> Node06F9FE30 [label="a2 != 0"];
+  Node06FA05C8 -> Node06F9FFE0 [label="a2 == 0"];
+  Node06F9FE30 [label="{  v4 = *(__ctype_b_loc())\l  v5 = (2 * v2)\l  str = IntToPtrCastExpr\<ptr\>((v5 + a3))\l  v3 = v2\l}"];
+  Node06F9FE30 -> Node06F9FF98;
+  Node06F9FFE0 [label="{  result = v3\l}"];
+  Node06F9FFE0 -> Node06F9FD58;
+  Node06F9FF98 [label="{  while ((*(IntToPtrCastExpr\<ptr\>(((2 * ExtCastExpr\<int64\>(*(str))) + PtrToIntCastExpr\<int64\>(v4)))) & 4096) != 0):\l}"];
+  Node06F9FF98 -> Node06FA0BF8 [label="(*(IntToPtrCastExpr\<ptr\>(((2 * ExtCastExpr\<int64\>(*(str))) + PtrToIntCastExpr\<int64\>(v4)))) & 4096) != 0"];
+  Node06F9FF98 -> Node06F9FFE0 [label="(*(IntToPtrCastExpr\<ptr\>(((2 * ExtCastExpr\<int64\>(*(str))) + PtrToIntCastExpr\<int64\>(v4)))) & 4096) == 0"];
+  Node06F9FD58 [label="{  if (v1 != __readfsqword(40)):\l}"];
+  Node06F9FD58 -> Node06FA0CD0 [label="v1 != __readfsqword(40)"];
+  Node06F9FD58 -> Node06F9FDA0 [label="v1 == __readfsqword(40)"];
+  Node06FA0BF8 [label="{  v6 = __ctype_b_loc()\l  v7 = *(IntToPtrCastExpr\<ptr\>(((v5 \| 1) + a3)))\l  v3 = v2\l}"];
+  Node06FA0BF8 -> Node06FA0D18;
+  Node06FA0CD0 [label="{0xf8e:\l  __stack_chk_fail()\l  result = &(g6)\l}"];
+  Node06FA0CD0 -> Node06F9FDA0;
+  Node06F9FDA0 [label="{0xf93:\l  return result\l}"];
+  Node06F9FDA0 -> Node06FA04A8;
+  Node06FA0D18 [label="{  if ((*(IntToPtrCastExpr\<ptr\>(((2 * ExtCastExpr\<int64\>(v7)) + PtrToIntCastExpr\<int64\>(*(v6))))) & 4096) == 0):\l}"];
+  Node06FA0D18 -> Node06FA0658 [label="(*(IntToPtrCastExpr\<ptr\>(((2 * ExtCastExpr\<int64\>(v7)) + PtrToIntCastExpr\<int64\>(*(v6))))) & 4096) == 0"];
+  Node06FA0D18 -> Node06FA0A00 [label="(*(IntToPtrCastExpr\<ptr\>(((2 * ExtCastExpr\<int64\>(v7)) + PtrToIntCastExpr\<int64\>(*(v6))))) & 4096) != 0"];
+  Node06FA04A8 [label="{exit:\l}"];
+  Node06FA0658 [label="{break -\> 0xf7b:\l  break\l}"];
+  Node06FA0658 -> Node06F9FFE0;
+  Node06FA0A00 [label="{0xec4:\l  v8\l  sscanf(str, \"%02x\", &(v8))\l  *(IntToPtrCastExpr\<ptr\>((v2 + a1))) = TruncCastExpr\<int8\>(v8)\l  v2 = (v2 + 1)\l  v3 = v2\l}"];
+  Node06FA0A00 -> Node06FA0AD8;
+  Node06FA0AD8 [label="{  if (v2 \>= a2):\l}"];
+  Node06FA0AD8 -> Node06FA06A0 [label="v2 \>= a2"];
+  Node06FA0AD8 -> Node06FA0A48 [label="v2 \< a2"];
+  Node06FA06A0 [label="{break -\> 0xf7b:\l  break\l}"];
+  Node06FA06A0 -> Node06F9FFE0;
+  Node06FA0A48 [label="{  v4 = *(__ctype_b_loc())\l  v5 = (2 * v2)\l  str = IntToPtrCastExpr\<ptr\>((v5 + a3))\l  v3 = v2\l}"];
+  Node06FA0A48 -> Node06F9FF98;
+
+}

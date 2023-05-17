@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'Gpm_PopRoi()'." {
+  label="Control-flow graph for function 'Gpm_PopRoi()'.";
+  node [shape=record];
+
+  Node07717DB0 [label="{entry:\l}"];
+  Node07717DB0 -> Node07717E40;
+  Node07717E40 [label="{0x2c90:\l  result\l  return result\l}"];
+  Node07717E40 -> Node07718590;
+  Node07718590 [label="{exit:\l}"];
+
+}

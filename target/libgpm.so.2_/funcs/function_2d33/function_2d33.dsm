@@ -1,0 +1,30 @@
+cli 
+mov rdx, qword ptr [rip + 0x429d]
+mov rax, qword ptr [rdx]
+test rax, rax
+je 0x2d98 <function_2d33+0x65>
+test rsi, rsi
+cmove rsi, rax
+cmp rsi, rdi
+je 0x2d9e <function_2d33+0x6b>
+mov rcx, qword ptr [rdi + 0x20]
+test rcx, rcx
+je 0x2d60 <function_2d33+0x2d>
+mov r8, qword ptr [rdi + 0x28]
+mov qword ptr [rcx + 0x28], r8
+mov r8, qword ptr [rdi + 0x28]
+test r8, r8
+je 0x2d6d <function_2d33+0x3a>
+mov qword ptr [r8 + 0x20], rcx
+cmp rax, rdi
+je 0x2da0 <function_2d33+0x6d>
+mov rax, qword ptr [rsi + 0x20]
+mov qword ptr [rdi + 0x20], rax
+mov qword ptr [rsi + 0x20], rdi
+mov rax, qword ptr [rdi + 0x20]
+mov qword ptr [rdi + 0x28], rsi
+test rax, rax
+je 0x2d98 <function_2d33+0x65>
+mov qword ptr [rax + 0x28], rdi
+mov rax, qword ptr [rdx]
+ret 

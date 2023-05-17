@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_24b3(*dest, *src, n)'." {
+  label="Control-flow graph for function 'function_24b3(*dest, *src, n)'.";
+  node [shape=record];
+
+  Node07711A20 [label="{entry:\l  dest\l  src\l  n\l}"];
+  Node07711A20 -> Node07712200;
+  Node07712200 [label="{0x24b3:\l  return memcpy(dest, src, n)\l}"];
+  Node07712200 -> Node07711DC8;
+  Node07711DC8 [label="{exit:\l}"];
+
+}

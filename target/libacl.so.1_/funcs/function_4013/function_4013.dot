@@ -1,0 +1,34 @@
+digraph "Control-flow graph for function 'function_4013(a1)'." {
+  label="Control-flow graph for function 'function_4013(a1)'.";
+  node [shape=record];
+
+  Node07970EB8 [label="{entry:\l  a1\l}"];
+  Node07970EB8 -> Node07970FD8;
+  Node07970FD8 [label="{0x4013:\l  v1\l}"];
+  Node07970FD8 -> Node07971DA0;
+  Node07971DA0 [label="{  if (a1 != 0):\l}"];
+  Node07971DA0 -> Node07970F48 [label="a1 != 0"];
+  Node07971DA0 -> Node079719F8 [label="a1 == 0"];
+  Node07970F48 [label="{  v2 = (a1 - 8)\l  v3 = IntToPtrCastExpr\<ptr\>(v2)\l  v1 = v2\l}"];
+  Node07970F48 -> Node07971C80;
+  Node079719F8 [label="{0x4037:\l  v4\l  v5\l  v6\l  v7 = function_2200(a1, IntToPtrCastExpr\<ptr\>(v4), TruncCastExpr\<int32\>(v5), TruncCastExpr\<int32\>(v6), v1)\l  *(IntToPtrCastExpr\<ptr\>(v7)) = 22\l  return 4294967295\l}"];
+  Node079719F8 -> Node07970F90;
+  Node07971C80 [label="{  switch *(v3):\l  case 28972:\l  case -10766:\l  case 7207:\l}"];
+  Node07971C80 -> Node07971920 [label="*(v3) == 28972"];
+  Node07971C80 -> Node07971EC0 [label="*(v3) == 7207"];
+  Node07971C80 -> Node079719F8;
+  Node07971C80 -> Node07971EC0 [label="*(v3) == -10766"];
+  Node07970F90 [label="{exit:\l}"];
+  Node07971920 [label="{0x4078:\l  function_28f0(v2)\l  return 0\l}"];
+  Node07971920 -> Node07970F90;
+  Node07971EC0 [label="{0x4050:\l  *(v3) = 0\l}"];
+  Node07971EC0 -> Node07971A40;
+  Node07971A40 [label="{  if ((*(IntToPtrCastExpr\<ptr\>((a1 - 6))) % 2) == 0):\l}"];
+  Node07971A40 -> Node07971650 [label="(*(IntToPtrCastExpr\<ptr\>((a1 - 6))) % 2) == 0"];
+  Node07971A40 -> Node07971A88 [label="(*(IntToPtrCastExpr\<ptr\>((a1 - 6))) % 2) != 0"];
+  Node07971650 [label="{0x4047:\l  return 0\l}"];
+  Node07971650 -> Node07970F90;
+  Node07971A88 [label="{0x405e:\l  function_21f0(v2)\l  return 0\l}"];
+  Node07971A88 -> Node07970F90;
+
+}

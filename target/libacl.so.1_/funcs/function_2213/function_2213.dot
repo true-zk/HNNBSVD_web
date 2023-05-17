@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2213(*dest, *src, n)'." {
+  label="Control-flow graph for function 'function_2213(*dest, *src, n)'.";
+  node [shape=record];
+
+  Node07C7D498 [label="{entry:\l  dest\l  src\l  n\l}"];
+  Node07C7D498 -> Node07C7CD90;
+  Node07C7CD90 [label="{0x2213:\l  return strncpy(dest, src, n)\l}"];
+  Node07C7CD90 -> Node07C7CCB8;
+  Node07C7CCB8 [label="{exit:\l}"];
+
+}

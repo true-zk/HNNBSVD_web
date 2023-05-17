@@ -1,0 +1,18 @@
+digraph "Control-flow graph for function '_init()'." {
+  label="Control-flow graph for function '_init()'.";
+  node [shape=record];
+
+  Node06F93248 [label="{entry:\l}"];
+  Node06F93248 -> Node06F978E0;
+  Node06F978E0 [label="{  result = 0\l}"];
+  Node06F978E0 -> Node06F98390;
+  Node06F98390 [label="{  if (*(IntToPtrCastExpr\<ptr\>(2105320)) != 0):\l}"];
+  Node06F98390 -> Node06F98D68 [label="*(IntToPtrCastExpr\<ptr\>(2105320)) != 0"];
+  Node06F98390 -> Node06F98810 [label="*(IntToPtrCastExpr\<ptr\>(2105320)) == 0"];
+  Node06F98D68 [label="{0x810:\l  __gmon_start__()\l  result = &(g6)\l}"];
+  Node06F98D68 -> Node06F98810;
+  Node06F98810 [label="{0x812:\l  return result\l}"];
+  Node06F98810 -> Node06F95DE0;
+  Node06F95DE0 [label="{exit:\l}"];
+
+}

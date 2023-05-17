@@ -1,0 +1,3 @@
+cli 
+mov eax, dword ptr [rip + 0x48d6]
+ret 

@@ -1,0 +1,57 @@
+digraph "Control-flow graph for function 'function_4a33(a1, a2, a3, a4, a5)'." {
+  label="Control-flow graph for function 'function_4a33(a1, a2, a3, a4, a5)'.";
+  node [shape=record];
+
+  Node081A0C08 [label="{entry:\l  a1\l  a2\l  a3\l  a4\l  a5\l}"];
+  Node081A0C08 -> Node081A10D0;
+  Node081A10D0 [label="{  v1 = __readfsqword(40)\l  v2\l  v3\l}"];
+  Node081A10D0 -> Node081A12C8;
+  Node081A12C8 [label="{  if (a3 == 0):\l  else:\l}"];
+  Node081A12C8 -> Node081A0CE0 [label="a3 == 0"];
+  Node081A12C8 -> Node081A1628 [label="a3 != 0"];
+  Node081A0CE0 [label="{  goto 0x4a6d\l}"];
+  Node081A0CE0 -> Node081A1238;
+  Node081A1628 [label="{0x4a52:\l  v3 = (a3 - 8)\l}"];
+  Node081A1628 -> Node081A1670;
+  Node081A1238 [label="{0x4a6d:\l  v5 = function_2200(a1, IntToPtrCastExpr\<ptr\>(a2), TruncCastExpr\<int32\>(a3), TruncCastExpr\<int32\>(a4), a5)\l  *(IntToPtrCastExpr\<ptr\>(v5)) = 22\l  result = 4294967295\l  goto 0x4a7e\l}"];
+  Node081A1238 -> Node081A1B80;
+  Node081A1670 [label="{  if (*(IntToPtrCastExpr\<ptr\>(v3)) != 28972):\l  else:\l}"];
+  Node081A1670 -> Node081A1700 [label="*(IntToPtrCastExpr\<ptr\>(v3)) != 28972"];
+  Node081A1670 -> Node081A16B8 [label="*(IntToPtrCastExpr\<ptr\>(v3)) == 28972"];
+  Node081A1B80 [label="{0x4a7e:\l  if (v1 != __readfsqword(40)):\l}"];
+  Node081A1B80 -> Node081A13A0 [label="v1 != __readfsqword(40)"];
+  Node081A1B80 -> Node081A1A60 [label="v1 == __readfsqword(40)"];
+  Node081A1700 [label="{  goto 0x4a6d\l}"];
+  Node081A1700 -> Node081A1238;
+  Node081A16B8 [label="{0x4a5a:\l  v4 = a2\l  v2 = PtrToIntCastExpr\<int64\>(\"system.posix_acl_default\")\l}"];
+  Node081A16B8 -> Node081A1748;
+  Node081A13A0 [label="{0x4af1:\l  return function_2290()\l}"];
+  Node081A13A0 -> Node081A1280;
+  Node081A1A60 [label="{0x4a8e:\l  return result\l}"];
+  Node081A1A60 -> Node081A1280;
+  Node081A1748 [label="{  if (v4 == 16384):\l  else:\l}"];
+  Node081A1748 -> Node081A1430 [label="v4 == 16384"];
+  Node081A1748 -> Node081A18F8 [label="v4 != 16384"];
+  Node081A1280 [label="{exit:\l}"];
+  Node081A1430 [label="{  goto 0x4aa7\l}"];
+  Node081A1430 -> Node081A1AA8;
+  Node081A18F8 [label="{0x4a65:\l  v2 = PtrToIntCastExpr\<int64\>(\"system.posix_acl_access\")\l}"];
+  Node081A18F8 -> Node081A1988;
+  Node081A1AA8 [label="{0x4aa7:\l  v6\l  v7 = function_2870(v3, &(v6))\l  result = 4294967295\l}"];
+  Node081A1AA8 -> Node081A17D8;
+  Node081A1988 [label="{  if (v4 == PtrToIntCastExpr\<int32\>(&(g5))):\l  else:\l}"];
+  Node081A1988 -> Node081A1358 [label="v4 == PtrToIntCastExpr\<int32\>(&(g5))"];
+  Node081A1988 -> Node081A1AF0 [label="v4 != PtrToIntCastExpr\<int32\>(&(g5))"];
+  Node081A17D8 [label="{  if (v7 != 0):\l}"];
+  Node081A17D8 -> Node081A1BC8 [label="v7 != 0"];
+  Node081A17D8 -> Node081A18B0 [label="v7 == 0"];
+  Node081A1358 [label="{  goto 0x4aa7\l}"];
+  Node081A1358 -> Node081A1AA8;
+  Node081A1AF0 [label="{  goto 0x4a6d\l}"];
+  Node081A1AF0 -> Node081A1238;
+  Node081A1BC8 [label="{  v8 = function_2370(a1, v2, v7, v6, 0)\l  function_21f0(v7)\l  result = (v8 & 4294967295)\l}"];
+  Node081A1BC8 -> Node081A18B0;
+  Node081A18B0 [label="{  goto 0x4a7e\l}"];
+  Node081A18B0 -> Node081A1B80;
+
+}

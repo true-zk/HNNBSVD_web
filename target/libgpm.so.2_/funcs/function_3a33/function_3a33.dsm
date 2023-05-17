@@ -1,0 +1,65 @@
+cli 
+push r12
+push rbp
+push rbx
+mov rbx, rdi
+sub rsp, 0xd0
+mov rax, qword ptr fs:[0x28]
+mov qword ptr [rsp + 0xc8], rax
+xor eax, eax
+mov eax, dword ptr [rip + 0x3761]
+mov qword ptr [rsp], 0
+mov qword ptr [rsp + 8], 0
+test eax, eax
+je 0x3b48 <function_3a33+0x115>
+cmp eax, 0x2649
+jle 0x3bc0 <function_3a33+0x18d>
+mov rbp, qword ptr [rip + 0x34aa]
+mov edx, dword ptr [rbp]
+test edx, edx
+jle 0x3be9 <function_3a33+0x1b6>
+mov dword ptr [rsp + 0x18], 0
+xor eax, eax
+test rbx, rbx
+je 0x3b88 <function_3a33+0x155>
+lea r12, [rsp + 0x40]
+mov dword ptr [rsp + 0x1c], eax
+mov ecx, 0x10
+xor eax, eax
+mov rdi, r12
+rep stosq qword ptr [rdi], rax
+movsxd rdi, edx
+call 0x23f0 <function_23f0>
+mov ecx, dword ptr [rbp]
+xor edx, edx
+mov rsi, r12
+mov r8, rax
+mov eax, 1
+shl rax, cl
+lea edi, [rcx + 1]
+or qword ptr [rsp + r8*8 + 0x40], rax
+xor ecx, ecx
+mov r8, rsp
+call 0x24e0 <function_24e0>
+mov r8d, eax
+xor eax, eax
+cmp r8d, 1
+je 0x3b1f <function_3a33+0xec>
+mov edi, dword ptr [rbp]
+lea rsi, [rsp + 0x10]
+mov edx, 0x10
+call 0x23b0 <function_23b0>
+mov rdi, rbx
+call 0x33f0 <Gpm_GetEvent>
+cmp eax, 1
+jne 0x3bb6 <function_3a33+0x183>
+mov eax, dword ptr [rbx + 0xc]
+mov dword ptr [rbx + 0xc], 0
+mov rdx, qword ptr [rsp + 0xc8]
+sub rdx, qword ptr fs:[0x28]
+jne 0x3c12 <function_3a33+0x1df>
+add rsp, 0xd0
+pop rbx
+pop rbp
+pop r12
+ret 

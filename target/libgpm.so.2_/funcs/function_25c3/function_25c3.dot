@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_25c3(*s)'." {
+  label="Control-flow graph for function 'function_25c3(*s)'.";
+  node [shape=record];
+
+  Node07713C28 [label="{entry:\l  s\l}"];
+  Node07713C28 -> Node07713EB0;
+  Node07713EB0 [label="{0x25c3:\l  return strdup(s)\l}"];
+  Node07713EB0 -> Node077137A8;
+  Node077137A8 [label="{exit:\l}"];
+
+}

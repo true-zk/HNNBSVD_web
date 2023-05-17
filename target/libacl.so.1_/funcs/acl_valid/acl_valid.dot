@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'acl_valid()'." {
+  label="Control-flow graph for function 'acl_valid()'.";
+  node [shape=record];
+
+  Node081A32D8 [label="{entry:\l}"];
+  Node081A32D8 -> Node081A3128;
+  Node081A3128 [label="{0x4e20:\l  result\l  return result\l}"];
+  Node081A3128 -> Node081A3320;
+  Node081A3320 [label="{exit:\l}"];
+
+}

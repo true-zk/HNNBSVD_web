@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2383(*s1, *s2, n)'." {
+  label="Control-flow graph for function 'function_2383(*s1, *s2, n)'.";
+  node [shape=record];
+
+  Node07710430 [label="{entry:\l  s1\l  s2\l  n\l}"];
+  Node07710430 -> Node07710160;
+  Node07710160 [label="{0x2383:\l  return strncmp(s1, s2, n)\l}"];
+  Node07710160 -> Node07710598;
+  Node07710598 [label="{exit:\l}"];
+
+}

@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'Gpm_CharsQueued()'." {
+  label="Control-flow graph for function 'Gpm_CharsQueued()'.";
+  node [shape=record];
+
+  Node077173D8 [label="{entry:\l}"];
+  Node077173D8 -> Node07717198;
+  Node07717198 [label="{0x29f0:\l  result\l  return result\l}"];
+  Node07717198 -> Node07716BB0;
+  Node07716BB0 [label="{exit:\l}"];
+
+}

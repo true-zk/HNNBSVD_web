@@ -1,0 +1,25 @@
+digraph "Control-flow graph for function 'CWE127_Buffer_Underread__char_alloca_loop_65b_goodG2BSink(a1)'." {
+  label="Control-flow graph for function 'CWE127_Buffer_Underread__char_alloca_loop_65b_goodG2BSink(a1)'.";
+  node [shape=record];
+
+  Node0774BB80 [label="{entry:\l  a1\l}"];
+  Node0774BB80 -> Node0774C360;
+  Node0774C360 [label="{  v1 = __readfsqword(40)\l  v2\l  memset(&(v2), 67, 99)\l}"];
+  Node0774C360 -> Node0774BCE8;
+  Node0774BCE8 [label="{  for i in range(0, 100):\l}"];
+  Node0774BCE8 -> Node0774C120;
+  Node0774BCE8 -> Node0774BE50;
+  Node0774C120 [label="{  v3 = *(IntToPtrCastExpr\<ptr\>((i + a1)))\l  *(IntToPtrCastExpr\<ptr\>((i + PtrToIntCastExpr\<int64\>(&(v2))))) = v3\l}"];
+  Node0774C120 -> Node0774BCE8;
+  Node0774BE50 [label="{0xb36:\l  printLine(BitCastExpr\<ptr\>(&(v2)))\l  result = 0\l}"];
+  Node0774BE50 -> Node0774C090;
+  Node0774C090 [label="{  if (v1 != __readfsqword(40)):\l}"];
+  Node0774C090 -> Node0774C1B0 [label="v1 != __readfsqword(40)"];
+  Node0774C090 -> Node0774BC10 [label="v1 == __readfsqword(40)"];
+  Node0774C1B0 [label="{0xb56:\l  __stack_chk_fail()\l  result = &(g5)\l}"];
+  Node0774C1B0 -> Node0774BC10;
+  Node0774BC10 [label="{0xb5b:\l  return result\l}"];
+  Node0774BC10 -> Node0774BCA0;
+  Node0774BCA0 [label="{exit:\l}"];
+
+}

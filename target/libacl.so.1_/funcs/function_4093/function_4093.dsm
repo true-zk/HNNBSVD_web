@@ -1,0 +1,25 @@
+cli 
+push rbx
+mov rbx, rdx
+test rdi, rdi
+je 0x4108 <function_4093+0x75>
+cmp word ptr [rdi - 8], 0x712c
+jne 0x4108 <function_4093+0x75>
+test rdx, rdx
+je 0x4130 <function_4093+0x9d>
+test esi, esi
+jne 0x40e0 <function_4093+0x4d>
+mov rax, qword ptr [rdi + 8]
+mov qword ptr [rdi + 0x10], rax
+sub rdi, 8
+cmp rax, rdi
+je 0x40fa <function_4093+0x67>
+test rax, rax
+je 0x4130 <function_4093+0x9d>
+cmp word ptr [rax], 0x9d6b
+jne 0x4130 <function_4093+0x9d>
+add rax, 8
+mov qword ptr [rbx], rax
+mov eax, 1
+pop rbx
+ret 

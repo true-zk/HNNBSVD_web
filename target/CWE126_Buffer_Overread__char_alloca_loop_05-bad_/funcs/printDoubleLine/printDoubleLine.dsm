@@ -1,0 +1,13 @@
+push rbp
+mov rbp, rsp
+sub rsp, 0x10
+movsd qword ptr [rbp - 8], xmm0
+mov rax, qword ptr [rbp - 8]
+mov qword ptr [rbp - 0x10], rax
+movsd xmm0, qword ptr [rbp - 0x10]
+lea rdi, [rip + 0x3ff]
+mov eax, 1
+call 0x870 <printf>
+nop 
+leave 
+ret 

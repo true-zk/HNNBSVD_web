@@ -1,0 +1,35 @@
+cli 
+push r12
+push rbp
+sub rsp, 0x18
+mov rax, qword ptr fs:[0x28]
+mov qword ptr [rsp + 8], rax
+xor eax, eax
+test rsi, rsi
+je 0x4a10 <function_4993+0x7d>
+cmp word ptr [rsi - 8], 0x712c
+jne 0x4a10 <function_4993+0x7d>
+mov r12d, edi
+lea rdi, [rsi - 8]
+mov rsi, rsp
+call 0x2870 <function_2870>
+mov rbp, rax
+test rax, rax
+je 0x4a23 <function_4993+0x90>
+mov rcx, qword ptr [rsp]
+mov edi, r12d
+xor r8d, r8d
+mov rdx, rax
+lea rsi, [rip + 0x161d]
+call 0x2250 <function_2250>
+mov rdi, rbp
+mov r12d, eax
+call 0x21f0 <function_21f0>
+mov rax, qword ptr [rsp + 8]
+sub rax, qword ptr fs:[0x28]
+jne 0x4a2b <function_4993+0x98>
+add rsp, 0x18
+mov eax, r12d
+pop rbp
+pop r12
+ret 

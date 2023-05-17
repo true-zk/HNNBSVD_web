@@ -1,0 +1,25 @@
+digraph "Control-flow graph for function 'CWE126_Buffer_Overread__char_alloca_loop_05_bad()'." {
+  label="Control-flow graph for function 'CWE126_Buffer_Overread__char_alloca_loop_05_bad()'.";
+  node [shape=record];
+
+  Node06F9EF48 [label="{entry:\l}"];
+  Node06F9EF48 -> Node06F9F260;
+  Node06F9F260 [label="{0xa1a:\l  v1\l  v2 = &(v1)\l  v3 = __readfsqword(40)\l  v4 = ((v2 - 65) & -16)\l  v5 = ((v2 - 193) & -16)\l  memset(IntToPtrCastExpr\<ptr\>(v4), 65, 49)\l  *(IntToPtrCastExpr\<ptr\>((v4 + 49))) = 0\l  memset(IntToPtrCastExpr\<ptr\>(v5), 65, 99)\l  *(IntToPtrCastExpr\<ptr\>((v5 + 99))) = 0\l  str\l  memset(&(str), 67, 99)\l}"];
+  Node06F9F260 -> Node06F9EF90;
+  Node06F9EF90 [label="{  for i in range(0, ExtCastExpr\<int64\>(strlen(BitCastExpr\<ptr\>(&(str))))):\l}"];
+  Node06F9EF90 -> Node06F9EFD8;
+  Node06F9EF90 -> Node06F9EF00;
+  Node06F9EFD8 [label="{0xb36:\l  v6\l  v7 = *(IntToPtrCastExpr\<ptr\>((i + (v6 if (g4 == 0) else v4))))\l  *(IntToPtrCastExpr\<ptr\>((i + PtrToIntCastExpr\<int64\>(&(str))))) = v7\l}"];
+  Node06F9EFD8 -> Node06F9EF90;
+  Node06F9EF00 [label="{0xb6f:\l  printLine(&(str))\l  result = 0\l}"];
+  Node06F9EF00 -> Node06F9ED08;
+  Node06F9ED08 [label="{  if (v3 != __readfsqword(40)):\l}"];
+  Node06F9ED08 -> Node06F9ED50 [label="v3 != __readfsqword(40)"];
+  Node06F9ED08 -> Node06F9EB58 [label="v3 == __readfsqword(40)"];
+  Node06F9ED50 [label="{0xb8f:\l  __stack_chk_fail()\l  result = &(g6)\l}"];
+  Node06F9ED50 -> Node06F9EB58;
+  Node06F9EB58 [label="{0xb94:\l  return result\l}"];
+  Node06F9EB58 -> Node06F9F218;
+  Node06F9F218 [label="{exit:\l}"];
+
+}

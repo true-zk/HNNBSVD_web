@@ -1,0 +1,21 @@
+digraph "Control-flow graph for function '__do_global_dtors_aux()'." {
+  label="Control-flow graph for function '__do_global_dtors_aux()'.";
+  node [shape=record];
+
+  Node0730E4E0 [label="{entry:\l}"];
+  Node0730E4E0 -> Node0730E6D8;
+  Node0730E6D8 [label="{0x9d0:\l  if (g5 != 0):\l}"];
+  Node0730E6D8 -> Node0730F260 [label="g5 != 0"];
+  Node0730E6D8 -> Node0730F2F0 [label="g5 == 0"];
+  Node0730F260 [label="{0xa08:\l  result\l  return result\l}"];
+  Node0730F260 -> Node0730E648;
+  Node0730F2F0 [label="{0x9d9:\l  if (*(IntToPtrCastExpr\<ptr\>(2105336)) != 0):\l}"];
+  Node0730F2F0 -> Node0730F3C8 [label="*(IntToPtrCastExpr\<ptr\>(2105336)) != 0"];
+  Node0730F2F0 -> Node0730EB58 [label="*(IntToPtrCastExpr\<ptr\>(2105336)) == 0"];
+  Node0730E648 [label="{exit:\l}"];
+  Node0730F3C8 [label="{0x9e7:\l  __cxa_finalize(IntToPtrCastExpr\<ptr\>(*(IntToPtrCastExpr\<ptr\>(2105352))))\l}"];
+  Node0730F3C8 -> Node0730EB58;
+  Node0730EB58 [label="{  result2 = deregister_tm_clones()\l  g5 = 1\l  return result2\l}"];
+  Node0730EB58 -> Node0730E648;
+
+}

@@ -1,0 +1,26 @@
+digraph "Control-flow graph for function 'function_26a3()'." {
+  label="Control-flow graph for function 'function_26a3()'.";
+  node [shape=record];
+
+  Node07714BE8 [label="{entry:\l}"];
+  Node07714BE8 -> Node07714BA0;
+  Node07714BA0 [label="{0x26a3:\l  if (g34 != 0):\l}"];
+  Node07714BA0 -> Node07714768 [label="g34 != 0"];
+  Node07714BA0 -> Node07714C78 [label="g34 == 0"];
+  Node07714768 [label="{0x2728:\l  result\l  return result\l}"];
+  Node07714768 -> Node077149F0;
+  Node07714C78 [label="{0x26ad:\l  if (*(IntToPtrCastExpr\<ptr\>(28656)) != 0):\l}"];
+  Node07714C78 -> Node077147B0 [label="*(IntToPtrCastExpr\<ptr\>(28656)) != 0"];
+  Node07714C78 -> Node07714DE0 [label="*(IntToPtrCastExpr\<ptr\>(28656)) == 0"];
+  Node077149F0 [label="{exit:\l}"];
+  Node077147B0 [label="{0x26be:\l  function_2330(*(IntToPtrCastExpr\<ptr\>(28672)))\l}"];
+  Node077147B0 -> Node07714DE0;
+  Node07714DE0 [label="{0x26ca:\l  if (g35 \< (((PtrToIntCastExpr\<int64\>(&(g9)) - PtrToIntCastExpr\<int64\>(&(g8))) \>\> 3) - 1)):\l}"];
+  Node07714DE0 -> Node077147F8 [label="g35 \< (((PtrToIntCastExpr\<int64\>(&(g9)) - PtrToIntCastExpr\<int64\>(&(g8))) \>\> 3) - 1)"];
+  Node07714DE0 -> Node07714FD8 [label="g35 \>= (((PtrToIntCastExpr\<int64\>(&(g9)) - PtrToIntCastExpr\<int64\>(&(g8))) \>\> 3) - 1)"];
+  Node077147F8 [label="{  v1 = (g35 + 1)\l  v2 = (v1 if (v1 \> (((PtrToIntCastExpr\<int64\>(&(g9)) - PtrToIntCastExpr\<int64\>(&(g8))) \>\> 3) - 1)) else (((PtrToIntCastExpr\<int64\>(&(g9)) - PtrToIntCastExpr\<int64\>(&(g8))) \>\> 3) - 1))\l  g35 = v2\l}"];
+  Node077147F8 -> Node07714FD8;
+  Node07714FD8 [label="{  result2 = function_2630()\l  g34 = 1\l  return result2\l}"];
+  Node07714FD8 -> Node077149F0;
+
+}

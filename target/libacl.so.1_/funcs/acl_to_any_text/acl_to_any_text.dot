@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'acl_to_any_text()'." {
+  label="Control-flow graph for function 'acl_to_any_text()'.";
+  node [shape=record];
+
+  Node081A8540 [label="{entry:\l}"];
+  Node081A8540 -> Node081A7FE8;
+  Node081A7FE8 [label="{0x5710:\l  result\l  return result\l}"];
+  Node081A7FE8 -> Node081A8780;
+  Node081A8780 [label="{exit:\l}"];
+
+}

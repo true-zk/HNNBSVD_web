@@ -1,0 +1,42 @@
+cli 
+push rbp
+mov rbp, rsp
+push r14
+push r13
+push r12
+mov r12, rdi
+push rbx
+mov ebx, esi
+sub rsp, 0xa0
+mov rax, qword ptr fs:[0x28]
+mov qword ptr [rbp - 0x28], rax
+mov rax, rsp
+cmp rsp, rax
+je 0x5525 <function_54e3+0x42>
+sub rsp, 0x1000
+or qword ptr [rsp + 0xff8], 0
+cmp rsp, rax
+jne 0x5510 <function_54e3+0x2d>
+sub rsp, 0x90
+or qword ptr [rsp + 0x88], 0
+lea rdx, [rsp + 0xf]
+and rdx, 0xfffffffffffffff0
+mov r13, rdx
+cmp ebx, 0x4000
+je 0x5590 <function_54e3+0xad>
+cmp ebx, 0x8000
+je 0x5608 <function_54e3+0x125>
+call 0x2200 <function_2200>
+xor r12d, r12d
+mov dword ptr [rax], 0x16
+mov rax, qword ptr [rbp - 0x28]
+sub rax, qword ptr fs:[0x28]
+jne 0x56ff <function_54e3+0x21c>
+lea rsp, [rbp - 0x20]
+mov rax, r12
+pop rbx
+pop r12
+pop r13
+pop r14
+pop rbp
+ret 

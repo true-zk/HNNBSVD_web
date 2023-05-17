@@ -1,0 +1,7 @@
+push rbp
+mov rbp, rsp
+mov eax, 0
+call 0x9ca <goodG2B>
+nop 
+pop rbp
+ret 

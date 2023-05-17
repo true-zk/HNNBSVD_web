@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_25d3(errnum)'." {
+  label="Control-flow graph for function 'function_25d3(errnum)'.";
+  node [shape=record];
+
+  Node077143C0 [label="{entry:\l  errnum\l}"];
+  Node077143C0 -> Node077144E0;
+  Node077144E0 [label="{0x25d3:\l  return strerror(errnum)\l}"];
+  Node077144E0 -> Node07714138;
+  Node07714138 [label="{exit:\l}"];
+
+}

@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'Gpm_Getc()'." {
+  label="Control-flow graph for function 'Gpm_Getc()'.";
+  node [shape=record];
+
+  Node0771B830 [label="{entry:\l}"];
+  Node0771B830 -> Node0771B908;
+  Node0771B908 [label="{0x34d0:\l  result\l  return result\l}"];
+  Node0771B908 -> Node0771B878;
+  Node0771B878 [label="{exit:\l}"];
+
+}

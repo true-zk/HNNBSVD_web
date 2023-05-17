@@ -1,0 +1,22 @@
+push rbp
+mov rbp, rsp
+sub rsp, 0x20
+mov dword ptr [rbp - 0x14], edi
+mov rax, qword ptr fs:[0x28]
+mov qword ptr [rbp - 8], rax
+xor eax, eax
+mov eax, dword ptr [rbp - 0x14]
+mov dword ptr [rbp - 0x10], eax
+mov dword ptr [rbp - 0xc], 0
+lea rax, [rbp - 0x10]
+mov rsi, rax
+lea rdi, [rip + 0x487]
+mov eax, 0
+call 0x880 <printf>
+nop 
+mov rax, qword ptr [rbp - 8]
+xor rax, qword ptr fs:[0x28]
+je 0xca1 <printWcharLine+0x54>
+call 0x870 <__stack_chk_fail>
+leave 
+ret 

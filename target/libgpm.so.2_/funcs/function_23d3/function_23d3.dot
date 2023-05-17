@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_23d3(*s)'." {
+  label="Control-flow graph for function 'function_23d3(*s)'.";
+  node [shape=record];
+
+  Node07710AA8 [label="{entry:\l  s\l}"];
+  Node07710AA8 -> Node07711000;
+  Node07711000 [label="{0x23d3:\l  return strlen(s)\l}"];
+  Node07711000 -> Node07710E50;
+  Node07710E50 [label="{exit:\l}"];
+
+}

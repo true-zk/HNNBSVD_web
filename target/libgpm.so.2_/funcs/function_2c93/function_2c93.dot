@@ -1,0 +1,51 @@
+digraph "Control-flow graph for function 'function_2c93(a1)'." {
+  label="Control-flow graph for function 'function_2c93(a1)'.";
+  node [shape=record];
+
+  Node07717E88 [label="{entry:\l  a1\l}"];
+  Node07717E88 -> Node07718038;
+  Node07718038 [label="{  v1 = *(IntToPtrCastExpr\<ptr\>((a1 + 32)))\l  v2 = IntToPtrCastExpr\<ptr\>((a1 + 40))\l}"];
+  Node07718038 -> Node07717ED0;
+  Node07717ED0 [label="{  if (v1 != 0):\l}"];
+  Node07717ED0 -> Node07718350 [label="v1 != 0"];
+  Node07717ED0 -> Node07717F60 [label="v1 == 0"];
+  Node07718350 [label="{0x2ca6:\l  *(IntToPtrCastExpr\<ptr\>((v1 + 40))) = *(v2)\l}"];
+  Node07718350 -> Node07717F60;
+  Node07717F60 [label="{  v3 = *(v2)\l}"];
+  Node07717F60 -> Node07718110;
+  Node07718110 [label="{  if (v3 != 0):\l}"];
+  Node07718110 -> Node07718398 [label="v3 != 0"];
+  Node07718110 -> Node077182C0 [label="v3 == 0"];
+  Node07718398 [label="{0x2cb7:\l  *(IntToPtrCastExpr\<ptr\>((v3 + 32))) = v1\l}"];
+  Node07718398 -> Node077182C0;
+  Node077182C0 [label="{  v4 = IntToPtrCastExpr\<ptr\>(g27)\l  result = *(v4)\l}"];
+  Node077182C0 -> Node07718308;
+  Node07718308 [label="{  if (result == a1):\l}"];
+  Node07718308 -> Node077180C8 [label="result == a1"];
+  Node07718308 -> Node077181E8 [label="result != a1"];
+  Node077180C8 [label="{0x2d20:\l  *(v4) = result\l}"];
+  Node077180C8 -> Node077181E8;
+  Node077181E8 [label="{0x2cc8:\l  if (*(IntToPtrCastExpr\<ptr\>((a1 + 14))) != 0):\l}"];
+  Node077181E8 -> Node077181A0 [label="*(IntToPtrCastExpr\<ptr\>((a1 + 14))) != 0"];
+  Node077181E8 -> Node07718158 [label="*(IntToPtrCastExpr\<ptr\>((a1 + 14))) == 0"];
+  Node077181A0 [label="{  v5 = IntToPtrCastExpr\<ptr\>(g26)\l}"];
+  Node077181A0 -> Node077183E0;
+  Node07718158 [label="{0x2cf0:\l  function_2360(a1)\l  v6 = IntToPtrCastExpr\<ptr\>(g26)\l}"];
+  Node07718158 -> Node07717FF0;
+  Node077183E0 [label="{  if (*(v5) != a1):\l}"];
+  Node077183E0 -> Node07718A10 [label="*(v5) != a1"];
+  Node077183E0 -> Node077184B8 [label="*(v5) == a1"];
+  Node07717FF0 [label="{  if (*(v6) != a1):\l}"];
+  Node07717FF0 -> Node07718500 [label="*(v6) != a1"];
+  Node07717FF0 -> Node077185D8 [label="*(v6) == a1"];
+  Node07718A10 [label="{0x2cdb:\l  return result\l}"];
+  Node07718A10 -> Node07717F18;
+  Node077184B8 [label="{0x2d04:\l  *(v5) = 0\l  return *(v4)\l}"];
+  Node077184B8 -> Node07717F18;
+  Node07718500 [label="{0x2cdb:\l  return *(v4)\l}"];
+  Node07718500 -> Node07717F18;
+  Node077185D8 [label="{0x2d04:\l  *(v6) = 0\l  return *(v4)\l}"];
+  Node077185D8 -> Node07717F18;
+  Node07717F18 [label="{exit:\l}"];
+
+}

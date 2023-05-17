@@ -1,0 +1,33 @@
+digraph "Control-flow graph for function 'function_41a3(a1, a2)'." {
+  label="Control-flow graph for function 'function_41a3(a1, a2)'.";
+  node [shape=record];
+
+  Node07972DF0 [label="{entry:\l  a1\l  a2\l}"];
+  Node07972DF0 -> Node07972E80;
+  Node07972E80 [label="{0x41a3:\l  v1\l  v2\l  v3\l}"];
+  Node07972E80 -> Node07972B68;
+  Node07972B68 [label="{  if (a1 != 0):\l}"];
+  Node07972B68 -> Node07972C88 [label="a1 != 0"];
+  Node07972B68 -> Node07972850 [label="a1 == 0"];
+  Node07972C88 [label="{0x41ad:\l  if (*(IntToPtrCastExpr\<ptr\>((a1 - 8))) == -25237):\l}"];
+  Node07972C88 -> Node07972D18 [label="*(IntToPtrCastExpr\<ptr\>((a1 - 8))) == -25237"];
+  Node07972C88 -> Node07972850 [label="*(IntToPtrCastExpr\<ptr\>((a1 - 8))) != -25237"];
+  Node07972850 [label="{  v4 = function_2200(a1, IntToPtrCastExpr\<ptr\>(a2), TruncCastExpr\<int32\>(v2), TruncCastExpr\<int32\>(v3), v1)\l  *(IntToPtrCastExpr\<ptr\>(v4)) = 22\l}"];
+  Node07972850 -> Node07972B20;
+  Node07972D18 [label="{  if (a2 == 0):\l}"];
+  Node07972D18 -> Node07972D60 [label="a2 == 0"];
+  Node07972D18 -> Node07972BB0 [label="a2 != 0"];
+  Node07972B20 [label="{  if (a2 == 0):\l}"];
+  Node07972B20 -> Node07972FA0 [label="a2 == 0"];
+  Node07972B20 -> Node07972CD0 [label="a2 != 0"];
+  Node07972D60 [label="{0x41e6:\l  *(IntToPtrCastExpr\<ptr\>(function_2200(a1, NULL, TruncCastExpr\<int32\>(v2), TruncCastExpr\<int32\>(v3), v1))) = 22\l  return 4294967295\l}"];
+  Node07972D60 -> Node07973078;
+  Node07972BB0 [label="{0x41ba:\l  *(IntToPtrCastExpr\<ptr\>(a2)) = (a1 + 56)\l  return 0\l}"];
+  Node07972BB0 -> Node07973078;
+  Node07972FA0 [label="{0x41c3:\l  return 4294967295\l}"];
+  Node07972FA0 -> Node07973078;
+  Node07972CD0 [label="{0x41dd:\l  *(IntToPtrCastExpr\<ptr\>(a2)) = 0\l  return 4294967295\l}"];
+  Node07972CD0 -> Node07973078;
+  Node07973078 [label="{exit:\l}"];
+
+}

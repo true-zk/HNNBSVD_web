@@ -1,0 +1,22 @@
+push rbp
+mov rbp, rdi
+mov rdi, qword ptr [rbp + 0x10]
+cmp rbp, rdi
+je 0x2918 <function_28f0+0x28>
+mov rax, qword ptr [rdi + 0x10]
+xor edx, edx
+mov qword ptr [rbp + 0x10], rax
+mov word ptr [rdi], dx
+test byte ptr [rdi + 2], 1
+jne 0x2930 <function_28f0+0x40>
+mov rdi, rax
+cmp rbp, rdi
+jne 0x28fd <function_28f0+0xd>
+mov rdi, qword ptr [rbp + 0x20]
+call 0x21f0 <function_21f0>
+xor eax, eax
+mov word ptr [rbp], ax
+test byte ptr [rbp + 2], 1
+jne 0x2940 <function_28f0+0x50>
+pop rbp
+ret 

@@ -1,0 +1,21 @@
+cli 
+push r13
+push r12
+push rbp
+push rbx
+sub rsp, 8
+mov rbx, qword ptr [rip + 0x3c9b]
+mov rax, qword ptr [rip + 0x3c8c]
+cmp dword ptr [rbx], -2
+mov dword ptr [rax], 0
+je 0x3360 <function_3283+0xdd>
+mov rbp, qword ptr [rip + 0x3d16]
+mov eax, dword ptr [rbp]
+test eax, eax
+jne 0x32c8 <function_3283+0x45>
+add rsp, 8
+pop rbx
+pop rbp
+pop r12
+pop r13
+ret 

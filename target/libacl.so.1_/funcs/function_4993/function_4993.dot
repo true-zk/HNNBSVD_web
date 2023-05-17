@@ -1,0 +1,41 @@
+digraph "Control-flow graph for function 'function_4993(a1, a2, a3, a4, a5)'." {
+  label="Control-flow graph for function 'function_4993(a1, a2, a3, a4, a5)'.";
+  node [shape=record];
+
+  Node081A1088 [label="{entry:\l  a1\l  a2\l  a3\l  a4\l  a5\l}"];
+  Node081A1088 -> Node081A0E00;
+  Node081A0E00 [label="{  v1 = __readfsqword(40)\l  result\l}"];
+  Node081A0E00 -> Node081A0B30;
+  Node081A0B30 [label="{  if (a2 == 0):\l  else:\l}"];
+  Node081A0B30 -> Node081A0D28 [label="a2 == 0"];
+  Node081A0B30 -> Node081A0B78 [label="a2 != 0"];
+  Node081A0D28 [label="{  goto 0x4a10\l}"];
+  Node081A0D28 -> Node081A11F0;
+  Node081A0B78 [label="{0x49b0:\l  v2 = (a2 - 8)\l}"];
+  Node081A0B78 -> Node081A1160;
+  Node081A11F0 [label="{0x4a10:\l  v6 = function_2200(a1, IntToPtrCastExpr\<ptr\>(a2), TruncCastExpr\<int32\>(a3), TruncCastExpr\<int32\>(a4), a5)\l  *(IntToPtrCastExpr\<ptr\>(v6)) = 22\l  result = 4294967295\l  goto 0x49f3\l}"];
+  Node081A11F0 -> Node081A0D70;
+  Node081A1160 [label="{  if (*(IntToPtrCastExpr\<ptr\>(v2)) != 28972):\l  else:\l}"];
+  Node081A1160 -> Node081A0E90 [label="*(IntToPtrCastExpr\<ptr\>(v2)) != 28972"];
+  Node081A1160 -> Node081A0ED8 [label="*(IntToPtrCastExpr\<ptr\>(v2)) == 28972"];
+  Node081A0D70 [label="{0x49f3:\l  if (v1 != __readfsqword(40)):\l}"];
+  Node081A0D70 -> Node081A0F68 [label="v1 != __readfsqword(40)"];
+  Node081A0D70 -> Node081A0C50 [label="v1 == __readfsqword(40)"];
+  Node081A0E90 [label="{  goto 0x4a10\l}"];
+  Node081A0E90 -> Node081A11F0;
+  Node081A0ED8 [label="{0x49b8:\l  v3\l  v4 = function_2870(v2, &(v3))\l  result = 4294967295\l}"];
+  Node081A0ED8 -> Node081A0F20;
+  Node081A0F68 [label="{0x4a2b:\l  return function_2290()\l}"];
+  Node081A0F68 -> Node081A0AA0;
+  Node081A0C50 [label="{0x4a03:\l  return result\l}"];
+  Node081A0C50 -> Node081A0AA0;
+  Node081A0F20 [label="{  if (v4 != 0):\l}"];
+  Node081A0F20 -> Node081A1310 [label="v4 != 0"];
+  Node081A0F20 -> Node081A0FF8 [label="v4 == 0"];
+  Node081A0AA0 [label="{exit:\l}"];
+  Node081A1310 [label="{  v5 = function_2250((a1 & 4294967295), \"system.posix_acl_access\", v4, v3, 0)\l  function_21f0(v4)\l  result = (v5 & 4294967295)\l}"];
+  Node081A1310 -> Node081A0FF8;
+  Node081A0FF8 [label="{  goto 0x49f3\l}"];
+  Node081A0FF8 -> Node081A0D70;
+
+}

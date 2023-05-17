@@ -1,0 +1,6 @@
+cli 
+test rdi, rdi
+je 0x2f8f <function_2f83+0xc>
+mov dword ptr [rdi], 0x4e84
+lea rax, [rip + 0x206a]
+ret 

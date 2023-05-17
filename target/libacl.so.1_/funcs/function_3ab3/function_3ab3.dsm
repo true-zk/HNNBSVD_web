@@ -1,0 +1,31 @@
+cli 
+sub rsp, 8
+test rsi, rsi
+je 0x3b20 <function_3ab3+0x6d>
+cmp word ptr [rsi - 8], 0x712c
+jne 0x3b20 <function_3ab3+0x6d>
+mov rax, qword ptr [rsi + 0x28]
+lea rax, [rax + rax*4]
+lea rax, [rax*8 + 8]
+cmp rax, rdx
+jg 0x3b37 <function_3ab3+0x84>
+mov qword ptr [rdi], rax
+mov rax, qword ptr [rsi + 8]
+lea r8, [rsi - 8]
+lea rcx, [rdi + 8]
+cmp rax, r8
+je 0x3b17 <function_3ab3+0x64>
+nop 
+movdqu xmm0, xmmword ptr [rax + 0x20]
+add rcx, 0x28
+movups xmmword ptr [rcx - 0x28], xmm0
+movdqu xmm1, xmmword ptr [rax + 0x30]
+movups xmmword ptr [rcx - 0x18], xmm1
+mov rdx, qword ptr [rax + 0x40]
+mov rax, qword ptr [rax + 0x10]
+mov qword ptr [rcx - 8], rdx
+cmp rax, r8
+jne 0x3af0 <function_3ab3+0x3d>
+xor eax, eax
+add rsp, 8
+ret 

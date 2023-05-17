@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'acl_calc_mask()'." {
+  label="Control-flow graph for function 'acl_calc_mask()'.";
+  node [shape=record];
+
+  Node0796D168 [label="{entry:\l}"];
+  Node0796D168 -> Node0796D1F8;
+  Node0796D1F8 [label="{0x3920:\l  result\l  return result\l}"];
+  Node0796D1F8 -> Node0796D6C0;
+  Node0796D6C0 [label="{exit:\l}"];
+
+}

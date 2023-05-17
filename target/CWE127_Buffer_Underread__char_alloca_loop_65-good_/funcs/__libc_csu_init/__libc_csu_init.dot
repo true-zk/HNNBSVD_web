@@ -1,0 +1,25 @@
+digraph "Control-flow graph for function '__libc_csu_init(a1, a2, a3)'." {
+  label="Control-flow graph for function '__libc_csu_init(a1, a2, a3)'.";
+  node [shape=record];
+
+  Node0774F018 [label="{entry:\l  a1\l  a2\l  a3\l}"];
+  Node0774F018 -> Node0774E9A0;
+  Node0774E9A0 [label="{  result = _init()\l}"];
+  Node0774E9A0 -> Node0774E880;
+  Node0774E880 [label="{  if (((PtrToIntCastExpr\<int64\>(&(g3)) - PtrToIntCastExpr\<int64\>(&(g2))) \>\> 3) == 0):\l}"];
+  Node0774E880 -> Node0774F1C8 [label="((PtrToIntCastExpr\<int64\>(&(g3)) - PtrToIntCastExpr\<int64\>(&(g2))) \>\> 3) == 0"];
+  Node0774E880 -> Node0774EB08 [label="((PtrToIntCastExpr\<int64\>(&(g3)) - PtrToIntCastExpr\<int64\>(&(g2))) \>\> 3) != 0"];
+  Node0774F1C8 [label="{0x10f6:\l  return result\l}"];
+  Node0774F1C8 -> Node0774E838;
+  Node0774EB08 [label="{  v1 = 0\l}"];
+  Node0774EB08 -> Node0774ECB8;
+  Node0774E838 [label="{exit:\l}"];
+  Node0774ECB8 [label="{  while ((v1 + 1) != ((PtrToIntCastExpr\<int64\>(&(g3)) - PtrToIntCastExpr\<int64\>(&(g2))) \>\> 3)):\l}"];
+  Node0774ECB8 -> Node0774EC70 [label="(v1 + 1) != ((PtrToIntCastExpr\<int64\>(&(g3)) - PtrToIntCastExpr\<int64\>(&(g2))) \>\> 3)"];
+  Node0774ECB8 -> Node0774F648 [label="(v1 + 1) == ((PtrToIntCastExpr\<int64\>(&(g3)) - PtrToIntCastExpr\<int64\>(&(g2))) \>\> 3)"];
+  Node0774EC70 [label="{0x10e0:\l  v1 = (v1 + 1)\l}"];
+  Node0774EC70 -> Node0774ECB8;
+  Node0774F648 [label="{0x10f6:\l  return result\l}"];
+  Node0774F648 -> Node0774E838;
+
+}

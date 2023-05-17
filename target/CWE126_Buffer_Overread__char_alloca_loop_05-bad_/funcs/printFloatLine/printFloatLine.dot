@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'printFloatLine()'." {
+  label="Control-flow graph for function 'printFloatLine()'.";
+  node [shape=record];
+
+  Node06F9F458 [label="{entry:\l}"];
+  Node06F9F458 -> Node06F9FB60;
+  Node06F9FB60 [label="{0xc7b:\l  v1\l  v2 = __asm_cvtss2sd(TruncCastExpr\<int32\>(__asm_movss(v1)))\l  return printf(\"%f\\n\", BitCastExpr\<double\>(TruncCastExpr\<int64\>(v2)))\l}"];
+  Node06F9FB60 -> Node06F9F800;
+  Node06F9F800 [label="{exit:\l}"];
+
+}

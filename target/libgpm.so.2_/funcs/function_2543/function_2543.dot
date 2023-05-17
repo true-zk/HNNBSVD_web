@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2543(*stream, *buf, modes, n)'." {
+  label="Control-flow graph for function 'function_2543(*stream, *buf, modes, n)'.";
+  node [shape=record];
+
+  Node07713058 [label="{entry:\l  stream\l  buf\l  modes\l  n\l}"];
+  Node07713058 -> Node07713250;
+  Node07713250 [label="{0x2543:\l  return setvbuf(stream, buf, modes, n)\l}"];
+  Node07713250 -> Node07712CF8;
+  Node07712CF8 [label="{exit:\l}"];
+
+}

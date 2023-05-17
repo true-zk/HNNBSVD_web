@@ -1,0 +1,11 @@
+push rbp
+mov rbp, rsp
+sub rsp, 0x10
+movss dword ptr [rbp - 4], xmm0
+cvtss2sd xmm0, dword ptr [rbp - 4]
+lea rdi, [rip + 0x553]
+mov eax, 1
+call 0x820 <printf>
+nop 
+leave 
+ret 

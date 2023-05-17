@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'acl_set_permset()'." {
+  label="Control-flow graph for function 'acl_set_permset()'.";
+  node [shape=record];
+
+  Node081A1820 [label="{entry:\l}"];
+  Node081A1820 -> Node081A1C10;
+  Node081A1C10 [label="{0x4b00:\l  result\l  return result\l}"];
+  Node081A1C10 -> Node081A13E8;
+  Node081A13E8 [label="{exit:\l}"];
+
+}

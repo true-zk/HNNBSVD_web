@@ -1,0 +1,18 @@
+digraph "Control-flow graph for function '___main()'." {
+  label="Control-flow graph for function '___main()'.";
+  node [shape=record];
+
+  Node06C7FA18 [label="{entry:\l}"];
+  Node06C7FA18 -> Node06C7F7D8;
+  Node06C7F7D8 [label="{  result = g2\l}"];
+  Node06C7F7D8 -> Node06C7FB38;
+  Node06C7FB38 [label="{  if (result != 0):\l}"];
+  Node06C7FB38 -> Node06C7FC10 [label="result != 0"];
+  Node06C7FB38 -> Node06C7FB80 [label="result == 0"];
+  Node06C7FC10 [label="{0x401a89:\l  return result\l}"];
+  Node06C7FC10 -> Node06C7FAF0;
+  Node06C7FB80 [label="{0x401a90:\l  g2 = 1\l  return ___do_global_ctors()\l}"];
+  Node06C7FB80 -> Node06C7FAF0;
+  Node06C7FAF0 [label="{exit:\l}"];
+
+}

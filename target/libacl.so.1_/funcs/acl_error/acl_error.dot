@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'acl_error()'." {
+  label="Control-flow graph for function 'acl_error()'.";
+  node [shape=record];
+
+  Node081A52E8 [label="{entry:\l}"];
+  Node081A52E8 -> Node081A5258;
+  Node081A5258 [label="{0x5160:\l  result\l  return result\l}"];
+  Node081A5258 -> Node081A5768;
+  Node081A5768 [label="{exit:\l}"];
+
+}

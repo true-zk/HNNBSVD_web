@@ -1,0 +1,16 @@
+cli 
+sub rsp, 8
+test rdi, rdi
+je 0x4bea <function_4bc3+0x27>
+cmp word ptr [rdi - 8], 0x9d6b
+jne 0x4bea <function_4bc3+0x27>
+cmp esi, 0x20
+ja 0x4bea <function_4bc3+0x27>
+movabs rax, 0x100010116
+bt rax, rsi
+jb 0x4c00 <function_4bc3+0x3d>
+call 0x2200 <function_2200>
+mov dword ptr [rax], 0x16
+mov eax, 0xffffffff
+add rsp, 8
+ret 

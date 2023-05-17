@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2523(fd)'." {
+  label="Control-flow graph for function 'function_2523(fd)'.";
+  node [shape=record];
+
+  Node07712710 [label="{entry:\l  fd\l}"];
+  Node07712710 -> Node07712E60;
+  Node07712E60 [label="{0x2523:\l  return ttyname(fd)\l}"];
+  Node07712E60 -> Node07713328;
+  Node07713328 [label="{exit:\l}"];
+
+}

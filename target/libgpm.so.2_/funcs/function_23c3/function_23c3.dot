@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_23c3()'." {
+  label="Control-flow graph for function 'function_23c3()'.";
+  node [shape=record];
+
+  Node077105E0 [label="{entry:\l}"];
+  Node077105E0 -> Node07710A60;
+  Node07710A60 [label="{0x23c3:\l  return getpid()\l}"];
+  Node07710A60 -> Node0770FF20;
+  Node0770FF20 [label="{exit:\l}"];
+
+}

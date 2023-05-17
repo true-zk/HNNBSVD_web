@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2313(size)'." {
+  label="Control-flow graph for function 'function_2313(size)'.";
+  node [shape=record];
+
+  Node07C7E728 [label="{entry:\l  size\l}"];
+  Node07C7E728 -> Node07C7ED58;
+  Node07C7ED58 [label="{0x2313:\l  return malloc(size)\l}"];
+  Node07C7ED58 -> Node07C7ED10;
+  Node07C7ED10 [label="{exit:\l}"];
+
+}

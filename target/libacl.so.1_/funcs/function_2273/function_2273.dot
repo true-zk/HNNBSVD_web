@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2273(*domainname, *msgid, category)'." {
+  label="Control-flow graph for function 'function_2273(*domainname, *msgid, category)'.";
+  node [shape=record];
+
+  Node07C7DD50 [label="{entry:\l  domainname\l  msgid\l  category\l}"];
+  Node07C7DD50 -> Node07C7D9A8;
+  Node07C7D9A8 [label="{0x2273:\l  return dcgettext(domainname, msgid, category)\l}"];
+  Node07C7D9A8 -> Node07C7D918;
+  Node07C7D918 [label="{exit:\l}"];
+
+}

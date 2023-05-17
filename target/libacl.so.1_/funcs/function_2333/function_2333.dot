@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2333(*ptr, size)'." {
+  label="Control-flow graph for function 'function_2333(*ptr, size)'.";
+  node [shape=record];
+
+  Node07C7F610 [label="{entry:\l  ptr\l  size\l}"];
+  Node07C7F610 -> Node07C7F2F8;
+  Node07C7F2F8 [label="{0x2333:\l  return realloc(ptr, size)\l}"];
+  Node07C7F2F8 -> Node07C7F100;
+  Node07C7F100 [label="{exit:\l}"];
+
+}

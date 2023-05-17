@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_800(wc)'." {
+  label="Control-flow graph for function 'function_800(wc)'.";
+  node [shape=record];
+
+  Node0774B1F0 [label="{entry:\l  wc\l}"];
+  Node0774B1F0 -> Node0774A9C8;
+  Node0774A9C8 [label="{0x800:\l  return iswxdigit(wc)\l}"];
+  Node0774A9C8 -> Node0774AF20;
+  Node0774AF20 [label="{exit:\l}"];
+
+}

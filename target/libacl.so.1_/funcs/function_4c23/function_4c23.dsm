@@ -1,0 +1,11 @@
+cli 
+sub rsp, 8
+test rdi, rdi
+je 0x4c50 <function_4c23+0x2d>
+cmp word ptr [rdi - 8], 0x712c
+jne 0x4c50 <function_4c23+0x2d>
+mov rax, qword ptr [rdi + 0x28]
+add rsp, 8
+lea rax, [rax + rax*4]
+lea rax, [rax*8 + 8]
+ret 

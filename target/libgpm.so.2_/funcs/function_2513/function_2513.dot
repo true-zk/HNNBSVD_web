@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2513(*s, *format, ...)'." {
+  label="Control-flow graph for function 'function_2513(*s, *format, ...)'.";
+  node [shape=record];
+
+  Node077123F8 [label="{entry:\l  s\l  format\l}"];
+  Node077123F8 -> Node077125F0;
+  Node077125F0 [label="{0x2513:\l  return sscanf(s, format)\l}"];
+  Node077125F0 -> Node07712518;
+  Node07712518 [label="{exit:\l}"];
+
+}

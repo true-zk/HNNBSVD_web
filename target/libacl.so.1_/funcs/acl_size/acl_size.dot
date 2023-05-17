@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'acl_size()'." {
+  label="Control-flow graph for function 'acl_size()'.";
+  node [shape=record];
+
+  Node081A2DC8 [label="{entry:\l}"];
+  Node081A2DC8 -> Node081A2900;
+  Node081A2900 [label="{0x4c20:\l  result\l  return result\l}"];
+  Node081A2900 -> Node081A2828;
+  Node081A2828 [label="{exit:\l}"];
+
+}

@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'printShortLine(a1)'." {
+  label="Control-flow graph for function 'printShortLine(a1)'.";
+  node [shape=record];
+
+  Node0730F968 [label="{entry:\l  a1\l}"];
+  Node0730F968 -> Node0730F800;
+  Node0730F800 [label="{0xb63:\l  return printf(\"%hd\\n\", TruncCastExpr\<int16\>(a1))\l}"];
+  Node0730F800 -> Node0730FB60;
+  Node0730FB60 [label="{exit:\l}"];
+
+}

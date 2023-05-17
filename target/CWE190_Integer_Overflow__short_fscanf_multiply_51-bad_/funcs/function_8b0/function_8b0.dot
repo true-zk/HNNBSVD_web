@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_8b0(*timer)'." {
+  label="Control-flow graph for function 'function_8b0(*timer)'.";
+  node [shape=record];
+
+  Node0730DE20 [label="{entry:\l  timer\l}"];
+  Node0730DE20 -> Node0730E2E8;
+  Node0730E2E8 [label="{0x8b0:\l  return time(timer)\l}"];
+  Node0730E2E8 -> Node0730E768;
+  Node0730E768 [label="{exit:\l}"];
+
+}

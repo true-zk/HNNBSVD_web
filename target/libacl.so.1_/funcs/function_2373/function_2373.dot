@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2373(*path, *name, *value, size, flags)'." {
+  label="Control-flow graph for function 'function_2373(*path, *name, *value, size, flags)'.";
+  node [shape=record];
+
+  Node07C7F220 [label="{entry:\l  path\l  name\l  value\l  size\l  flags\l}"];
+  Node07C7F220 -> Node07C7F460;
+  Node07C7F460 [label="{0x2373:\l  return setxattr(path, name, value, size, flags)\l}"];
+  Node07C7F460 -> Node07C7F418;
+  Node07C7F418 [label="{exit:\l}"];
+
+}

@@ -1,0 +1,30 @@
+digraph "Control-flow graph for function 'function_3cf3(a1)'." {
+  label="Control-flow graph for function 'function_3cf3(a1)'.";
+  node [shape=record];
+
+  Node0771CE20 [label="{entry:\l  a1\l}"];
+  Node0771CE20 -> Node0771D378;
+  Node0771D378 [label="{  v1 = a1\l}"];
+  Node0771D378 -> Node0771D570;
+  Node0771D570 [label="{  if (v1 \< 0):\l}"];
+  Node0771D570 -> Node0771D498 [label="v1 \< 0"];
+  Node0771D570 -> Node0771CE68 [label="v1 \>= 0"];
+  Node0771D498 [label="{0x3d25:\l  return 0\l}"];
+  Node0771D498 -> Node0771D018;
+  Node0771CE68 [label="{0x3d02:\l  if (v1 == 0):\l}"];
+  Node0771CE68 -> Node0771CEF8 [label="v1 == 0"];
+  Node0771CE68 -> Node0771D450 [label="v1 != 0"];
+  Node0771D018 [label="{exit:\l}"];
+  Node0771CEF8 [label="{0x3d25:\l  return 1\l}"];
+  Node0771CEF8 -> Node0771D018;
+  Node0771D450 [label="{  result = 0\l  result = ((result + 1) & 4294967295)\l  v2 = Gpm_x_high_y(10, result)\l}"];
+  Node0771D450 -> Node0771CEB0;
+  Node0771CEB0 [label="{  while ((a1 & 4294967295) \>= v2):\l}"];
+  Node0771CEB0 -> Node0771CF88 [label="(a1 & 4294967295) \>= v2"];
+  Node0771CEB0 -> Node0771D5B8 [label="(a1 & 4294967295) \< v2"];
+  Node0771CF88 [label="{0x3d10:\l  result = ((result + 1) & 4294967295)\l  v2 = Gpm_x_high_y(10, result)\l}"];
+  Node0771CF88 -> Node0771CEB0;
+  Node0771D5B8 [label="{0x3d25:\l  return result\l}"];
+  Node0771D5B8 -> Node0771D018;
+
+}

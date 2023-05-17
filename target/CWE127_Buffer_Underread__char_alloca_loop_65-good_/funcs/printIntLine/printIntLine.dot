@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'printIntLine(a1)'." {
+  label="Control-flow graph for function 'printIntLine(a1)'.";
+  node [shape=record];
+
+  Node0774BFB8 [label="{entry:\l  a1\l}"];
+  Node0774BFB8 -> Node0774CCA8;
+  Node0774CCA8 [label="{0xbad:\l  return printf(\"%d\\n\", (a1 & 4294967295))\l}"];
+  Node0774CCA8 -> Node0774C8B8;
+  Node0774C8B8 [label="{exit:\l}"];
+
+}

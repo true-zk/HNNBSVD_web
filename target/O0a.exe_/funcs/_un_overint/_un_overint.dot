@@ -1,0 +1,26 @@
+digraph "Control-flow graph for function '_un_overint(a1)'." {
+  label="Control-flow graph for function '_un_overint(a1)'.";
+  node [shape=record];
+
+  Node06C7A888 [label="{entry:\l  a1\l}"];
+  Node06C7A888 -> Node06C7C778;
+  Node06C7C778 [label="{  if ((a1 & 1073741824) != 0):\l}"];
+  Node06C7C778 -> Node06C7EAE8 [label="(a1 & 1073741824) != 0"];
+  Node06C7C778 -> Node06C7C268 [label="(a1 & 1073741824) == 0"];
+  Node06C7EAE8 [label="{  if ((a1 \>= 0) == (a1 != 0)):\l}"];
+  Node06C7EAE8 -> Node06C7EDB8 [label="(a1 \>= 0) == (a1 != 0)"];
+  Node06C7EAE8 -> Node06C7C268 [label="(a1 \>= 0) != (a1 != 0)"];
+  Node06C7C268 [label="{  result = (2 * a1)\l}"];
+  Node06C7C268 -> Node06C7C460;
+  Node06C7EDB8 [label="{0x401497:\l  printf(\"%d * 2  will over int\", a1)\l  return 0\l}"];
+  Node06C7EDB8 -> Node06C7B530;
+  Node06C7C460 [label="{  if ((result \< 1) or (a1 \>= 0)):\l}"];
+  Node06C7C460 -> Node06C7EB78 [label="(result \< 1) or (a1 \>= 0)"];
+  Node06C7C460 -> Node06C7CEC8 [label="(result \>= 1) and (a1 \< 0)"];
+  Node06C7B530 [label="{exit:\l}"];
+  Node06C7EB78 [label="{0x4014bb:\l  return result\l}"];
+  Node06C7EB78 -> Node06C7B530;
+  Node06C7CEC8 [label="{0x401497:\l  printf(\"%d * 2  will over int\", a1)\l  return 0\l}"];
+  Node06C7CEC8 -> Node06C7B530;
+
+}

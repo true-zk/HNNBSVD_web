@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'acl_set_tag_type()'." {
+  label="Control-flow graph for function 'acl_set_tag_type()'.";
+  node [shape=record];
+
+  Node081A2048 [label="{entry:\l}"];
+  Node081A2048 -> Node081A1D78;
+  Node081A1D78 [label="{0x4bc0:\l  result\l  return result\l}"];
+  Node081A1D78 -> Node081A1D30;
+  Node081A1D30 [label="{exit:\l}"];
+
+}

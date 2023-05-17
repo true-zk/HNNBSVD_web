@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_25a3(fd, *addr, len)'." {
+  label="Control-flow graph for function 'function_25a3(fd, *addr, len)'.";
+  node [shape=record];
+
+  Node07713568 [label="{entry:\l  fd\l  addr\l  len\l}"];
+  Node07713568 -> Node07713640;
+  Node07713640 [label="{0x25a3:\l  return connect(fd, addr, len)\l}"];
+  Node07713640 -> Node077135F8;
+  Node077135F8 [label="{exit:\l}"];
+
+}

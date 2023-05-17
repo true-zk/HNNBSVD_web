@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>H-BVD二进制代码漏洞自动检测详细结果</title>
+</head>
+<body>
+    <div class = "whole">
+    
+        <span class="HBVD">H-BVD：二进制代码漏洞检测</span><br>
+        <span class="HBVD-b">详细检测结果</span>
+        <img src="{{ url_for('static', filename='images/v13_3.png') }}" class="pic">
+    <div class="name"></div></div>
+        
+<div class="text-result-detailed">
+    <div>
+    <h3>LEN_of_DSM:</h3>
+    <p style="text-align: center">{{ res["len"] }}Lines</p>
+    </div>
+
+    <div>
+    <h3>DSM: </h3>
+    <pre style="text-align: left">{{ content }}</pre>
+    </div>
+
+    <div>
+        <h3>CFG:</h3>
+        <img src="{{ url_for('get_image', png_path=png_path) }}" alt="Image not found">
+
+    </div>
+
+    <div>
+        <h3>Detection_Time_Span:</h3>
+        <p style="text-align: center">{{ res["time"] }}s</p>
+    </div>
+
+    <div>
+        <h3>Result:</h3>
+        <p>&nbsp&nbsp</p>
+        <table class = "table-detailed">
+          <thead>
+            <tr>
+              <th>函数名</th>
+              <th>无可检测漏洞</th>
+              <th>CWE23</th>
+              <th>CWE126</th>
+              <th>CWE127</th>
+              <th>CWE190</th>
+              <th>CWE401</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>函数分类结果</td>
+              <td>{% if res["y"] == 0 %}&#10003;{% endif %}</td>
+              <td>{% if res["y"] == 1 %}&#10003;{% endif %}</td>
+              <td>{% if res["y"] == 2 %}&#10003;{% endif %}</td>
+              <td>{% if res["y"] == 3 %}&#10003;{% endif %}</td>
+              <td>{% if res["y"] == 4 %}&#10003;{% endif %}</td>
+              <td>{% if res["y"] == 5 %}&#10003;{% endif %}</td>
+            </tr>
+            <tr>
+                <td>相似度</td>
+                <td>{{res["p"][0]}}</td>
+                <td>{{res["p"][1]}}</td>
+                <td>{{res["p"][2]}}</td>
+                <td>{{res["p"][3]}}</td>
+                <td>{{res["p"][4]}}</td>
+                <td>{{res["p"][5]}}</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

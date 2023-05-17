@@ -1,0 +1,46 @@
+cli 
+push rbp
+mov ecx, 0x10
+push rbx
+sub rsp, 0xa8
+mov rax, qword ptr fs:[0x28]
+mov qword ptr [rsp + 0x98], rax
+xor eax, eax
+imul eax, edi, 0x3e8
+lea rbp, [rsp + 0x10]
+mov qword ptr [rsp], 0
+mov rdi, rbp
+cdqe 
+mov qword ptr [rsp + 8], rax
+mov rax, qword ptr [rip + 0x44e7]
+mov ebx, dword ptr [rax]
+xor eax, eax
+test ebx, ebx
+cmovs ebx, eax
+xor eax, eax
+rep stosq qword ptr [rdi], rax
+movsxd rdi, ebx
+call 0x23f0 <function_23f0>
+mov ecx, ebx
+xor edx, edx
+lea edi, [rbx + 1]
+mov r8, rax
+mov eax, 1
+mov rsi, rbp
+shl rax, cl
+xor ecx, ecx
+or qword ptr [rsp + r8*8 + 0x10], rax
+mov r8, rsp
+call 0x24e0 <function_24e0>
+test eax, eax
+sete al
+mov rdx, qword ptr [rsp + 0x98]
+sub rdx, qword ptr fs:[0x28]
+jne 0x2aa8 <function_2a03+0xa5>
+add rsp, 0xa8
+movzx eax, al
+pop rbx
+pop rbp
+ret 
+call 0x23e0 <function_23e0>
+nop dword ptr [rax]

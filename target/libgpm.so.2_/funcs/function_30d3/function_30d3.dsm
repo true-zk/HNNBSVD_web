@@ -1,0 +1,82 @@
+cli 
+push r12
+mov r12, rcx
+push rbp
+sub rsp, 0xd8
+mov qword ptr [rsp + 0x40], r8
+mov qword ptr [rsp + 0x48], r9
+test al, al
+je 0x3126 <function_30d3+0x53>
+movaps xmmword ptr [rsp + 0x50], xmm0
+movaps xmmword ptr [rsp + 0x60], xmm1
+movaps xmmword ptr [rsp + 0x70], xmm2
+movaps xmmword ptr [rsp + 0x80], xmm3
+movaps xmmword ptr [rsp + 0x90], xmm4
+movaps xmmword ptr [rsp + 0xa0], xmm5
+movaps xmmword ptr [rsp + 0xb0], xmm6
+movaps xmmword ptr [rsp + 0xc0], xmm7
+mov rax, qword ptr fs:[0x28]
+mov qword ptr [rsp + 0x18], rax
+xor eax, eax
+cmp edx, 2
+je 0x31b1 <function_30d3+0xde>
+lea rax, [rsp + 0xf0]
+mov dword ptr [rsp], 0x20
+mov qword ptr [rsp + 8], rax
+lea rax, [rsp + 0x20]
+mov dword ptr [rsp + 4], 0x30
+mov qword ptr [rsp + 0x10], rax
+cmp edx, 5
+je 0x3268 <function_30d3+0x195>
+jg 0x31d0 <function_30d3+0xfd>
+cmp edx, 3
+je 0x3220 <function_30d3+0x14d>
+cmp edx, 4
+jne 0x3260 <function_30d3+0x18d>
+mov ebp, 3
+lea rcx, [rip + 0x1e9d]
+lea rdx, [rip + 0x1ee0]
+mov esi, 1
+mov edi, ebp
+xor eax, eax
+call 0x2550 <function_2550>
+mov rcx, rsp
+mov rdx, r12
+mov esi, 1
+mov edi, ebp
+call 0x2450 <function_2450>
+mov rax, qword ptr [rsp + 0x18]
+sub rax, qword ptr fs:[0x28]
+jne 0x3279 <function_30d3+0x1a6>
+add rsp, 0xd8
+pop rbp
+pop r12
+ret 
+cmp edx, 6
+jne 0x3260 <function_30d3+0x18d>
+lea rcx, [rip + 0x1e67]
+lea rdx, [rip + 0x1e8a]
+mov esi, 1
+xor eax, eax
+mov edi, 2
+call 0x2550 <function_2550>
+mov edi, 2
+mov rcx, rsp
+mov rdx, r12
+mov esi, 1
+call 0x2450 <function_2450>
+mov edi, 1
+call 0x2590 <function_2590>
+nop word ptr [rax + rax]
+lea rcx, [rip + 0x1e16]
+lea rdx, [rip + 0x1e43]
+mov esi, 1
+mov edi, 6
+xor eax, eax
+call 0x2550 <function_2550>
+mov rcx, rsp
+mov rdx, r12
+mov esi, 1
+mov edi, 6
+call 0x2450 <function_2450>
+jmp 0x31b1 <function_30d3+0xde>

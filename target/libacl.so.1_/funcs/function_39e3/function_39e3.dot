@@ -1,0 +1,23 @@
+digraph "Control-flow graph for function 'function_39e3(a1)'." {
+  label="Control-flow graph for function 'function_39e3(a1)'.";
+  node [shape=record];
+
+  Node0796E488 [label="{entry:\l  a1\l}"];
+  Node0796E488 -> Node0796E6C8;
+  Node0796E6C8 [label="{0x39e3:\l  v1\l  v2\l  v3\l  v4\l  v5\l}"];
+  Node0796E6C8 -> Node0796E0E0;
+  Node0796E0E0 [label="{  if (a1 == 0):\l}"];
+  Node0796E0E0 -> Node0796E7E8 [label="a1 == 0"];
+  Node0796E0E0 -> Node0796E710 [label="a1 != 0"];
+  Node0796E7E8 [label="{0x3a08:\l  v5 = function_2200(a1, IntToPtrCastExpr\<ptr\>(v2), TruncCastExpr\<int32\>(v3), TruncCastExpr\<int32\>(v4), v1)\l  *(IntToPtrCastExpr\<ptr\>(v5)) = 22\l  return 4294967295\l}"];
+  Node0796E7E8 -> Node0796E3F8;
+  Node0796E710 [label="{0x39ed:\l  if (*(IntToPtrCastExpr\<ptr\>((a1 - 8))) == 7893):\l}"];
+  Node0796E710 -> Node0796E098 [label="*(IntToPtrCastExpr\<ptr\>((a1 - 8))) == 7893"];
+  Node0796E710 -> Node0796E7A0 [label="*(IntToPtrCastExpr\<ptr\>((a1 - 8))) != 7893"];
+  Node0796E3F8 [label="{exit:\l}"];
+  Node0796E098 [label="{0x39f5:\l  *(IntToPtrCastExpr\<ptr\>(a1)) = 0\l  return 0\l}"];
+  Node0796E098 -> Node0796E3F8;
+  Node0796E7A0 [label="{0x3a08:\l  v5 = function_2200(a1, IntToPtrCastExpr\<ptr\>(v2), TruncCastExpr\<int32\>(v3), TruncCastExpr\<int32\>(v4), v1)\l  *(IntToPtrCastExpr\<ptr\>(v5)) = 22\l  return 4294967295\l}"];
+  Node0796E7A0 -> Node0796E3F8;
+
+}

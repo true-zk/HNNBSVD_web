@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_22e3(*nptr, **endptr, base)'." {
+  label="Control-flow graph for function 'function_22e3(*nptr, **endptr, base)'.";
+  node [shape=record];
+
+  Node07C7E890 [label="{entry:\l  nptr\l  endptr\l  base\l}"];
+  Node07C7E890 -> Node07C7E8D8;
+  Node07C7E8D8 [label="{0x22e3:\l  return strtol(nptr, endptr, base)\l}"];
+  Node07C7E8D8 -> Node07C7EA88;
+  Node07C7EA88 [label="{exit:\l}"];
+
+}

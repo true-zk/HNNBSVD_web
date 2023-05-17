@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2383(fd, *buf)'." {
+  label="Control-flow graph for function 'function_2383(fd, *buf)'.";
+  node [shape=record];
+
+  Node07C7FAD8 [label="{entry:\l  fd\l  buf\l}"];
+  Node07C7FAD8 -> Node07C801E0;
+  Node07C801E0 [label="{0x2383:\l  return fstat(fd, buf)\l}"];
+  Node07C801E0 -> Node07C7FF10;
+  Node07C7FF10 [label="{exit:\l}"];
+
+}

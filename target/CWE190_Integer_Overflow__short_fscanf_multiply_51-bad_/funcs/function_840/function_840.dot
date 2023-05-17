@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_840(*stream, *format, ...)'." {
+  label="Control-flow graph for function 'function_840(*stream, *format, ...)'.";
+  node [shape=record];
+
+  Node07308270 [label="{entry:\l  stream\l  format\l}"];
+  Node07308270 -> Node0730DFD0;
+  Node0730DFD0 [label="{0x840:\l  return fscanf(stream, format)\l}"];
+  Node0730DFD0 -> Node0730E018;
+  Node0730E018 [label="{exit:\l}"];
+
+}

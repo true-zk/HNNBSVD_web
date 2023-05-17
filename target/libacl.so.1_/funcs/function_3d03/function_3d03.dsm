@@ -1,0 +1,21 @@
+cli 
+push rbx
+mov rbx, rsi
+test rdi, rdi
+je 0x3d40 <function_3d03+0x3d>
+test rsi, rsi
+je 0x3d4c <function_3d03+0x49>
+mov rax, qword ptr [rdi]
+lea rdi, [rax - 8]
+test rax, rax
+je 0x3d4c <function_3d03+0x49>
+cmp word ptr [rax - 8], 0x712c
+jne 0x3d4c <function_3d03+0x49>
+call 0x2750 <function_2750>
+test rax, rax
+je 0x3d5e <function_3d03+0x5b>
+add rax, 8
+mov qword ptr [rbx], rax
+xor eax, eax
+pop rbx
+ret 

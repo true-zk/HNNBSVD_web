@@ -1,0 +1,35 @@
+push ebp
+mov ebp, esp
+and esp, 0xfffffff0
+sub esp, 0x20
+call 0x401a80 <___main>
+mov dword ptr [esp], 0x40507a ; "input a int, and press enter"
+call 0x403b28 <printf>
+mov eax, dword ptr [esp + 0x1c]
+mov dword ptr [esp + 4], eax
+mov dword ptr [esp], 0x405097 ; "%d"
+call 0x403b18 <scanf>
+mov eax, dword ptr [esp + 0x1c]
+mov dword ptr [esp], eax
+call 0x401460 <_overint>
+mov dword ptr [esp + 0x18], eax
+mov eax, dword ptr [esp + 0x1c]
+mov dword ptr [esp], eax
+call 0x401473 <_un_overint>
+mov dword ptr [esp + 0x14], eax
+cmp dword ptr [esp + 0x14], 0
+jne 0x40152b <main+0x6b>
+mov eax, dword ptr [esp + 0x18]
+mov dword ptr [esp + 4], eax
+mov dword ptr [esp], 0x40509a ; "%d, 0"
+call 0x403b28 <printf>
+jmp 0x401547 <main+0x87>
+mov eax, dword ptr [esp + 0x14]
+mov dword ptr [esp + 8], eax
+mov eax, dword ptr [esp + 0x18]
+mov dword ptr [esp + 4], eax
+mov dword ptr [esp], 0x4050a0 ; "%d, %d"
+call 0x403b28 <printf>
+mov eax, 0
+leave 
+ret 

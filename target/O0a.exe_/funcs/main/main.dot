@@ -1,0 +1,20 @@
+digraph "Control-flow graph for function 'main(argc, **argv)'." {
+  label="Control-flow graph for function 'main(argc, **argv)'.";
+  node [shape=record];
+
+  Node06C7EFF8 [label="{entry:\l  argc\l  argv\l}"];
+  Node06C7EFF8 -> Node06C80000;
+  Node06C80000 [label="{0x4014c0:\l  ___main()\l  printf(\"input a int, and press enter\")\l  v1\l  scanf(\"%d\", IntToPtrCastExpr\<ptr\>(v1))\l  v2 = _overint(v1)\l  v3 = _un_overint(v1)\l}"];
+  Node06C80000 -> Node06C7F8F8;
+  Node06C7F8F8 [label="{  if (v3 != 0):\l  else:\l}"];
+  Node06C7F8F8 -> Node06C7FBC8 [label="v3 != 0"];
+  Node06C7F8F8 -> Node06C7F748 [label="v3 == 0"];
+  Node06C7FBC8 [label="{0x40152b:\l  printf(\"%d, %d\", v2, v3)\l}"];
+  Node06C7FBC8 -> Node06C7F628;
+  Node06C7F748 [label="{0x401515:\l  printf(\"%d, 0\", v2)\l}"];
+  Node06C7F748 -> Node06C7F628;
+  Node06C7F628 [label="{0x401547:\l  return 0\l}"];
+  Node06C7F628 -> Node06C7F9D0;
+  Node06C7F9D0 [label="{exit:\l}"];
+
+}

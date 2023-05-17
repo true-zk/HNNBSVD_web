@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_21f3(*ptr)'." {
+  label="Control-flow graph for function 'function_21f3(*ptr)'.";
+  node [shape=record];
+
+  Node07C7D378 [label="{entry:\l  ptr\l}"];
+  Node07C7D378 -> Node07C7D018;
+  Node07C7D018 [label="{0x21f3:\l  free(ptr)\l}"];
+  Node07C7D018 -> Node07C7CC70;
+  Node07C7CC70 [label="{exit:\l}"];
+
+}

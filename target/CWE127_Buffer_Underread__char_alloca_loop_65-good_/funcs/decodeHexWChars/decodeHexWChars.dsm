@@ -1,0 +1,56 @@
+push rbp
+mov rbp, rsp
+sub rsp, 0x40
+mov qword ptr [rbp - 0x28], rdi
+mov qword ptr [rbp - 0x30], rsi
+mov qword ptr [rbp - 0x38], rdx
+mov rax, qword ptr fs:[0x28]
+mov qword ptr [rbp - 8], rax
+xor eax, eax
+mov qword ptr [rbp - 0x10], 0
+jmp 0xf84 <decodeHexWChars+0x71>
+mov rax, qword ptr [rbp - 0x10]
+lea rdx, [rax*8]
+mov rax, qword ptr [rbp - 0x38]
+lea rcx, [rdx + rax]
+lea rax, [rbp - 0x14]
+mov rdx, rax
+lea rsi, [rip + 0x236]
+mov rdi, rcx
+mov eax, 0
+call 0x850 <swscanf>
+mov edx, dword ptr [rbp - 0x14]
+mov rcx, qword ptr [rbp - 0x28]
+mov rax, qword ptr [rbp - 0x10]
+add rax, rcx
+mov byte ptr [rax], dl
+add qword ptr [rbp - 0x10], 1
+mov rax, qword ptr [rbp - 0x10]
+cmp rax, qword ptr [rbp - 0x30]
+jae 0xfd2 <decodeHexWChars+0xbf>
+mov rax, qword ptr [rbp - 0x10]
+lea rdx, [rax*8]
+mov rax, qword ptr [rbp - 0x38]
+add rax, rdx
+mov eax, dword ptr [rax]
+mov edi, eax
+call 0x800 <iswxdigit>
+test eax, eax
+je 0xfd2 <decodeHexWChars+0xbf>
+mov rax, qword ptr [rbp - 0x10]
+shl rax, 3
+lea rdx, [rax + 4]
+mov rax, qword ptr [rbp - 0x38]
+add rax, rdx
+mov eax, dword ptr [rax]
+mov edi, eax
+call 0x800 <iswxdigit>
+test eax, eax
+jne 0xf40 <decodeHexWChars+0x2d>
+mov rax, qword ptr [rbp - 0x10]
+mov rsi, qword ptr [rbp - 8]
+xor rsi, qword ptr fs:[0x28]
+je 0xfea <decodeHexWChars+0xd7>
+call 0x810 <__stack_chk_fail>
+leave 
+ret 

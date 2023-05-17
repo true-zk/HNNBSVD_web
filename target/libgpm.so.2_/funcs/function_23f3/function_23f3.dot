@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_23f3(d)'." {
+  label="Control-flow graph for function 'function_23f3(d)'.";
+  node [shape=record];
+
+  Node07711048 [label="{entry:\l  d\l}"];
+  Node07711048 -> Node07710DC0;
+  Node07710DC0 [label="{0x23f3:\l  return __fdelt_chk(d)\l}"];
+  Node07710DC0 -> Node07711090;
+  Node07711090 [label="{exit:\l}"];
+
+}

@@ -1,0 +1,41 @@
+digraph "Control-flow graph for function 'function_3c23()'." {
+  label="Control-flow graph for function 'function_3c23()'.";
+  node [shape=record];
+
+  Node0771C8C8 [label="{entry:\l}"];
+  Node0771C8C8 -> Node0771CB98;
+  Node0771CB98 [label="{  v1 = __readfsqword(40)\l  v2\l  v3 = function_2490(PtrToIntCastExpr\<int64\>(\"/dev/vc/0\"), &(v2))\l  v4 = PtrToIntCastExpr\<int64\>(\"/dev/vc/0\")\l  result\l}"];
+  Node0771CB98 -> Node0771C5F8;
+  Node0771C5F8 [label="{  if (TruncCastExpr\<int32\>(v3) == 0):\l  else:\l}"];
+  Node0771C5F8 -> Node0771C7F0 [label="TruncCastExpr\<int32\>(v3) == 0"];
+  Node0771C5F8 -> Node0771C910 [label="TruncCastExpr\<int32\>(v3) != 0"];
+  Node0771C7F0 [label="{  goto 0x3c75\l}"];
+  Node0771C7F0 -> Node0771CC70;
+  Node0771C910 [label="{0x3c59:\l  v5 = function_2490(PtrToIntCastExpr\<int64\>(\"/dev/tty0\"), &(v2))\l  v4 = PtrToIntCastExpr\<int64\>(\"/dev/tty0\")\l  result = 0\l}"];
+  Node0771C910 -> Node0771CDD8;
+  Node0771CC70 [label="{0x3c75:\l  v6 = function_24f0(10, PtrToIntCastExpr\<int64\>(&(v2)))\l  result = 0\l}"];
+  Node0771CC70 -> Node0771CD90;
+  Node0771CDD8 [label="{  if (TruncCastExpr\<int32\>(v5) != 0):\l  else:\l}"];
+  Node0771CDD8 -> Node0771CBE0 [label="TruncCastExpr\<int32\>(v5) != 0"];
+  Node0771CDD8 -> Node0771C5B0 [label="TruncCastExpr\<int32\>(v5) == 0"];
+  Node0771CD90 [label="{  if (v6 != 0):\l}"];
+  Node0771CD90 -> Node0771C520 [label="v6 != 0"];
+  Node0771CD90 -> Node0771CD48 [label="v6 == 0"];
+  Node0771CBE0 [label="{  goto 0x3c92\l}"];
+  Node0771CBE0 -> Node0771C9A0;
+  Node0771C5B0 [label="{  goto 0x3c75\l}"];
+  Node0771C5B0 -> Node0771CC70;
+  Node0771C520 [label="{0x3c84:\l  *(IntToPtrCastExpr\<ptr\>(v6)) = *(IntToPtrCastExpr\<ptr\>(v4))\l  *(IntToPtrCastExpr\<ptr\>((v6 + 8))) = *(IntToPtrCastExpr\<ptr\>((v4 + 8)))\l  result = v6\l}"];
+  Node0771C520 -> Node0771CD48;
+  Node0771CD48 [label="{  goto 0x3c92\l}"];
+  Node0771CD48 -> Node0771C9A0;
+  Node0771C9A0 [label="{0x3c92:\l  if (v1 != __readfsqword(40)):\l}"];
+  Node0771C9A0 -> Node0771CC28 [label="v1 != __readfsqword(40)"];
+  Node0771C9A0 -> Node0771C9E8 [label="v1 == __readfsqword(40)"];
+  Node0771CC28 [label="{0x3caf:\l  return function_23e0()\l}"];
+  Node0771CC28 -> Node0771C760;
+  Node0771C9E8 [label="{0x3ca5:\l  return result\l}"];
+  Node0771C9E8 -> Node0771C760;
+  Node0771C760 [label="{exit:\l}"];
+
+}

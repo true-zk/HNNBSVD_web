@@ -1,0 +1,44 @@
+cli 
+push r12
+push rbx
+mov ebx, edi
+mov edi, 3
+sub rsp, 8
+call 0x27e0 <function_27e0>
+mov r12, rax
+test rax, rax
+je 0x5320 <function_5293+0x8d>
+mov rdi, rax
+call 0x2750 <function_2750>
+test rax, rax
+je 0x5330 <function_5293+0x9d>
+mov edx, ebx
+mov dword ptr [rax + 0x20], 1
+mov rdi, r12
+shr edx, 6
+mov dword ptr [rax + 0x30], 0xffffffff
+and edx, 7
+mov dword ptr [rax + 0x40], edx
+call 0x2750 <function_2750>
+test rax, rax
+je 0x5330 <function_5293+0x9d>
+mov edx, ebx
+mov dword ptr [rax + 0x20], 4
+mov rdi, r12
+shr edx, 3
+mov dword ptr [rax + 0x30], 0xffffffff
+and edx, 7
+mov dword ptr [rax + 0x40], edx
+call 0x2750 <function_2750>
+test rax, rax
+je 0x5330 <function_5293+0x9d>
+and ebx, 7
+mov dword ptr [rax + 0x20], 0x20
+add r12, 8
+mov dword ptr [rax + 0x30], 0xffffffff
+mov dword ptr [rax + 0x40], ebx
+add rsp, 8
+mov rax, r12
+pop rbx
+pop r12
+ret 

@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2343(*name)'." {
+  label="Control-flow graph for function 'function_2343(*name)'.";
+  node [shape=record];
+
+  Node0770FE90 [label="{entry:\l  name\l}"];
+  Node0770FE90 -> Node0770F788;
+  Node0770F788 [label="{0x2343:\l  return getenv(name)\l}"];
+  Node0770F788 -> Node0770FA10;
+  Node0770FA10 [label="{exit:\l}"];
+
+}

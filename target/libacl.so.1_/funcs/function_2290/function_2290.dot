@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2290()'." {
+  label="Control-flow graph for function 'function_2290()'.";
+  node [shape=record];
+
+  Node07C7E1D0 [label="{entry:\l}"];
+  Node07C7E1D0 -> Node07C7E650;
+  Node07C7E650 [label="{0x2290:\l  result\l  return result\l}"];
+  Node07C7E650 -> Node07C7E260;
+  Node07C7E260 [label="{exit:\l}"];
+
+}

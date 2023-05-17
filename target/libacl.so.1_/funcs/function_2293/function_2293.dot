@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2293()'." {
+  label="Control-flow graph for function 'function_2293()'.";
+  node [shape=record];
+
+  Node07C7E4E8 [label="{entry:\l}"];
+  Node07C7E4E8 -> Node07C7E218;
+  Node07C7E218 [label="{0x2293:\l  __stack_chk_fail()\l}"];
+  Node07C7E218 -> Node07C7E578;
+  Node07C7E578 [label="{exit:\l}"];
+
+}

@@ -1,0 +1,14 @@
+cli 
+sub rsp, 8
+test rdi, rdi
+je 0x4180 <function_4153+0x2d>
+cmp word ptr [rdi - 8], 0x1ed5
+jne 0x4180 <function_4153+0x2d>
+mov eax, 0xffffffff
+test esi, 0xfffffff8
+jne 0x4179 <function_4153+0x26>
+xor eax, eax
+and esi, dword ptr [rdi]
+setne al
+add rsp, 8
+ret 

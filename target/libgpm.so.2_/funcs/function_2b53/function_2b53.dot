@@ -1,0 +1,38 @@
+digraph "Control-flow graph for function 'function_2b53(a1, a2, a3, a4)'." {
+  label="Control-flow graph for function 'function_2b53(a1, a2, a3, a4)'.";
+  node [shape=record];
+
+  Node07717780 [label="{entry:\l  a1\l  a2\l  a3\l  a4\l}"];
+  Node07717780 -> Node07717858;
+  Node07717858 [label="{0x2b53:\l  v1\l  v2 = v1\l}"];
+  Node07717858 -> Node07717978;
+  Node07717978 [label="{  if (v2 == 35):\l  else:\l}"];
+  Node07717978 -> Node077178E8 [label="v2 == 35"];
+  Node07717978 -> Node077176F0 [label="v2 != 35"];
+  Node077178E8 [label="{  v3 = (g57 % 32)\l  *(IntToPtrCastExpr\<ptr\>((a2 + 12))) = (24 if (v3 == 0) else ((16 \<\< v3) \| 8))\l  function_2410(&(g55), 0)\l  g57 = 0\l}"];
+  Node077178E8 -> Node077178A0;
+  Node077176F0 [label="{0x2b6a:\l  *(IntToPtrCastExpr\<ptr\>((a2 + 12))) = 4\l  function_2410(&(g53), 0)\l  v4 = 0\l}"];
+  Node077176F0 -> Node077179C0;
+  Node077178A0 [label="{  v6 = (-32 - *(BitCastExpr\<ptr\>(g23)))\l  *(IntToPtrCastExpr\<ptr\>((a2 + 8))) = (v6 + ExtCastExpr\<int16\>(*(IntToPtrCastExpr\<ptr\>((a1 + 1)))))\l  *(IntToPtrCastExpr\<ptr\>((a2 + 10))) = (v6 + ExtCastExpr\<int16\>(*(IntToPtrCastExpr\<ptr\>((a1 + 2)))))\l  return 0\l}"];
+  Node077178A0 -> Node07717C48;
+  Node077179C0 [label="{  if (g55 != 0):\l}"];
+  Node077179C0 -> Node07717D20 [label="g55 != 0"];
+  Node077179C0 -> Node07718278 [label="g55 == 0"];
+  Node07717C48 [label="{exit:\l}"];
+  Node07717D20 [label="{  v5 = (g54 - g56)\l  v4 = (0 if (((TruncCastExpr\<int64\>(((2361183241434822607 * ExtCastExpr\<int128\>(v5)) / 9223372036854775808)) / 128) + (((g53 - g55) * PtrToIntCastExpr\<int64\>(&(g1))) \| (v5 \>\> 63))) \> 249) else (PtrToIntCastExpr\<int32\>(&(g58)) - TruncCastExpr\<int32\>((ExtCastExpr\<int64\>((TruncCastExpr\<int32\>((TruncCastExpr\<int64\>((1431655766 * ExtCastExpr\<int128\>(PtrToIntCastExpr\<int32\>(&(g58))))) \>\> 32)) - (PtrToIntCastExpr\<int32\>(&(g58)) \>\> 31))) + (2 * ExtCastExpr\<int64\>((TruncCastExpr\<int32\>((TruncCastExpr\<int64\>((1431655766 * ExtCastExpr\<int128\>(PtrToIntCastExpr\<int32\>(&(g58))))) \>\> 32)) - (PtrToIntCastExpr\<int32\>(&(g58)) \>\> 31))))))))\l}"];
+  Node07717D20 -> Node07718278;
+  Node07718278 [label="{0x2bf8:\l  g57 = v4\l}"];
+  Node07718278 -> Node07717DF8;
+  Node07717DF8 [label="{  switch v2:\l  case 33:\l  case 34:\l  case 32:\l}"];
+  Node07717DF8 -> Node07717D68 [label="v2 == 33"];
+  Node07717DF8 -> Node07718230 [label="v2 == 34"];
+  Node07717DF8 -> Node07718548 [label="v2 == 32"];
+  Node07717DF8 -> Node077178A0;
+  Node07717D68 [label="{0x2c80:\l  *(IntToPtrCastExpr\<ptr\>(a2)) = 2\l  break\l}"];
+  Node07717D68 -> Node077178A0;
+  Node07718230 [label="{0x2c78:\l  *(IntToPtrCastExpr\<ptr\>(a2)) = 1\l  break\l}"];
+  Node07718230 -> Node077178A0;
+  Node07718548 [label="{0x2c70:\l  *(IntToPtrCastExpr\<ptr\>(a2)) = 4\l  break\l}"];
+  Node07718548 -> Node077178A0;
+
+}

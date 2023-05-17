@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_8d0(*s, *format, ...)'." {
+  label="Control-flow graph for function 'function_8d0(*s, *format, ...)'.";
+  node [shape=record];
+
+  Node0730E528 [label="{entry:\l  s\l  format\l}"];
+  Node0730E528 -> Node0730E7B0;
+  Node0730E7B0 [label="{0x8d0:\l  return sscanf(s, format)\l}"];
+  Node0730E7B0 -> Node0730E720;
+  Node0730E720 [label="{exit:\l}"];
+
+}

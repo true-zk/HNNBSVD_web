@@ -1,0 +1,38 @@
+digraph "Control-flow graph for function 'function_5163(a1)'." {
+  label="Control-flow graph for function 'function_5163(a1)'.";
+  node [shape=record];
+
+  Node081A5330 [label="{entry:\l  a1\l}"];
+  Node081A5330 -> Node081A57B0;
+  Node081A57B0 [label="{  v1 = a1\l}"];
+  Node081A57B0 -> Node081A53C0;
+  Node081A53C0 [label="{  if (v1 == 12288):\l}"];
+  Node081A53C0 -> Node081A5918 [label="v1 == 12288"];
+  Node081A53C0 -> Node081A58D0 [label="v1 != 12288"];
+  Node081A5918 [label="{0x51b8:\l  return function_2270(0, \"Missing or wrong entry\", 5)\l}"];
+  Node081A5918 -> Node081A5378;
+  Node081A58D0 [label="{  if (v1 \> 12288):\l}"];
+  Node081A58D0 -> Node081A5960 [label="v1 \> 12288"];
+  Node081A58D0 -> Node081A5570 [label="v1 \<= 12288"];
+  Node081A5378 [label="{exit:\l}"];
+  Node081A5960 [label="{  if (v1 == 16384):\l}"];
+  Node081A5960 -> Node081A5AC8 [label="v1 == 16384"];
+  Node081A5960 -> Node081A59A8 [label="v1 != 16384"];
+  Node081A5570 [label="{  if (v1 == PtrToIntCastExpr\<int32\>(&(g1))):\l}"];
+  Node081A5570 -> Node081A57F8 [label="v1 == PtrToIntCastExpr\<int32\>(&(g1))"];
+  Node081A5570 -> Node081A5408 [label="v1 != PtrToIntCastExpr\<int32\>(&(g1))"];
+  Node081A5AC8 [label="{0x51a0:\l  return function_2270(0, \"Invalid entry type\", 5)\l}"];
+  Node081A5AC8 -> Node081A5378;
+  Node081A59A8 [label="{0x51d0:\l  return 0\l}"];
+  Node081A59A8 -> Node081A5378;
+  Node081A57F8 [label="{0x51d8:\l  return function_2270(0, \"Multiple entries of same type\", 5)\l}"];
+  Node081A57F8 -> Node081A5378;
+  Node081A5408 [label="{  if (v1 == 8192):\l}"];
+  Node081A5408 -> Node081A59F0 [label="v1 == 8192"];
+  Node081A5408 -> Node081A55B8 [label="v1 != 8192"];
+  Node081A59F0 [label="{0x517e:\l  return function_2270(0, \"Duplicate entries\", 5)\l}"];
+  Node081A59F0 -> Node081A5378;
+  Node081A55B8 [label="{0x51d0:\l  return 0\l}"];
+  Node081A55B8 -> Node081A5378;
+
+}

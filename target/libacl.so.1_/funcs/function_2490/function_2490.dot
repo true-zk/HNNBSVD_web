@@ -1,0 +1,56 @@
+digraph "Control-flow graph for function 'function_2490(a1, a2, a3)'." {
+  label="Control-flow graph for function 'function_2490(a1, a2, a3)'.";
+  node [shape=record];
+
+  Node07C80468 [label="{entry:\l  a1\l  a2\l  a3\l}"];
+  Node07C80468 -> Node07C80A50;
+  Node07C80A50 [label="{  result\l  v1\l}"];
+  Node07C80A50 -> Node07C80738;
+  Node07C80738 [label="{  if (a3 \< 10):\l  else:\l}"];
+  Node07C80738 -> Node07C80978 [label="a3 \< 10"];
+  Node07C80738 -> Node07C806F0 [label="a3 \>= 10"];
+  Node07C80978 [label="{0x2528:\l  v1 = 1\l  result = 1\l}"];
+  Node07C80978 -> Node07C80A98;
+  Node07C806F0 [label="{  v2 = a3\l  v2 = ((3435973837 * v2) / 34359738368)\l  v3 = 2\l  v4 = 10\l  v5 = v4\l  v6 = (v3 & 4294967295)\l}"];
+  Node07C806F0 -> Node07C804F8;
+  Node07C80A98 [label="{  if ((a2 != 0) and (a3 == 0)):\l}"];
+  Node07C80A98 -> Node07C80660 [label="(a2 != 0) and (a3 == 0)"];
+  Node07C80A98 -> Node07C805D0 [label="(a2 == 0) or (a3 != 0)"];
+  Node07C804F8 [label="{  while (TruncCastExpr\<int32\>(v2) \>= 10):\l}"];
+  Node07C804F8 -> Node07C80348 [label="TruncCastExpr\<int32\>(v2) \>= 10"];
+  Node07C804F8 -> Node07C80540 [label="TruncCastExpr\<int32\>(v2) \< 10"];
+  Node07C80660 [label="{0x2531:\l  *(IntToPtrCastExpr\<ptr\>(a1)) = 48\l  *(IntToPtrCastExpr\<ptr\>((a1 + 1))) = 0\l  return 1\l}"];
+  Node07C80660 -> Node07C804B0;
+  Node07C805D0 [label="{  v7 = a3\l  v8 = v1\l  v9 = a1\l  v10 = a2\l}"];
+  Node07C805D0 -> Node07C80930;
+  Node07C80348 [label="{0x24c0:\l  v2 = ((3435973837 * v2) / 34359738368)\l  v3 = (v6 + 1)\l  v4 = ((10 * v5) & 4294967294)\l  v5 = v4\l  v6 = (v3 & 4294967295)\l}"];
+  Node07C80348 -> Node07C804F8;
+  Node07C80540 [label="{0x24db:\l  v1 = v4\l  result = ((4294967296 * v3) / 4294967296)\l}"];
+  Node07C80540 -> Node07C804B0;
+  Node07C804B0 [label="{exit:\l}"];
+  Node07C80930 [label="{  if ((a2 \< 1) or (v1 == 0)):\l  else:\l}"];
+  Node07C80930 -> Node07C80588 [label="(a2 \< 1) or (v1 == 0)"];
+  Node07C80930 -> Node07C80858 [label="(a2 \>= 1) and (v1 != 0)"];
+  Node07C80588 [label="{0x251c:\l  if (a2 != 0):\l}"];
+  Node07C80588 -> Node07C809C0 [label="a2 != 0"];
+  Node07C80588 -> Node07C80810 [label="a2 == 0"];
+  Node07C80858 [label="{  v11 = TruncCastExpr\<int32\>(v8)\l  *(IntToPtrCastExpr\<ptr\>(v9)) = (TruncCastExpr\<int8\>((v7 / v11)) + 48)\l}"];
+  Node07C80858 -> Node07C80618;
+  Node07C809C0 [label="{0x253d:\l  *(IntToPtrCastExpr\<ptr\>(a1)) = 0\l  return result\l}"];
+  Node07C809C0 -> Node07C804B0;
+  Node07C80810 [label="{0x2524:\l  return result\l}"];
+  Node07C80810 -> Node07C804B0;
+  Node07C80618 [label="{  while (v10 \>= 2):\l}"];
+  Node07C80618 -> Node07C80390 [label="v10 \>= 2"];
+  Node07C80618 -> Node07C80810 [label="v10 \< 2"];
+  Node07C80390 [label="{0x2517:\l  v9 = (v9 + 1)\l  v7 = (v7 % v11)\l  v8 = ((3435973837 * (v8 & 4294967295)) / 34359738368)\l  v10 = (v10 - 1)\l  v12 = v9\l}"];
+  Node07C80390 -> Node07C803D8;
+  Node07C803D8 [label="{  if (v11 \< 10):\l}"];
+  Node07C803D8 -> Node07C808A0 [label="v11 \< 10"];
+  Node07C803D8 -> Node07C80AE0 [label="v11 \>= 10"];
+  Node07C808A0 [label="{0x253d:\l  *(IntToPtrCastExpr\<ptr\>(v12)) = 0\l  return result\l}"];
+  Node07C808A0 -> Node07C804B0;
+  Node07C80AE0 [label="{  v11 = TruncCastExpr\<int32\>(v8)\l  *(IntToPtrCastExpr\<ptr\>(v9)) = (TruncCastExpr\<int8\>((v7 / v11)) + 48)\l}"];
+  Node07C80AE0 -> Node07C80618;
+
+}

@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'Gpm_Wgetch()'." {
+  label="Control-flow graph for function 'Gpm_Wgetch()'.";
+  node [shape=record];
+
+  Node077201E0 [label="{entry:\l}"];
+  Node077201E0 -> Node07720150;
+  Node07720150 [label="{0x4650:\l  result\l  return result\l}"];
+  Node07720150 -> Node0771FF10;
+  Node0771FF10 [label="{exit:\l}"];
+
+}

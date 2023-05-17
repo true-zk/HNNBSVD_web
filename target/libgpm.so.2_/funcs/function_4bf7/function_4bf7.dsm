@@ -1,0 +1,5 @@
+cli 
+sub rsp, 8
+call 0x26a0 <function_26a0>
+add rsp, 8
+ret 

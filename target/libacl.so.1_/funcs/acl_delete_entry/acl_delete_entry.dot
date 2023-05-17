@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'acl_delete_entry()'." {
+  label="Control-flow graph for function 'acl_delete_entry()'.";
+  node [shape=record];
+
+  Node0796FB50 [label="{entry:\l}"];
+  Node0796FB50 -> Node07970138;
+  Node07970138 [label="{0x3db0:\l  result\l  return result\l}"];
+  Node07970138 -> Node079700F0;
+  Node079700F0 [label="{exit:\l}"];
+
+}

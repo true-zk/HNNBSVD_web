@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_8b0(*d)'." {
+  label="Control-flow graph for function 'function_8b0(*d)'.";
+  node [shape=record];
+
+  Node0774BAA8 [label="{entry:\l  d\l}"];
+  Node0774BAA8 -> Node0774BA60;
+  Node0774BA60 [label="{0x8b0:\l  __cxa_finalize(d)\l}"];
+  Node0774BA60 -> Node0774BAF0;
+  Node0774BAF0 [label="{exit:\l}"];
+
+}

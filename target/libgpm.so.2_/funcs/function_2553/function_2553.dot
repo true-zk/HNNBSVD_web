@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2553(pri, flag, *fmt, ...)'." {
+  label="Control-flow graph for function 'function_2553(pri, flag, *fmt, ...)'.";
+  node [shape=record];
+
+  Node07713448 [label="{entry:\l  pri\l  flag\l  fmt\l}"];
+  Node07713448 -> Node07713178;
+  Node07713178 [label="{0x2553:\l  __syslog_chk(pri, flag, fmt)\l}"];
+  Node07713178 -> Node077133B8;
+  Node077133B8 [label="{exit:\l}"];
+
+}

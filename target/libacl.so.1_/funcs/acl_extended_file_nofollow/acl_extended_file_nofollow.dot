@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'acl_extended_file_nofollow()'." {
+  label="Control-flow graph for function 'acl_extended_file_nofollow()'.";
+  node [shape=record];
+
+  Node081A5EB8 [label="{entry:\l}"];
+  Node081A5EB8 -> Node081A5F00;
+  Node081A5F00 [label="{0x5280:\l  result\l  return result\l}"];
+  Node081A5F00 -> Node081A5BE8;
+  Node081A5BE8 [label="{exit:\l}"];
+
+}

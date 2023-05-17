@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2563()'." {
+  label="Control-flow graph for function 'function_2563()'.";
+  node [shape=record];
+
+  Node07713208 [label="{entry:\l}"];
+  Node07713208 -> Node07712C20;
+  Node07712C20 [label="{0x2563:\l  return wgetch()\l}"];
+  Node07712C20 -> Node077132E0;
+  Node077132E0 [label="{exit:\l}"];
+
+}

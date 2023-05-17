@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_860()'." {
+  label="Control-flow graph for function 'function_860()'.";
+  node [shape=record];
+
+  Node06F9DDD8 [label="{entry:\l}"];
+  Node06F9DDD8 -> Node06F9DEB0;
+  Node06F9DEB0 [label="{0x860:\l  __stack_chk_fail()\l}"];
+  Node06F9DEB0 -> Node06F9DE68;
+  Node06F9DE68 [label="{exit:\l}"];
+
+}

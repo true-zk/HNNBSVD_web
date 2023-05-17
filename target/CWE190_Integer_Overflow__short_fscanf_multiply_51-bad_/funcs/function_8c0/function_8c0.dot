@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_8c0(*format, ...)'." {
+  label="Control-flow graph for function 'function_8c0(*format, ...)'.";
+  node [shape=record];
+
+  Node0730E2A0 [label="{entry:\l  format\l}"];
+  Node0730E2A0 -> Node0730EA80;
+  Node0730EA80 [label="{0x8c0:\l  return wprintf(format)\l}"];
+  Node0730EA80 -> Node0730E3C0;
+  Node0730E3C0 [label="{exit:\l}"];
+
+}

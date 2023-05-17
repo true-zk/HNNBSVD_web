@@ -1,0 +1,15 @@
+cli 
+sub rsp, 8
+lea rsi, [rip + 0x2299]
+call 0x2360 <function_2360>
+mov r8d, eax
+xor eax, eax
+test r8d, r8d
+jns 0x3d9e <function_3d73+0x2b>
+call 0x2200 <function_2200>
+cmp dword ptr [rax], 0x3d
+setne al
+movzx eax, al
+neg eax
+add rsp, 8
+ret 

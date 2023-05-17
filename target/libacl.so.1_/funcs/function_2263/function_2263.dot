@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2263(uid)'." {
+  label="Control-flow graph for function 'function_2263(uid)'.";
+  node [shape=record];
+
+  Node07C7D9F0 [label="{entry:\l  uid\l}"];
+  Node07C7D9F0 -> Node07C7DA38;
+  Node07C7DA38 [label="{0x2263:\l  return getpwuid(uid)\l}"];
+  Node07C7DA38 -> Node07C7D720;
+  Node07C7D720 [label="{exit:\l}"];
+
+}

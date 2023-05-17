@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'globalReturnsTrue()'." {
+  label="Control-flow graph for function 'globalReturnsTrue()'.";
+  node [shape=record];
+
+  Node0774D908 [label="{entry:\l}"];
+  Node0774D908 -> Node0774DA28;
+  Node0774DA28 [label="{0xfec:\l  return 1\l}"];
+  Node0774DA28 -> Node0774DEF0;
+  Node0774DEF0 [label="{exit:\l}"];
+
+}

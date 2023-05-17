@@ -1,0 +1,12 @@
+push rbp
+mov rbp, rsp
+sub rsp, 0x10
+mov qword ptr [rbp - 8], rdi
+cmp qword ptr [rbp - 8], 0
+je 0xbfe <printLine+0x1f>
+mov rax, qword ptr [rbp - 8]
+mov rdi, rax
+call 0x830 <puts>
+nop 
+leave 
+ret 

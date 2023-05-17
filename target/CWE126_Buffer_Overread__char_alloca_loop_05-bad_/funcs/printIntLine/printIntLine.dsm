@@ -1,0 +1,12 @@
+push rbp
+mov rbp, rsp
+sub rsp, 0x10
+mov dword ptr [rbp - 4], edi
+mov eax, dword ptr [rbp - 4]
+mov esi, eax
+lea rdi, [rip + 0x592]
+mov eax, 0
+call 0x870 <printf>
+nop 
+leave 
+ret 

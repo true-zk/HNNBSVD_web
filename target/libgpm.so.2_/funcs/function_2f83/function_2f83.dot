@@ -1,0 +1,16 @@
+digraph "Control-flow graph for function 'function_2f83(a1)'." {
+  label="Control-flow graph for function 'function_2f83(a1)'.";
+  node [shape=record];
+
+  Node07719CE8 [label="{entry:\l  a1\l}"];
+  Node07719CE8 -> Node07719E08;
+  Node07719E08 [label="{  if (a1 != 0):\l}"];
+  Node07719E08 -> Node07719C10 [label="a1 != 0"];
+  Node07719E08 -> Node07719F70 [label="a1 == 0"];
+  Node07719C10 [label="{0x2f89:\l  *(IntToPtrCastExpr\<ptr\>(a1)) = 20100\l}"];
+  Node07719C10 -> Node07719F70;
+  Node07719F70 [label="{0x2f8f:\l  return PtrToIntCastExpr\<int64\>(\"2.1.0\")\l}"];
+  Node07719F70 -> Node07719B38;
+  Node07719B38 [label="{exit:\l}"];
+
+}

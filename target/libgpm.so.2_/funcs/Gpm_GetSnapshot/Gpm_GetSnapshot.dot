@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'Gpm_GetSnapshot()'." {
+  label="Control-flow graph for function 'Gpm_GetSnapshot()'.";
+  node [shape=record];
+
+  Node0771BCF8 [label="{entry:\l}"];
+  Node0771BCF8 -> Node0771C4D8;
+  Node0771C4D8 [label="{0x3a30:\l  result\l  return result\l}"];
+  Node0771C4D8 -> Node0771BF80;
+  Node0771BF80 [label="{exit:\l}"];
+
+}

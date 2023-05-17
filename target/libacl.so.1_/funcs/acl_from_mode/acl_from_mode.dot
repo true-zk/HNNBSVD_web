@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'acl_from_mode(a1)'." {
+  label="Control-flow graph for function 'acl_from_mode(a1)'.";
+  node [shape=record];
+
+  Node081A5F48 [label="{entry:\l  a1\l}"];
+  Node081A5F48 -> Node081A62F0;
+  Node081A62F0 [label="{0x5290:\l  result\l  return result\l}"];
+  Node081A62F0 -> Node081A6218;
+  Node081A6218 [label="{exit:\l}"];
+
+}

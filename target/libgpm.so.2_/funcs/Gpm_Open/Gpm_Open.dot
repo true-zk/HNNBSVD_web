@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'Gpm_Open(*a1, a2)'." {
+  label="Control-flow graph for function 'Gpm_Open(*a1, a2)'.";
+  node [shape=record];
+
+  Node0771D060 [label="{entry:\l  a1\l  a2\l}"];
+  Node0771D060 -> Node0771D408;
+  Node0771D408 [label="{0x3d30:\l  result\l  return result\l}"];
+  Node0771D408 -> Node0771D0A8;
+  Node0771D0A8 [label="{exit:\l}"];
+
+}

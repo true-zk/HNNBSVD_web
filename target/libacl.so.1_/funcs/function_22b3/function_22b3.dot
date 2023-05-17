@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_22b3(gid)'." {
+  label="Control-flow graph for function 'function_22b3(gid)'.";
+  node [shape=record];
+
+  Node07C7E0F8 [label="{entry:\l  gid\l}"];
+  Node07C7E0F8 -> Node07C7E2F0;
+  Node07C7E2F0 [label="{0x22b3:\l  return getgrgid(gid)\l}"];
+  Node07C7E2F0 -> Node07C7DE70;
+  Node07C7DE70 [label="{exit:\l}"];
+
+}

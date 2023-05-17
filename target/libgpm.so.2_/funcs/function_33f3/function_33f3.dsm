@@ -1,0 +1,43 @@
+cli 
+mov rax, qword ptr [rip + 0x3bcd]
+push r12
+push rbp
+push rbx
+mov r12d, dword ptr [rax]
+test r12d, r12d
+je 0x3474 <function_33f3+0x81>
+mov rax, qword ptr [rip + 0x3b22]
+mov rsi, rdi
+mov rbx, rdi
+mov edx, 0x1c
+mov edi, dword ptr [rax]
+call 0x2460 <function_2460>
+mov rbp, rax
+mov r12d, eax
+cmp eax, 0x1c
+je 0x3480 <function_33f3+0x8d>
+test eax, eax
+je 0x34a0 <function_33f3+0xad>
+cmp eax, -1
+jne 0x343e <function_33f3+0x4b>
+call 0x2370 <function_2370>
+cmp dword ptr [rax], 0xb
+je 0x3474 <function_33f3+0x81>
+sub rsp, 8
+lea r9, [rip + 0x1c2b]
+xor eax, eax
+mov r8d, ebp
+push 0x1ea
+mov edx, 3
+mov rsi, r9
+mov edi, 0x1e9
+lea rcx, [rip + 0x1cd1]
+mov r12d, 0xffffffff
+call 0x30d0 <gpm_report>
+pop rax
+pop rdx
+mov eax, r12d
+pop rbx
+pop rbp
+pop r12
+ret 

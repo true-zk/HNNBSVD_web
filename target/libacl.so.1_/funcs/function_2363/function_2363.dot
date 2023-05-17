@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2363(*path, *name)'." {
+  label="Control-flow graph for function 'function_2363(*path, *name)'.";
+  node [shape=record];
+
+  Node07C7F730 [label="{entry:\l  path\l  name\l}"];
+  Node07C7F730 -> Node07C7F778;
+  Node07C7F778 [label="{0x2363:\l  return removexattr(path, name)\l}"];
+  Node07C7F778 -> Node07C7F580;
+  Node07C7F580 [label="{exit:\l}"];
+
+}

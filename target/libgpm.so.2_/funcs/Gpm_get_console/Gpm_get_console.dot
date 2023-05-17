@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'Gpm_get_console()'." {
+  label="Control-flow graph for function 'Gpm_get_console()'.";
+  node [shape=record];
+
+  Node0771C208 [label="{entry:\l}"];
+  Node0771C208 -> Node0771CB08;
+  Node0771CB08 [label="{0x3c20:\l  result\l  return result\l}"];
+  Node0771CB08 -> Node0771CAC0;
+  Node0771CAC0 [label="{exit:\l}"];
+
+}

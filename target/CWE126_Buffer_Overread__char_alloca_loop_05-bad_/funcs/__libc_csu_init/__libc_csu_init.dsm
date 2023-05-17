@@ -1,0 +1,34 @@
+push r15
+push r14
+mov r15, rdx
+push r13
+push r12
+lea r12, [rip + 0x200c26]
+push rbp
+lea rbp, [rip + 0x200c26]
+push rbx
+mov r13d, edi
+mov r14, rsi
+sub rbp, r12
+sub rsp, 8
+sar rbp, 3
+call 0x800 <_init>
+test rbp, rbp
+je 0x1176 <__libc_csu_init+0x56>
+xor ebx, ebx
+nop dword ptr [rax + rax]
+mov rdx, r15
+mov rsi, r14
+mov edi, r13d
+call qword ptr [r12 + rbx*8]
+add rbx, 1
+cmp rbp, rbx
+jne 0x1160 <__libc_csu_init+0x40>
+add rsp, 8
+pop rbx
+pop rbp
+pop r12
+pop r13
+pop r14
+pop r15
+ret 

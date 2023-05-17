@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'Gpm_x_high_y(a1, a2)'." {
+  label="Control-flow graph for function 'Gpm_x_high_y(a1, a2)'.";
+  node [shape=record];
+
+  Node0771D648 [label="{entry:\l  a1\l  a2\l}"];
+  Node0771D648 -> Node0771D6D8;
+  Node0771D6D8 [label="{0x3cc0:\l  result\l  return result\l}"];
+  Node0771D6D8 -> Node0771D0F0;
+  Node0771D0F0 [label="{exit:\l}"];
+
+}

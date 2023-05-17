@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2613(*s, flag, slen, *format, ...)'." {
+  label="Control-flow graph for function 'function_2613(*s, flag, slen, *format, ...)'.";
+  node [shape=record];
+
+  Node07714378 [label="{entry:\l  s\l  flag\l  slen\l  format\l}"];
+  Node07714378 -> Node07714498;
+  Node07714498 [label="{0x2613:\l  return __sprintf_chk(s, flag, slen, format)\l}"];
+  Node07714498 -> Node07714060;
+  Node07714060 [label="{exit:\l}"];
+
+}

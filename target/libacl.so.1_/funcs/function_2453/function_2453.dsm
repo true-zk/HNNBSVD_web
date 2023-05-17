@@ -1,0 +1,16 @@
+cli 
+mov rdx, qword ptr [rsi]
+mov rcx, qword ptr [rdi]
+mov eax, 0xffffffff
+mov esi, dword ptr [rdx + 0x20]
+cmp dword ptr [rcx + 0x20], esi
+jl 0x2482 <function_2453+0x2f>
+mov eax, 1
+jg 0x2482 <function_2453+0x2f>
+mov eax, dword ptr [rdx + 0x30]
+cmp dword ptr [rcx + 0x30], eax
+mov edx, 0xffffffff
+seta al
+movzx eax, al
+cmovb eax, edx
+ret 

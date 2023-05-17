@@ -1,0 +1,40 @@
+digraph "Control-flow graph for function 'function_3b53(a1)'." {
+  label="Control-flow graph for function 'function_3b53(a1)'.";
+  node [shape=record];
+
+  Node0796E998 [label="{entry:\l  a1\l}"];
+  Node0796E998 -> Node0796F7F0;
+  Node0796F7F0 [label="{0x3b53:\l  v1\l  v2\l  v3\l}"];
+  Node0796F7F0 -> Node0796F688;
+  Node0796F688 [label="{  if (a1 != 0):\l}"];
+  Node0796F688 -> Node0796EB00 [label="a1 != 0"];
+  Node0796F688 -> Node0796F910 [label="a1 == 0"];
+  Node0796EB00 [label="{0x3b67:\l  v2 = a1\l}"];
+  Node0796EB00 -> Node0796F400;
+  Node0796F910 [label="{0x3ca0:\l  v6\l  v7 = function_2200(a1, IntToPtrCastExpr\<ptr\>(v3), TruncCastExpr\<int32\>(v2), TruncCastExpr\<int32\>(v1), v6)\l  *(IntToPtrCastExpr\<ptr\>(v7)) = 22\l  return 0\l}"];
+  Node0796F910 -> Node0796EB48;
+  Node0796F400 [label="{  if (a1 \>= 8):\l}"];
+  Node0796F400 -> Node0796F520 [label="a1 \>= 8"];
+  Node0796F400 -> Node0796F910 [label="a1 \< 8"];
+  Node0796EB48 [label="{exit:\l}"];
+  Node0796F520 [label="{  v4 = (a1 - 8)\l  v1 = -3689348814741910323\l  v2 = v4\l  v3 = 461168601842738790\l}"];
+  Node0796F520 -> Node0796F7A8;
+  Node0796F7A8 [label="{  if ((((-3689348814741910323 * v4) / 8) or (-6917529027641081856 * a1)) \< 461168601842738791):\l}"];
+  Node0796F7A8 -> Node0796F838 [label="(((-3689348814741910323 * v4) / 8) or (-6917529027641081856 * a1)) \< 461168601842738791"];
+  Node0796F7A8 -> Node0796F910;
+  Node0796F838 [label="{  v5 = function_27e0(0)\l}"];
+  Node0796F838 -> Node0796F6D0;
+  Node0796F6D0 [label="{  if (v5 == 0):\l}"];
+  Node0796F6D0 -> Node0796F958 [label="v5 == 0"];
+  Node0796F6D0 -> Node0796F2E0 [label="v5 != 0"];
+  Node0796F958 [label="{0x3cae:\l  return 0\l}"];
+  Node0796F958 -> Node0796EB48;
+  Node0796F2E0 [label="{0x3cd8:\l  if (TruncCastExpr\<int32\>(function_2b60(v5)) == 0):\l}"];
+  Node0796F2E0 -> Node0796F490 [label="TruncCastExpr\<int32\>(function_2b60(v5)) == 0"];
+  Node0796F2E0 -> Node0796F3B8 [label="TruncCastExpr\<int32\>(function_2b60(v5)) != 0"];
+  Node0796F490 [label="{0x3ce4:\l  return (v5 + 8)\l}"];
+  Node0796F490 -> Node0796EB48;
+  Node0796F3B8 [label="{0x3cbc:\l  function_28f0(v5)\l  return 0\l}"];
+  Node0796F3B8 -> Node0796EB48;
+
+}

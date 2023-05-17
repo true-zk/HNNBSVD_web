@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'printLongLongLine(a1)'." {
+  label="Control-flow graph for function 'printLongLongLine(a1)'.";
+  node [shape=record];
+
+  Node06F9F7B8 [label="{entry:\l  a1\l}"];
+  Node06F9F7B8 -> Node06F9F9B0;
+  Node06F9F9B0 [label="{0xcc8:\l  return printf(\"%ld\\n\", TruncCastExpr\<int32\>(a1))\l}"];
+  Node06F9F9B0 -> Node06F9FAD0;
+  Node06F9FAD0 [label="{exit:\l}"];
+
+}

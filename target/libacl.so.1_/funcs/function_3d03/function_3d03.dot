@@ -1,0 +1,42 @@
+digraph "Control-flow graph for function 'function_3d03(a1, a2)'." {
+  label="Control-flow graph for function 'function_3d03(a1, a2)'.";
+  node [shape=record];
+
+  Node0796F760 [label="{entry:\l  a1\l  a2\l}"];
+  Node0796F760 -> Node0796F568;
+  Node0796F568 [label="{0x3d03:\l  v1\l  v2\l  v3\l  v4\l}"];
+  Node0796F568 -> Node0796F880;
+  Node0796F880 [label="{  if (a1 == 0):\l}"];
+  Node0796F880 -> Node0796FAC0 [label="a1 == 0"];
+  Node0796F880 -> Node0796F8C8 [label="a1 != 0"];
+  Node0796FAC0 [label="{0x3d40:\l  if (a2 != 0):\l}"];
+  Node0796FAC0 -> Node07970018 [label="a2 != 0"];
+  Node0796FAC0 -> Node0796F250 [label="a2 == 0"];
+  Node0796F8C8 [label="{0x3d0d:\l  if (a2 == 0):\l}"];
+  Node0796F8C8 -> Node0796F298 [label="a2 == 0"];
+  Node0796F8C8 -> Node0796FB08 [label="a2 != 0"];
+  Node07970018 [label="{0x3d45:\l  *(IntToPtrCastExpr\<ptr\>(a2)) = 0\l}"];
+  Node07970018 -> Node0796F250;
+  Node0796F250 [label="{0x3d4c:\l  v4 = function_2200(0, IntToPtrCastExpr\<ptr\>(a2), TruncCastExpr\<int32\>(v2), TruncCastExpr\<int32\>(v3), v1)\l  *(IntToPtrCastExpr\<ptr\>(v4)) = 22\l  return 4294967295\l}"];
+  Node0796F250 -> Node0796F5B0;
+  Node0796F298 [label="{0x3d4c:\l  v4 = function_2200(a1, IntToPtrCastExpr\<ptr\>(a2), TruncCastExpr\<int32\>(v2), TruncCastExpr\<int32\>(v3), v1)\l  *(IntToPtrCastExpr\<ptr\>(v4)) = 22\l  return 4294967295\l}"];
+  Node0796F298 -> Node0796F5B0;
+  Node0796FB08 [label="{  v5 = (a1 - 8)\l}"];
+  Node0796FB08 -> Node0796F718;
+  Node0796F5B0 [label="{exit:\l}"];
+  Node0796F718 [label="{  if (*(IntToPtrCastExpr\<ptr\>(v5)) != 28972):\l}"];
+  Node0796F718 -> Node0796F448 [label="*(IntToPtrCastExpr\<ptr\>(v5)) != 28972"];
+  Node0796F718 -> Node0796FA30 [label="*(IntToPtrCastExpr\<ptr\>(v5)) == 28972"];
+  Node0796F448 [label="{0x3d4c:\l  v4 = function_2200(v5, IntToPtrCastExpr\<ptr\>(a2), TruncCastExpr\<int32\>(v2), TruncCastExpr\<int32\>(v3), v1)\l  *(IntToPtrCastExpr\<ptr\>(v4)) = 22\l  return 4294967295\l}"];
+  Node0796F448 -> Node0796F5B0;
+  Node0796FA30 [label="{  v6 = function_2750(v5, a2)\l}"];
+  Node0796FA30 -> Node0796F328;
+  Node0796F328 [label="{  if (v6 == 0):\l}"];
+  Node0796F328 -> Node0796F4D8 [label="v6 == 0"];
+  Node0796F328 -> Node0796FA78 [label="v6 != 0"];
+  Node0796F4D8 [label="{0x3d5e:\l  return 4294967295\l}"];
+  Node0796F4D8 -> Node0796F5B0;
+  Node0796FA78 [label="{0x3d30:\l  *(IntToPtrCastExpr\<ptr\>(a2)) = (v6 + 8)\l  return 0\l}"];
+  Node0796FA78 -> Node0796F5B0;
+
+}

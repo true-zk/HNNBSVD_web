@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2610(a1, a2, a3, *a4, a5)'." {
+  label="Control-flow graph for function 'function_2610(a1, a2, a3, *a4, a5)'.";
+  node [shape=record];
+
+  Node077142A0 [label="{entry:\l  a1\l  a2\l  a3\l  a4\l  a5\l}"];
+  Node077142A0 -> Node07714330;
+  Node07714330 [label="{0x2610:\l  result\l  return result\l}"];
+  Node07714330 -> Node077142E8;
+  Node077142E8 [label="{exit:\l}"];
+
+}

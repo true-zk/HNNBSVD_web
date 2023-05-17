@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_890()'." {
+  label="Control-flow graph for function 'function_890()'.";
+  node [shape=record];
+
+  Node0774AD28 [label="{entry:\l}"];
+  Node0774AD28 -> Node0774B868;
+  Node0774B868 [label="{0x890:\l  return rand()\l}"];
+  Node0774B868 -> Node0774B2C8;
+  Node0774B2C8 [label="{exit:\l}"];
+
+}

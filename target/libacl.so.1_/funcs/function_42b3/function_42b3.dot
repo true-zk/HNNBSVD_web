@@ -1,0 +1,16 @@
+digraph "Control-flow graph for function 'function_42b3(a1)'." {
+  label="Control-flow graph for function 'function_42b3(a1)'.";
+  node [shape=record];
+
+  Node07973540 [label="{entry:\l  a1\l}"];
+  Node07973540 -> Node079732B8;
+  Node079732B8 [label="{0x42b3:\l  if (TruncCastExpr\<int32\>(a1) \>= 0):\l}"];
+  Node079732B8 -> Node07973348 [label="TruncCastExpr\<int32\>(a1) \>= 0"];
+  Node079732B8 -> Node079735D0 [label="TruncCastExpr\<int32\>(a1) \< 0"];
+  Node07973348 [label="{  v1 = function_27e0(a1)\l  return ((v1 + 8) if (v1 != 0) else v1)\l}"];
+  Node07973348 -> Node079734B0;
+  Node079735D0 [label="{0x42d8:\l  v2\l  v3\l  v4\l  v5\l  v6 = function_2200(a1, IntToPtrCastExpr\<ptr\>(v3), TruncCastExpr\<int32\>(v4), TruncCastExpr\<int32\>(v5), v2)\l  *(IntToPtrCastExpr\<ptr\>(v6)) = 22\l  return 0\l}"];
+  Node079735D0 -> Node079734B0;
+  Node079734B0 [label="{exit:\l}"];
+
+}

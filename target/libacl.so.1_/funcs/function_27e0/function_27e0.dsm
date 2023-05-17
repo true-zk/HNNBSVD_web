@@ -1,0 +1,23 @@
+push r12
+push rbx
+movsxd rbx, edi
+mov edi, 0x38
+sub rsp, 8
+call 0x2310 <function_2310>
+mov r12, rax
+test rax, rax
+je 0x282e <function_27e0+0x4e>
+mov dword ptr [rax], 0x1712c
+mov qword ptr [rax + 0x30], 0
+mov qword ptr [r12 + 0x10], rax
+mov qword ptr [r12 + 8], rax
+mov qword ptr [r12 + 0x18], rax
+test ebx, ebx
+jg 0x2840 <function_27e0+0x60>
+mov qword ptr [rax + 0x20], 0
+mov qword ptr [r12 + 0x28], 0
+add rsp, 8
+mov rax, r12
+pop rbx
+pop r12
+ret 

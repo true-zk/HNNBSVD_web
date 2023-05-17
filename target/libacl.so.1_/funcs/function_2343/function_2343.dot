@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2343(fd, mode)'." {
+  label="Control-flow graph for function 'function_2343(fd, mode)'.";
+  node [shape=record];
+
+  Node07C7F4F0 [label="{entry:\l  fd\l  mode\l}"];
+  Node07C7F4F0 -> Node07C7F850;
+  Node07C7F850 [label="{0x2343:\l  return fchmod(fd, mode)\l}"];
+  Node07C7F850 -> Node07C7F2B0;
+  Node07C7F2B0 [label="{exit:\l}"];
+
+}

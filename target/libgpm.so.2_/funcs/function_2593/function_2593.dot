@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2593(status)'." {
+  label="Control-flow graph for function 'function_2593(status)'.";
+  node [shape=record];
+
+  Node07713958 [label="{entry:\l  status\l}"];
+  Node07713958 -> Node077136D0;
+  Node077136D0 [label="{0x2593:\l  exit(status)\l}"];
+  Node077136D0 -> Node07713520;
+  Node07713520 [label="{exit:\l}"];
+
+}

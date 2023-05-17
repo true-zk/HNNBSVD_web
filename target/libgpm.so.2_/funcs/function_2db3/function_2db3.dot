@@ -1,0 +1,28 @@
+digraph "Control-flow graph for function 'function_2db3(a1, a2, a3, a4, a5, a6, a7)'." {
+  label="Control-flow graph for function 'function_2db3(a1, a2, a3, a4, a5, a6, a7)'.";
+  node [shape=record];
+
+  Node07718ED8 [label="{entry:\l  a1\l  a2\l  a3\l  a4\l  a5\l  a6\l  a7\l}"];
+  Node07718ED8 -> Node077186B0;
+  Node077186B0 [label="{  v1 = function_24f0(48, a2)\l}"];
+  Node077186B0 -> Node077187D0;
+  Node077187D0 [label="{  if (v1 == 0):\l}"];
+  Node077187D0 -> Node077192C8 [label="v1 == 0"];
+  Node077187D0 -> Node077188A8 [label="v1 != 0"];
+  Node077192C8 [label="{0x2e79:\l  return 0\l}"];
+  Node077192C8 -> Node07718668;
+  Node077188A8 [label="{0x2dee:\l  if (*(IntToPtrCastExpr\<ptr\>(g27)) == 0):\l}"];
+  Node077188A8 -> Node07719358 [label="*(IntToPtrCastExpr\<ptr\>(g27)) == 0"];
+  Node077188A8 -> Node07719310 [label="*(IntToPtrCastExpr\<ptr\>(g27)) != 0"];
+  Node07718668 [label="{exit:\l}"];
+  Node07719358 [label="{  v2 = IntToPtrCastExpr\<ptr\>(g17)\l}"];
+  Node07719358 -> Node077191F0;
+  Node07719310 [label="{0x2dfe:\l  *(IntToPtrCastExpr\<ptr\>(v1)) = TruncCastExpr\<int16\>(a1)\l  *(IntToPtrCastExpr\<ptr\>((v1 + 14))) = 0\l  *(IntToPtrCastExpr\<ptr\>((v1 + 2))) = TruncCastExpr\<int16\>(a3)\l  *(IntToPtrCastExpr\<ptr\>((v1 + 4))) = TruncCastExpr\<int16\>(a2)\l  *(IntToPtrCastExpr\<ptr\>((v1 + 6))) = TruncCastExpr\<int16\>(a4)\l  *(IntToPtrCastExpr\<ptr\>((v1 + 8))) = -65536\l  *(IntToPtrCastExpr\<ptr\>((v1 + 40))) = 0\l  *(IntToPtrCastExpr\<ptr\>((v1 + 32))) = 0\l  *(IntToPtrCastExpr\<ptr\>((v1 + 12))) = TruncCastExpr\<int16\>(a5)\l  *(IntToPtrCastExpr\<ptr\>((v1 + 16))) = a6\l  *(IntToPtrCastExpr\<ptr\>((v1 + 24))) = (v1 if (a7 == 0) else a7)\l  return Gpm_RaiseRoi(v1, 0)\l}"];
+  Node07719310 -> Node07718668;
+  Node077191F0 [label="{  if (*(v2) == 0):\l}"];
+  Node077191F0 -> Node077195E0 [label="*(v2) == 0"];
+  Node077191F0 -> Node07719310 [label="*(v2) != 0"];
+  Node077195E0 [label="{0x2e6d:\l  *(v2) = 10048\l}"];
+  Node077195E0 -> Node07719310;
+
+}

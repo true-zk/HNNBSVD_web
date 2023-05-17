@@ -1,0 +1,27 @@
+push ebp
+mov ebp, esp
+sub esp, 0x28
+mov eax, dword ptr [ebp + 8]
+add eax, eax
+test eax, eax
+jns 0x401488 <_un_overint+0x15>
+cmp dword ptr [ebp + 8], 0
+jg 0x401497 <_un_overint+0x24>
+mov eax, dword ptr [ebp + 8]
+add eax, eax
+test eax, eax
+jle 0x4014b3 <_un_overint+0x40>
+cmp dword ptr [ebp + 8], 0
+jns 0x4014b3 <_un_overint+0x40>
+mov eax, dword ptr [ebp + 8]
+mov dword ptr [esp + 4], eax
+mov dword ptr [esp], 0x405064 ; "%d * 2  will over int"
+call 0x403b28 <printf>
+mov dword ptr [ebp - 0xc], 0
+jmp 0x4014bb <_un_overint+0x48>
+mov eax, dword ptr [ebp + 8]
+add eax, eax
+mov dword ptr [ebp - 0xc], eax
+mov eax, dword ptr [ebp - 0xc]
+leave 
+ret 

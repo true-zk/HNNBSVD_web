@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_25e3(fd, *buf)'." {
+  label="Control-flow graph for function 'function_25e3(fd, *buf)'.";
+  node [shape=record];
+
+  Node07714210 [label="{entry:\l  fd\l  buf\l}"];
+  Node07714210 -> Node07714648;
+  Node07714648 [label="{0x25e3:\l  return fstat(fd, buf)\l}"];
+  Node07714648 -> Node07714600;
+  Node07714600 [label="{exit:\l}"];
+
+}

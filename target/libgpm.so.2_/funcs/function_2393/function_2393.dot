@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2393(fd)'." {
+  label="Control-flow graph for function 'function_2393(fd)'.";
+  node [shape=record];
+
+  Node07710478 [label="{entry:\l  fd\l}"];
+  Node07710478 -> Node07710508;
+  Node07710508 [label="{0x2393:\l  return isatty(fd)\l}"];
+  Node07710508 -> Node07710628;
+  Node07710628 [label="{exit:\l}"];
+
+}

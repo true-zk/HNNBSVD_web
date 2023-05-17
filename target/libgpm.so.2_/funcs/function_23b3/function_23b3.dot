@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_23b3(fd, *buf, n)'." {
+  label="Control-flow graph for function 'function_23b3(fd, *buf, n)'.";
+  node [shape=record];
+
+  Node077107D8 [label="{entry:\l  fd\l  buf\l  n\l}"];
+  Node077107D8 -> Node07710358;
+  Node07710358 [label="{0x23b3:\l  return write(fd, buf, n)\l}"];
+  Node07710358 -> Node07710790;
+  Node07710790 [label="{exit:\l}"];
+
+}

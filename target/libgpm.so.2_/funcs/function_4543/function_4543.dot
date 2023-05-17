@@ -1,0 +1,25 @@
+digraph "Control-flow graph for function 'function_4543()'." {
+  label="Control-flow graph for function 'function_4543()'.";
+  node [shape=record];
+
+  Node0771F610 [label="{entry:\l}"];
+  Node0771F610 -> Node0771F418;
+  Node0771F418 [label="{  v1 = __readfsqword(40)\l  v2\l  function_2480(&(v2))\l  function_2600(&(v2), 20)\l  v3\l  function_2350(0, &(v2), &(v3))\l  v4 = 281474976645120\l  v5 = Gpm_Open(&(v4), 0)\l  function_2350(2, &(v3), NULL)\l  function_23a0(20, &(g70), 0)\l  function_24c0((function_23c0() & 4294967295), 20)\l  v6\l  function_2480(&(v6))\l  v7 = 17728\l  function_23a0(20, &(v7), 0)\l}"];
+  Node0771F418 -> Node0771FF58;
+  Node0771FF58 [label="{  if (TruncCastExpr\<int32\>(v5) \>= 0):\l}"];
+  Node0771FF58 -> Node07720108 [label="TruncCastExpr\<int32\>(v5) \>= 0"];
+  Node0771FF58 -> Node077200C0 [label="TruncCastExpr\<int32\>(v5) \< 0"];
+  Node07720108 [label="{0x4620:\l  Gpm_Close()\l}"];
+  Node07720108 -> Node077200C0;
+  Node077200C0 [label="{  result = (v1 - __readfsqword(40))\l}"];
+  Node077200C0 -> Node07720228;
+  Node07720228 [label="{  if (result != 0):\l}"];
+  Node07720228 -> Node07720270 [label="result != 0"];
+  Node07720228 -> Node0771FFE8 [label="result == 0"];
+  Node07720270 [label="{0x4644:\l  return function_23e0()\l}"];
+  Node07720270 -> Node0771F388;
+  Node0771FFE8 [label="{0x4638:\l  return result\l}"];
+  Node0771FFE8 -> Node0771F388;
+  Node0771F388 [label="{exit:\l}"];
+
+}

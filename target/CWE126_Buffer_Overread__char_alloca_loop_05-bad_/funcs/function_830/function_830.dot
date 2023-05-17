@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_830(*s)'." {
+  label="Control-flow graph for function 'function_830(*s)'.";
+  node [shape=record];
+
+  Node06F92B40 [label="{entry:\l  s\l}"];
+  Node06F92B40 -> Node06F9D520;
+  Node06F9D520 [label="{0x830:\l  return puts(s)\l}"];
+  Node06F9D520 -> Node06F9B798;
+  Node06F9B798 [label="{exit:\l}"];
+
+}

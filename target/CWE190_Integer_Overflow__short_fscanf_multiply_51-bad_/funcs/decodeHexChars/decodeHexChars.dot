@@ -1,0 +1,44 @@
+digraph "Control-flow graph for function 'decodeHexChars(a1, a2, a3)'." {
+  label="Control-flow graph for function 'decodeHexChars(a1, a2, a3)'.";
+  node [shape=record];
+
+  Node07310610 [label="{entry:\l  a1\l  a2\l  a3\l}"];
+  Node07310610 -> Node0730FF08;
+  Node0730FF08 [label="{  v1 = __readfsqword(40)\l  v2 = 0\l  v3 = 0\l}"];
+  Node0730FF08 -> Node07310070;
+  Node07310070 [label="{  if (a2 != 0):\l}"];
+  Node07310070 -> Node07310190 [label="a2 != 0"];
+  Node07310070 -> Node073100B8 [label="a2 == 0"];
+  Node07310190 [label="{  v4 = *(__ctype_b_loc())\l  v5 = (2 * v2)\l  str = IntToPtrCastExpr\<ptr\>((v5 + a3))\l  v3 = v2\l}"];
+  Node07310190 -> Node073101D8;
+  Node073100B8 [label="{  result = v3\l}"];
+  Node073100B8 -> Node0730FD58;
+  Node073101D8 [label="{  while ((*(IntToPtrCastExpr\<ptr\>(((2 * ExtCastExpr\<int64\>(*(str))) + PtrToIntCastExpr\<int64\>(v4)))) & 4096) != 0):\l}"];
+  Node073101D8 -> Node073105C8 [label="(*(IntToPtrCastExpr\<ptr\>(((2 * ExtCastExpr\<int64\>(*(str))) + PtrToIntCastExpr\<int64\>(v4)))) & 4096) != 0"];
+  Node073101D8 -> Node073100B8 [label="(*(IntToPtrCastExpr\<ptr\>(((2 * ExtCastExpr\<int64\>(*(str))) + PtrToIntCastExpr\<int64\>(v4)))) & 4096) == 0"];
+  Node0730FD58 [label="{  if (v1 != __readfsqword(40)):\l}"];
+  Node0730FD58 -> Node073102B0 [label="v1 != __readfsqword(40)"];
+  Node0730FD58 -> Node07310100 [label="v1 == __readfsqword(40)"];
+  Node073105C8 [label="{  v6 = __ctype_b_loc()\l  v7 = *(IntToPtrCastExpr\<ptr\>(((v5 \| 1) + a3)))\l  v3 = v2\l}"];
+  Node073105C8 -> Node0730FE30;
+  Node073102B0 [label="{0xe9e:\l  __stack_chk_fail()\l  result = &(g6)\l}"];
+  Node073102B0 -> Node07310100;
+  Node07310100 [label="{0xea3:\l  return result\l}"];
+  Node07310100 -> Node07310388;
+  Node0730FE30 [label="{  if ((*(IntToPtrCastExpr\<ptr\>(((2 * ExtCastExpr\<int64\>(v7)) + PtrToIntCastExpr\<int64\>(*(v6))))) & 4096) == 0):\l}"];
+  Node0730FE30 -> Node073108E0 [label="(*(IntToPtrCastExpr\<ptr\>(((2 * ExtCastExpr\<int64\>(v7)) + PtrToIntCastExpr\<int64\>(*(v6))))) & 4096) == 0"];
+  Node0730FE30 -> Node07310730 [label="(*(IntToPtrCastExpr\<ptr\>(((2 * ExtCastExpr\<int64\>(v7)) + PtrToIntCastExpr\<int64\>(*(v6))))) & 4096) != 0"];
+  Node07310388 [label="{exit:\l}"];
+  Node073108E0 [label="{break -\> 0xe8b:\l  break\l}"];
+  Node073108E0 -> Node073100B8;
+  Node07310730 [label="{0xdd4:\l  v8\l  sscanf(str, \"%02x\", &(v8))\l  *(IntToPtrCastExpr\<ptr\>((v2 + a1))) = TruncCastExpr\<int8\>(v8)\l  v2 = (v2 + 1)\l  v3 = v2\l}"];
+  Node07310730 -> Node07310A00;
+  Node07310A00 [label="{  if (v2 \>= a2):\l}"];
+  Node07310A00 -> Node07310898 [label="v2 \>= a2"];
+  Node07310A00 -> Node07310E38 [label="v2 \< a2"];
+  Node07310898 [label="{break -\> 0xe8b:\l  break\l}"];
+  Node07310898 -> Node073100B8;
+  Node07310E38 [label="{  v4 = *(__ctype_b_loc())\l  v5 = (2 * v2)\l  str = IntToPtrCastExpr\<ptr\>((v5 + a3))\l  v3 = v2\l}"];
+  Node07310E38 -> Node073101D8;
+
+}

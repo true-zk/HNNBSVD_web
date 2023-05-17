@@ -1,0 +1,32 @@
+<!DOCTYPE html><html><head>
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"><title>H-BVD二进制代码漏洞自动检测</title>
+    <script>
+function displayFileName() {
+  const input = document.getElementById("file");
+  const fileName = input.files[0].name;
+  const fileNameElement = document.getElementById("file-name");
+  fileNameElement.textContent = fileName;
+}
+
+    </script>
+
+
+</head><body><div class = "whole">
+    
+    <span class="HBVD">H-BVD：二进制代码漏洞检测</span>
+    <img src="{{ url_for('static', filename='images/v13_3.png') }}" class="pic">
+<div class="name"></div>
+    
+    <form action="/upload" method="POST" enctype="multipart/form-data" onchange="displayFileName()">
+        <div class="button-container">
+		<input type="file" id="file" name="file" >
+        <label for="file" class="se-button text-1 valign-middle"> 
+            <span class="label">点 击 上 传 文 件</span>
+        </label>
+        <span id="file-name" class="file-name"></span>
+    </div>
+		<input type="submit" class="my-submit" value="检测">
+    </form>
+    
+    <span class="words">在您上传二进制文件并点击“检测”后，H-BVD会自动扫描该文件中是否存在常见漏洞和错误（CWE23，CWE126，CWE127，CWE190，CWE401），以帮助您发现并解决潜在的安全风险。</span></div></body></html>

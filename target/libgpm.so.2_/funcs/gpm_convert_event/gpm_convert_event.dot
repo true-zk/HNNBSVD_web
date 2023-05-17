@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'gpm_convert_event(*a1, *a2)'." {
+  label="Control-flow graph for function 'gpm_convert_event(*a1, *a2)'.";
+  node [shape=record];
+
+  Node07717CD8 [label="{entry:\l  a1\l  a2\l}"];
+  Node07717CD8 -> Node077176A8;
+  Node077176A8 [label="{0x2b50:\l  result\l  return result\l}"];
+  Node077176A8 -> Node07717618;
+  Node07717618 [label="{exit:\l}"];
+
+}

@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'acl_set_file(a1, *a2, a3)'." {
+  label="Control-flow graph for function 'acl_set_file(a1, *a2, a3)'.";
+  node [shape=record];
+
+  Node081A0FB0 [label="{entry:\l  a1\l  a2\l  a3\l}"];
+  Node081A0FB0 -> Node081A1040;
+  Node081A1040 [label="{0x4a30:\l  result\l  return result\l}"];
+  Node081A1040 -> Node081A0A58;
+  Node081A0A58 [label="{exit:\l}"];
+
+}

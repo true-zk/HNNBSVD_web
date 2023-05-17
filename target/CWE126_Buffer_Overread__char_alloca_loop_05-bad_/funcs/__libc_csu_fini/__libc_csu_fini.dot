@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function '__libc_csu_fini()'." {
+  label="Control-flow graph for function '__libc_csu_fini()'.";
+  node [shape=record];
+
+  Node06FA28F0 [label="{entry:\l}"];
+  Node06FA28F0 -> Node06FA2668;
+  Node06FA2668 [label="{0x1190:\l  result\l  return result\l}"];
+  Node06FA2668 -> Node06FA2A10;
+  Node06FA2A10 [label="{exit:\l}"];
+
+}

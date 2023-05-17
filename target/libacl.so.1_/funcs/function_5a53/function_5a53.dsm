@@ -1,0 +1,49 @@
+cli 
+push r15
+mov r15, rsi
+push r14
+mov r14, rdx
+push r13
+mov r13, rdi
+push r12
+push rbp
+push rbx
+sub rsp, 0xb8
+mov rax, qword ptr fs:[0x28]
+mov qword ptr [rsp + 0xa8], rax
+xor eax, eax
+lea rsi, [rsp + 0x10]
+call 0x22d0 <function_22d0>
+test eax, eax
+jne 0x5e60 <function_5a53+0x40d>
+mov esi, 0x8000
+mov rdi, r13
+mov r12d, eax
+call 0x54e0 <acl_get_file>
+mov rbp, rax
+test rax, rax
+je 0x5bc0 <function_5a53+0x16d>
+mov rdx, rax
+mov esi, 0x8000
+mov rdi, r15
+call 0x4a30 <acl_set_file>
+test eax, eax
+jne 0x5b10 <function_5a53+0xbd>
+mov rdi, rbp
+call 0x4010 <acl_free>
+mov eax, dword ptr [rsp + 0x28]
+and eax, 0xf000
+cmp eax, 0x4000
+je 0x5db0 <function_5a53+0x35d>
+mov rax, qword ptr [rsp + 0xa8]
+sub rax, qword ptr fs:[0x28]
+jne 0x5efe <function_5a53+0x4ab>
+add rsp, 0xb8
+mov eax, r12d
+pop rbx
+pop rbp
+pop r12
+pop r13
+pop r14
+pop r15
+ret 

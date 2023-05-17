@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'printStructLine(a1)'." {
+  label="Control-flow graph for function 'printStructLine(a1)'.";
+  node [shape=record];
+
+  Node07310418 [label="{entry:\l  a1\l}"];
+  Node07310418 -> Node073104F0;
+  Node073104F0 [label="{  v1 = *(IntToPtrCastExpr\<ptr\>((a1 + 4)))\l  v2\l  return printf(\"%d -- %d\\n\", (v2 & 4294967295), ExtCastExpr\<int64\>(v1))\l}"];
+  Node073104F0 -> Node073104A8;
+  Node073104A8 [label="{exit:\l}"];
+
+}

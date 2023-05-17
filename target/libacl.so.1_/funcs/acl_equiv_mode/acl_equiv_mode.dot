@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'acl_equiv_mode()'." {
+  label="Control-flow graph for function 'acl_equiv_mode()'.";
+  node [shape=record];
+
+  Node081A4FD0 [label="{entry:\l}"];
+  Node081A4FD0 -> Node081A5018;
+  Node081A5018 [label="{0x5060:\l  result\l  return result\l}"];
+  Node081A5018 -> Node081A5060;
+  Node081A5060 [label="{exit:\l}"];
+
+}

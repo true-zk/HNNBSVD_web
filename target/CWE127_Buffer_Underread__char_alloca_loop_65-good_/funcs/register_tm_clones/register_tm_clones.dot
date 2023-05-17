@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'register_tm_clones()'." {
+  label="Control-flow graph for function 'register_tm_clones()'.";
+  node [shape=record];
+
+  Node0774B3E8 [label="{entry:\l}"];
+  Node0774B3E8 -> Node0774B7D8;
+  Node0774B7D8 [label="{0x930:\l  return 0\l}"];
+  Node0774B7D8 -> Node0774B790;
+  Node0774B790 [label="{exit:\l}"];
+
+}

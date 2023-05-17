@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2270(a1, *a2, a3)'." {
+  label="Control-flow graph for function 'function_2270(a1, *a2, a3)'.";
+  node [shape=record];
+
+  Node07C7DD08 [label="{entry:\l  a1\l  a2\l  a3\l}"];
+  Node07C7DD08 -> Node07C7DDE0;
+  Node07C7DDE0 [label="{0x2270:\l  result\l  return result\l}"];
+  Node07C7DDE0 -> Node07C7D8D0;
+  Node07C7D8D0 [label="{exit:\l}"];
+
+}

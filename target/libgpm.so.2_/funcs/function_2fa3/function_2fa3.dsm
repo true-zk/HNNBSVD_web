@@ -1,0 +1,27 @@
+cli 
+push r13
+push r12
+push rbp
+push rbx
+mov rbx, rdi
+sub rsp, 0xa8
+mov rax, qword ptr fs:[0x28]
+mov qword ptr [rsp + 0x98], rax
+xor eax, eax
+cmp byte ptr [rip + 0x41f2], 0
+mov dword ptr [rsp + 4], 0
+je 0x3018 <function_2fa3+0x75>
+lea rax, [rip + 0x41e1]
+test rbx, rbx
+je 0x2fec <function_2fa3+0x49>
+mov edx, dword ptr [rip + 0x41d2]
+mov dword ptr [rbx], edx
+mov rdx, qword ptr [rsp + 0x98]
+sub rdx, qword ptr fs:[0x28]
+jne 0x30c7 <function_2fa3+0x124>
+add rsp, 0xa8
+pop rbx
+pop rbp
+pop r12
+pop r13
+ret 

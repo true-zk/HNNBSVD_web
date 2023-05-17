@@ -1,0 +1,25 @@
+digraph "Control-flow graph for function 'function_2e93(a1, a2)'." {
+  label="Control-flow graph for function 'function_2e93(a1, a2)'.";
+  node [shape=record];
+
+  Node07719430 [label="{entry:\l  a1\l  a2\l}"];
+  Node07719430 -> Node07719700;
+  Node07719700 [label="{0x2e93:\l  *(IntToPtrCastExpr\<ptr\>((a1 + 40))) = 0\l  *(IntToPtrCastExpr\<ptr\>((a1 + 14))) = 1\l  *(IntToPtrCastExpr\<ptr\>((a1 + 32))) = 0\l}"];
+  Node07719700 -> Node077194C0;
+  Node077194C0 [label="{  if (*(IntToPtrCastExpr\<ptr\>(g27)) != 0):\l}"];
+  Node077194C0 -> Node07718FB0 [label="*(IntToPtrCastExpr\<ptr\>(g27)) != 0"];
+  Node077194C0 -> Node07719238 [label="*(IntToPtrCastExpr\<ptr\>(g27)) == 0"];
+  Node07718FB0 [label="{0x2eba:\l  return Gpm_RaiseRoi(a1, 0)\l}"];
+  Node07718FB0 -> Node07719628;
+  Node07719238 [label="{  v1 = IntToPtrCastExpr\<ptr\>(g17)\l}"];
+  Node07719238 -> Node07719748;
+  Node07719628 [label="{exit:\l}"];
+  Node07719748 [label="{  if (*(v1) == 0):\l}"];
+  Node07719748 -> Node07719670 [label="*(v1) == 0"];
+  Node07719748 -> Node077196B8 [label="*(v1) != 0"];
+  Node07719670 [label="{0x2ed5:\l  *(v1) = 10048\l}"];
+  Node07719670 -> Node077196B8;
+  Node077196B8 [label="{0x2eba:\l  return Gpm_RaiseRoi(a1, 0)\l}"];
+  Node077196B8 -> Node07719628;
+
+}

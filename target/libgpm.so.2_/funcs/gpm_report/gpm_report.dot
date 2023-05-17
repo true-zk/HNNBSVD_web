@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'gpm_report(a1, *a2, a3, *a4, a5, a6)'." {
+  label="Control-flow graph for function 'gpm_report(a1, *a2, a3, *a4, a5, a6)'.";
+  node [shape=record];
+
+  Node0771A948 [label="{entry:\l  a1\l  a2\l  a3\l  a4\l  a5\l  a6\l}"];
+  Node0771A948 -> Node0771A798;
+  Node0771A798 [label="{0x30d0:\l  result\l  return result\l}"];
+  Node0771A798 -> Node0771A678;
+  Node0771A678 [label="{exit:\l}"];
+
+}

@@ -1,0 +1,24 @@
+push rbp
+mov rbp, rsp
+sub rsp, 0x10
+mov rax, qword ptr fs:[0x28]
+mov qword ptr [rbp - 8], rax
+xor eax, eax
+mov word ptr [rbp - 0xa], 0
+mov rax, qword ptr [rip + 0x2015e2]
+lea rdx, [rbp - 0xa]
+lea rsi, [rip + 0x66b]
+mov rdi, rax
+mov eax, 0
+call 0x840 <fscanf>
+movzx eax, word ptr [rbp - 0xa]
+cwde 
+mov edi, eax
+call 0xac2 <CWE190_Integer_Overflow__short_fscanf_multiply_51b_badSink>
+nop 
+mov rax, qword ptr [rbp - 8]
+xor rax, qword ptr fs:[0x28]
+je 0xa77 <CWE190_Integer_Overflow__short_fscanf_multiply_51_bad+0x5d>
+call 0x870 <__stack_chk_fail>
+leave 
+ret 

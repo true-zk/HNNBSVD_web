@@ -1,0 +1,46 @@
+mov r9, rsi
+mov esi, edx
+mov edx, 0xcccccccd
+mov r8, rdi
+mov rax, rsi
+imul rsi, rdx
+shr rsi, 0x23
+cmp eax, 9
+jbe 0x2528 <function_2490+0x98>
+mov ecx, 1
+mov r10d, 1
+nop dword ptr [rax + rax]
+mov esi, esi
+lea ecx, [rcx + rcx*4]
+add r10d, 1
+mov rdi, rsi
+imul rsi, rdx
+add ecx, ecx
+shr rsi, 0x23
+cmp edi, 9
+ja 0x24c0 <function_2490+0x30>
+test ecx, ecx
+je 0x251c <function_2490+0x8c>
+mov edi, 0xcccccccd
+test r9, r9
+jle 0x251c <function_2490+0x8c>
+nop dword ptr [rax]
+xor edx, edx
+add r8, 1
+sub r9, 1
+div ecx
+mov ecx, ecx
+lea esi, [rax + 0x30]
+mov eax, edx
+mov rdx, rcx
+imul rcx, rdi
+mov byte ptr [r8 - 1], sil
+shr rcx, 0x23
+test r9, r9
+jle 0x251c <function_2490+0x8c>
+cmp edx, 9
+ja 0x24f0 <function_2490+0x60>
+movsxd rax, r10d
+test r9, r9
+jne 0x254e <function_2490+0xbe>
+ret 

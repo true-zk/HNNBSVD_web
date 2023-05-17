@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2353(how, *set, *oset)'." {
+  label="Control-flow graph for function 'function_2353(how, *set, *oset)'.";
+  node [shape=record];
+
+  Node0770F620 [label="{entry:\l  how\l  set\l  oset\l}"];
+  Node0770F620 -> Node0770F860;
+  Node0770F860 [label="{0x2353:\l  return sigprocmask(how, set, oset)\l}"];
+  Node0770F860 -> Node0770F7D0;
+  Node0770F7D0 [label="{exit:\l}"];
+
+}

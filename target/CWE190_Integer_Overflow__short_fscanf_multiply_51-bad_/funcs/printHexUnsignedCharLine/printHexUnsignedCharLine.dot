@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'printHexUnsignedCharLine(a1)'." {
+  label="Control-flow graph for function 'printHexUnsignedCharLine(a1)'.";
+  node [shape=record];
+
+  Node0730FB18 [label="{entry:\l  a1\l}"];
+  Node0730FB18 -> Node0730FEC0;
+  Node0730FEC0 [label="{0xcc7:\l  return printf(\"%02x\\n\", (BitCastExpr\<uint32\>(TruncCastExpr\<int32\>(a1)) % 256))\l}"];
+  Node0730FEC0 -> Node0730FE78;
+  Node0730FE78 [label="{exit:\l}"];
+
+}

@@ -1,0 +1,23 @@
+push ebx
+sub esp, 0x18
+mov ebx, dword ptr [0x403c60]
+cmp ebx, -1
+je 0x401a60 <___do_global_ctors+0x30>
+test ebx, ebx
+je 0x401a4f <___do_global_ctors+0x1f>
+call dword ptr [ebx*4 + 0x403c60]
+sub ebx, 1
+jne 0x401a43 <___do_global_ctors+0x13>
+mov dword ptr [esp], 0x401a00
+call 0x401320 <atexit>
+add esp, 0x18
+pop ebx
+ret 
+xor ebx, ebx
+jmp 0x401a66 <___do_global_ctors+0x36>
+mov ebx, eax
+lea eax, [ebx + 1]
+mov edx, dword ptr [eax*4 + 0x403c60]
+test edx, edx
+jne 0x401a64 <___do_global_ctors+0x34>
+jmp 0x401a3f <___do_global_ctors+0xf>

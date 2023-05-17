@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'acl_get_entry(a1, a2, *a3)'." {
+  label="Control-flow graph for function 'acl_get_entry(a1, a2, *a3)'.";
+  node [shape=record];
+
+  Node07971DE8 [label="{entry:\l  a1\l  a2\l  a3\l}"];
+  Node07971DE8 -> Node07971698;
+  Node07971698 [label="{0x4090:\l  result\l  return result\l}"];
+  Node07971698 -> Node07971D58;
+  Node07971D58 [label="{exit:\l}"];
+
+}

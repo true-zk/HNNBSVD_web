@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2573(*file, oflag, ...)'." {
+  label="Control-flow graph for function 'function_2573(*file, oflag, ...)'.";
+  node [shape=record];
+
+  Node07712C68 [label="{entry:\l  file\l  oflag\l}"];
+  Node07712C68 -> Node07713718;
+  Node07713718 [label="{0x2573:\l  return open(file, oflag)\l}"];
+  Node07713718 -> Node07713DD8;
+  Node07713DD8 [label="{exit:\l}"];
+
+}

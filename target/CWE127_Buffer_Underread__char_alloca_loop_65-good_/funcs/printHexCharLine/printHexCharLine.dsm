@@ -1,0 +1,13 @@
+push rbp
+mov rbp, rsp
+sub rsp, 0x10
+mov eax, edi
+mov byte ptr [rbp - 4], al
+movsx eax, byte ptr [rbp - 4]
+mov esi, eax
+lea rdi, [rip + 0x4c5]
+mov eax, 0
+call 0x820 <printf>
+nop 
+leave 
+ret 

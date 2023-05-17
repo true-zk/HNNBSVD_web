@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_22f3(*dest, *src, n)'." {
+  label="Control-flow graph for function 'function_22f3(*dest, *src, n)'.";
+  node [shape=record];
+
+  Node07C7EB60 [label="{entry:\l  dest\l  src\l  n\l}"];
+  Node07C7EB60 -> Node07C7EBF0;
+  Node07C7EBF0 [label="{0x22f3:\l  return memcpy(dest, src, n)\l}"];
+  Node07C7EBF0 -> Node07C7EEC0;
+  Node07C7EEC0 [label="{exit:\l}"];
+
+}

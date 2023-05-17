@@ -1,0 +1,13 @@
+cli 
+cmp byte ptr [rip + 0x6bfd], 0
+jne 0x2438 <function_2403+0x35>
+push rbp
+cmp qword ptr [rip + 0x5f1a], 0
+mov rbp, rsp
+je 0x2427 <function_2403+0x24>
+mov rdi, qword ptr [rip + 0x6bde]
+call 0x21e0 <function_21e0>
+call 0x2390 <function_2390>
+mov byte ptr [rip + 0x6bd5], 1
+pop rbp
+ret 

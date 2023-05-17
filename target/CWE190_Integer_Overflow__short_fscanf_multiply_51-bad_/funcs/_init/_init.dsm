@@ -1,0 +1,7 @@
+sub rsp, 8
+mov rax, qword ptr [rip + 0x2017cd]
+test rax, rax
+je 0x822 <_init+0x12>
+call rax <__gmon_start__>
+add rsp, 8
+ret 

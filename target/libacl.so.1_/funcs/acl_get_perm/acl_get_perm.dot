@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'acl_get_perm(a1, a2)'." {
+  label="Control-flow graph for function 'acl_get_perm(a1, a2)'.";
+  node [shape=record];
+
+  Node07972340 [label="{entry:\l  a1\l  a2\l}"];
+  Node07972340 -> Node07972190;
+  Node07972190 [label="{0x4150:\l  result\l  return result\l}"];
+  Node07972190 -> Node07972220;
+  Node07972220 [label="{exit:\l}"];
+
+}

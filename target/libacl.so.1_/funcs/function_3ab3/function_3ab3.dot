@@ -1,0 +1,46 @@
+digraph "Control-flow graph for function 'function_3ab3(a1, a2, a3)'." {
+  label="Control-flow graph for function 'function_3ab3(a1, a2, a3)'.";
+  node [shape=record];
+
+  Node0796EC20 [label="{entry:\l  a1\l  a2\l  a3\l}"];
+  Node0796EC20 -> Node0796EB90;
+  Node0796EB90 [label="{0x3ab3:\l  v1\l  v2\l  v3\l}"];
+  Node0796EB90 -> Node0796EDD0;
+  Node0796EDD0 [label="{  if (a2 == 0):\l}"];
+  Node0796EDD0 -> Node0796EF80 [label="a2 == 0"];
+  Node0796EDD0 -> Node0796EEF0 [label="a2 != 0"];
+  Node0796EF80 [label="{0x3b20:\l  v3 = function_2200(a1, IntToPtrCastExpr\<ptr\>(a2), TruncCastExpr\<int32\>(a3), TruncCastExpr\<int32\>(v2), v1)\l  *(IntToPtrCastExpr\<ptr\>(v3)) = 22\l  return -1\l}"];
+  Node0796EF80 -> Node0796F058;
+  Node0796EEF0 [label="{  v4 = (a2 - 8)\l}"];
+  Node0796EEF0 -> Node0796EE18;
+  Node0796F058 [label="{exit:\l}"];
+  Node0796EE18 [label="{  if (*(IntToPtrCastExpr\<ptr\>(v4)) != 28972):\l}"];
+  Node0796EE18 -> Node0796EFC8 [label="*(IntToPtrCastExpr\<ptr\>(v4)) != 28972"];
+  Node0796EE18 -> Node0796EBD8 [label="*(IntToPtrCastExpr\<ptr\>(v4)) == 28972"];
+  Node0796EFC8 [label="{0x3b20:\l  v3 = function_2200(a1, IntToPtrCastExpr\<ptr\>(a2), TruncCastExpr\<int32\>(a3), TruncCastExpr\<int32\>(v2), v1)\l  *(IntToPtrCastExpr\<ptr\>(v3)) = 22\l  return -1\l}"];
+  Node0796EFC8 -> Node0796F058;
+  Node0796EBD8 [label="{  v5 = ((40 * *(IntToPtrCastExpr\<ptr\>((a2 + 40)))) + 8)\l}"];
+  Node0796EBD8 -> Node0796ED88;
+  Node0796ED88 [label="{  if (v5 \> a3):\l}"];
+  Node0796ED88 -> Node0796F0E8 [label="v5 \> a3"];
+  Node0796ED88 -> Node0796F1C0 [label="v5 \<= a3"];
+  Node0796F0E8 [label="{  v6 = function_2200(a1, IntToPtrCastExpr\<ptr\>(a2), TruncCastExpr\<int32\>(a3), TruncCastExpr\<int32\>(v2), v1)\l  *(IntToPtrCastExpr\<ptr\>(v6)) = 34\l  return -1\l}"];
+  Node0796F0E8 -> Node0796F058;
+  Node0796F1C0 [label="{0x3ada:\l  *(IntToPtrCastExpr\<ptr\>(a1)) = v5\l  v7 = *(IntToPtrCastExpr\<ptr\>((a2 + 8)))\l}"];
+  Node0796F1C0 -> Node0796EEA8;
+  Node0796EEA8 [label="{  if (v7 == v4):\l}"];
+  Node0796EEA8 -> Node0796F130 [label="v7 == v4"];
+  Node0796EEA8 -> Node0796EF38 [label="v7 != v4"];
+  Node0796F130 [label="{0x3b19:\l  return 0\l}"];
+  Node0796F130 -> Node0796F058;
+  Node0796EF38 [label="{  v8 = (a1 + 8)\l  __asm_movups(*(IntToPtrCastExpr\<ptr\>(v8)), __asm_movdqu(*(IntToPtrCastExpr\<ptr\>((v7 + 32)))))\l  __asm_movups(*(IntToPtrCastExpr\<ptr\>((v8 + 16))), __asm_movdqu(*(IntToPtrCastExpr\<ptr\>((v7 + 48)))))\l  v9 = *(IntToPtrCastExpr\<ptr\>((v7 + 16)))\l  *(IntToPtrCastExpr\<ptr\>((v8 + 32))) = *(IntToPtrCastExpr\<ptr\>((v7 + 64)))\l  v8 = (v8 + 40)\l}"];
+  Node0796EF38 -> Node0796F208;
+  Node0796F208 [label="{  while (v9 != v4):\l}"];
+  Node0796F208 -> Node0796E950 [label="v9 != v4"];
+  Node0796F208 -> Node0796F0A0 [label="v9 == v4"];
+  Node0796E950 [label="{  v10 = v9\l  __asm_movups(*(IntToPtrCastExpr\<ptr\>(v8)), __asm_movdqu(*(IntToPtrCastExpr\<ptr\>((v10 + 32)))))\l  __asm_movups(*(IntToPtrCastExpr\<ptr\>((v8 + 16))), __asm_movdqu(*(IntToPtrCastExpr\<ptr\>((v10 + 48)))))\l  v9 = *(IntToPtrCastExpr\<ptr\>((v10 + 16)))\l  *(IntToPtrCastExpr\<ptr\>((v8 + 32))) = *(IntToPtrCastExpr\<ptr\>((v10 + 64)))\l  v8 = (v8 + 40)\l}"];
+  Node0796E950 -> Node0796F208;
+  Node0796F0A0 [label="{0x3b19:\l  return 0\l}"];
+  Node0796F0A0 -> Node0796F058;
+
+}

@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'Gpm_GetServerVersion(a1)'." {
+  label="Control-flow graph for function 'Gpm_GetServerVersion(a1)'.";
+  node [shape=record];
+
+  Node07719E50 [label="{entry:\l  a1\l}"];
+  Node07719E50 -> Node07719868;
+  Node07719868 [label="{0x2fa0:\l  result\l  return result\l}"];
+  Node07719868 -> Node0771A048;
+  Node0771A048 [label="{exit:\l}"];
+
+}

@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'good6()'." {
+  label="Control-flow graph for function 'good6()'.";
+  node [shape=record];
+
+  Node073114F8 [label="{entry:\l}"];
+  Node073114F8 -> Node07311030;
+  Node07311030 [label="{0xfd5:\l  result\l  return result\l}"];
+  Node07311030 -> Node07311660;
+  Node07311660 [label="{exit:\l}"];
+
+}

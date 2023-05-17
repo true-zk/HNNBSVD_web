@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2493(*file, *buf)'." {
+  label="Control-flow graph for function 'function_2493(*file, *buf)'.";
+  node [shape=record];
+
+  Node07712128 [label="{entry:\l  file\l  buf\l}"];
+  Node07712128 -> Node07712098;
+  Node07712098 [label="{0x2493:\l  return stat(file, buf)\l}"];
+  Node07712098 -> Node07712008;
+  Node07712008 [label="{exit:\l}"];
+
+}

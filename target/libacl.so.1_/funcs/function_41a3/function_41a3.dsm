@@ -1,0 +1,14 @@
+cli 
+push rbx
+mov rbx, rsi
+test rdi, rdi
+je 0x41c8 <function_41a3+0x25>
+cmp word ptr [rdi - 8], 0x9d6b
+jne 0x41c8 <function_41a3+0x25>
+test rsi, rsi
+je 0x41e6 <function_41a3+0x43>
+add rdi, 0x38
+xor eax, eax
+mov qword ptr [rsi], rdi
+pop rbx
+ret 

@@ -1,0 +1,63 @@
+cli 
+push r12
+push rbp
+mov rbp, rdi
+push rbx
+movzx eax, byte ptr [rdi]
+mov rbx, rsi
+cmp eax, 0x23
+je 0x2c40 <function_2b53+0xed>
+mov dword ptr [rsi + 0xc], 4
+lea rdi, [rip + 0x4678]
+xor esi, esi
+lea r12d, [rax - 0x20]
+call 0x2410 <function_2410>
+mov rdi, qword ptr [rip + 0x4676]
+xor ecx, ecx
+test rdi, rdi
+je 0x2bf8 <function_2b53+0xa5>
+mov rsi, qword ptr [rip + 0x4660]
+sub rsi, qword ptr [rip + 0x4669]
+movabs rdx, 0x20c49ba5e353f7cf
+mov rax, rsi
+sar rsi, 0x3f
+imul rdx
+mov rax, qword ptr [rip + 0x4636]
+sub rax, rdi
+imul rax, rax, 0x3e8
+sar rdx, 7
+sub rdx, rsi
+add rdx, rax
+cmp rdx, 0xf9
+jg 0x2bf8 <function_2b53+0xa5>
+mov eax, dword ptr [rip + 0x4633]
+add eax, 1
+movsxd rcx, eax
+cdq 
+imul rcx, rcx, 0x55555556
+shr rcx, 0x20
+sub ecx, edx
+lea edx, [rcx + rcx*2]
+sub eax, edx
+mov ecx, eax
+mov dword ptr [rip + 0x4612], ecx
+cmp r12d, 1
+je 0x2c80 <function_2b53+0x12d>
+cmp r12d, 2
+je 0x2c78 <function_2b53+0x125>
+test r12d, r12d
+je 0x2c70 <function_2b53+0x11d>
+mov rdx, qword ptr [rip + 0x43a2]
+mov eax, 0xffffffe0
+sub ax, word ptr [rdx]
+movzx edx, byte ptr [rbp + 1]
+add edx, eax
+mov word ptr [rbx + 8], dx
+movzx edx, byte ptr [rbp + 2]
+add eax, edx
+mov word ptr [rbx + 0xa], ax
+pop rbx
+xor eax, eax
+pop rbp
+pop r12
+ret 

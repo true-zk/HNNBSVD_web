@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_25b3(*ptr, size, n, *s)'." {
+  label="Control-flow graph for function 'function_25b3(*ptr, size, n, *s)'.";
+  node [shape=record];
+
+  Node07713BE0 [label="{entry:\l  ptr\l  size\l  n\l  s\l}"];
+  Node07713BE0 -> Node07713760;
+  Node07713760 [label="{0x25b3:\l  return fwrite(ptr, size, n, s)\l}"];
+  Node07713760 -> Node07713D48;
+  Node07713D48 [label="{exit:\l}"];
+
+}

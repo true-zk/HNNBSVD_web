@@ -1,0 +1,23 @@
+digraph "Control-flow graph for function 'printBytesLine(a1, a2)'." {
+  label="Control-flow graph for function 'printBytesLine(a1, a2)'.";
+  node [shape=record];
+
+  Node06FA0340 [label="{entry:\l  a1\l  a2\l}"];
+  Node06FA0340 -> Node06FA04F0;
+  Node06FA04F0 [label="{0xe3b:\l  if (a2 == 0):\l}"];
+  Node06FA04F0 -> Node06FA0460 [label="a2 == 0"];
+  Node06FA04F0 -> Node06FA0388 [label="a2 != 0"];
+  Node06FA0460 [label="{0xe88:\l  return puts(BitCastExpr\<ptr\>(&(g1)))\l}"];
+  Node06FA0460 -> Node06FA0070;
+  Node06FA0388 [label="{  v1 = 0\l  printf(\"%02x\", ExtCastExpr\<int32\>(*(IntToPtrCastExpr\<ptr\>((v1 + a1)))))\l  v1 = (v1 + 1)\l}"];
+  Node06FA0388 -> Node06F9FF50;
+  Node06FA0070 [label="{exit:\l}"];
+  Node06F9FF50 [label="{  while (v1 != a2):\l}"];
+  Node06F9FF50 -> Node06FA0268 [label="v1 != a2"];
+  Node06F9FF50 -> Node06F9FE78 [label="v1 == a2"];
+  Node06FA0268 [label="{0xe55:\l  printf(\"%02x\", ExtCastExpr\<int32\>(*(IntToPtrCastExpr\<ptr\>((v1 + a1)))))\l  v1 = (v1 + 1)\l}"];
+  Node06FA0268 -> Node06F9FF50;
+  Node06F9FE78 [label="{0xe88:\l  return puts(BitCastExpr\<ptr\>(&(g1)))\l}"];
+  Node06F9FE78 -> Node06FA0070;
+
+}

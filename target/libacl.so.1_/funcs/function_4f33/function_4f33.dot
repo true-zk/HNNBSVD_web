@@ -1,0 +1,23 @@
+digraph "Control-flow graph for function 'function_4f33(a1)'." {
+  label="Control-flow graph for function 'function_4f33(a1)'.";
+  node [shape=record];
+
+  Node081A40A0 [label="{entry:\l  a1\l}"];
+  Node081A40A0 -> Node081A4370;
+  Node081A4370 [label="{0x4f33:\l  v1\l  v2\l  v3\l  v4\l  v5\l}"];
+  Node081A4370 -> Node081A4838;
+  Node081A4838 [label="{  if (a1 == 0):\l}"];
+  Node081A4838 -> Node081A4058 [label="a1 == 0"];
+  Node081A4838 -> Node081A43B8 [label="a1 != 0"];
+  Node081A4058 [label="{0x4f50:\l  v5 = function_2200(a1, IntToPtrCastExpr\<ptr\>(v2), TruncCastExpr\<int32\>(v3), TruncCastExpr\<int32\>(v4), v1)\l  *(IntToPtrCastExpr\<ptr\>(v5)) = 22\l  return 4294967295\l}"];
+  Node081A4058 -> Node081A47F0;
+  Node081A43B8 [label="{0x4f3d:\l  if (*(IntToPtrCastExpr\<ptr\>((a1 - 8))) == 28972):\l}"];
+  Node081A43B8 -> Node081A4490 [label="*(IntToPtrCastExpr\<ptr\>((a1 - 8))) == 28972"];
+  Node081A43B8 -> Node081A4910 [label="*(IntToPtrCastExpr\<ptr\>((a1 - 8))) != 28972"];
+  Node081A47F0 [label="{exit:\l}"];
+  Node081A4490 [label="{0x4f45:\l  return ExtCastExpr\<int64\>(*(IntToPtrCastExpr\<ptr\>((a1 + 40))))\l}"];
+  Node081A4490 -> Node081A47F0;
+  Node081A4910 [label="{0x4f50:\l  v5 = function_2200(a1, IntToPtrCastExpr\<ptr\>(v2), TruncCastExpr\<int32\>(v3), TruncCastExpr\<int32\>(v4), v1)\l  *(IntToPtrCastExpr\<ptr\>(v5)) = 22\l  return 4294967295\l}"];
+  Node081A4910 -> Node081A47F0;
+
+}

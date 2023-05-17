@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2303(*name)'." {
+  label="Control-flow graph for function 'function_2303(*name)'.";
+  node [shape=record];
+
+  Node07C7E920 [label="{entry:\l  name\l}"];
+  Node07C7E920 -> Node07C7EC80;
+  Node07C7EC80 [label="{0x2303:\l  return getgrnam(name)\l}"];
+  Node07C7EC80 -> Node07C7E968;
+  Node07C7E968 [label="{exit:\l}"];
+
+}

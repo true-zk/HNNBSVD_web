@@ -1,0 +1,30 @@
+digraph "Control-flow graph for function '___do_global_ctors()'." {
+  label="Control-flow graph for function '___do_global_ctors()'.";
+  node [shape=record];
+
+  Node06C7FCA0 [label="{entry:\l}"];
+  Node06C7FCA0 -> Node06C7FA60;
+  Node06C7FA60 [label="{  v1 = 0\l  v2 = (v1 + 1)\l}"];
+  Node06C7FA60 -> Node06C7FF70;
+  Node06C7FF70 [label="{  while (*(IntToPtrCastExpr\<ptr\>(((4 * v2) + PtrToIntCastExpr\<int32\>(&(g1))))) != 0):\l}"];
+  Node06C7FF70 -> Node06C7FE98 [label="*(IntToPtrCastExpr\<ptr\>(((4 * v2) + PtrToIntCastExpr\<int32\>(&(g1))))) != 0"];
+  Node06C7FF70 -> Node06C7F940 [label="*(IntToPtrCastExpr\<ptr\>(((4 * v2) + PtrToIntCastExpr\<int32\>(&(g1))))) == 0"];
+  Node06C7FE98 [label="{0x401a66:\l  v1 = v2\l  v2 = (v1 + 1)\l}"];
+  Node06C7FE98 -> Node06C7FF70;
+  Node06C7F940 [label="{0x401a74:\l  if (v1 == 0):\l}"];
+  Node06C7F940 -> Node06C7B338 [label="v1 == 0"];
+  Node06C7F940 -> Node06C7FFB8 [label="v1 != 0"];
+  Node06C7B338 [label="{0x401a4f:\l  return atexit(IntToPtrCastExpr\<ptr\>(4200960))\l}"];
+  Node06C7B338 -> Node06C7F790;
+  Node06C7FFB8 [label="{  v3 = v1\l}"];
+  Node06C7FFB8 -> Node06C7FAA8;
+  Node06C7F790 [label="{exit:\l}"];
+  Node06C7FAA8 [label="{  while (v3 != 1):\l}"];
+  Node06C7FAA8 -> Node06C7FCE8 [label="v3 != 1"];
+  Node06C7FAA8 -> Node06C7FEE0 [label="v3 == 1"];
+  Node06C7FCE8 [label="{0x401a43:\l  v3 = (v3 - 1)\l}"];
+  Node06C7FCE8 -> Node06C7FAA8;
+  Node06C7FEE0 [label="{0x401a4f:\l  return atexit(IntToPtrCastExpr\<ptr\>(4200960))\l}"];
+  Node06C7FEE0 -> Node06C7F790;
+
+}

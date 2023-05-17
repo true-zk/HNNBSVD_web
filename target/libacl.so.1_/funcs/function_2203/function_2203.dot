@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2203()'." {
+  label="Control-flow graph for function 'function_2203()'.";
+  node [shape=record];
+
+  Node07C7D2A0 [label="{entry:\l}"];
+  Node07C7D2A0 -> Node07C7D3C0;
+  Node07C7D3C0 [label="{0x2203:\l  return __errno_location()\l}"];
+  Node07C7D3C0 -> Node07C7D180;
+  Node07C7D180 [label="{exit:\l}"];
+
+}

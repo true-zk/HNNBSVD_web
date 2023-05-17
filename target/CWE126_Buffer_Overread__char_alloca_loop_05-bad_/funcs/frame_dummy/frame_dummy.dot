@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'frame_dummy()'." {
+  label="Control-flow graph for function 'frame_dummy()'.";
+  node [shape=record];
+
+  Node06F9EE70 [label="{entry:\l}"];
+  Node06F9EE70 -> Node06F9F338;
+  Node06F9F338 [label="{0xa10:\l  return register_tm_clones()\l}"];
+  Node06F9F338 -> Node06F9ECC0;
+  Node06F9ECC0 [label="{exit:\l}"];
+
+}

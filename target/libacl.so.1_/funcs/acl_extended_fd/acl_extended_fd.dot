@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'acl_extended_fd()'." {
+  label="Control-flow graph for function 'acl_extended_fd()'.";
+  node [shape=record];
+
+  Node081A5528 [label="{entry:\l}"];
+  Node081A5528 -> Node081A5A38;
+  Node081A5A38 [label="{0x51f0:\l  result\l  return result\l}"];
+  Node081A5A38 -> Node081A5840;
+  Node081A5840 [label="{exit:\l}"];
+
+}

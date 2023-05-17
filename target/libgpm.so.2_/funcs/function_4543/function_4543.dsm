@@ -1,0 +1,60 @@
+cli 
+push r12
+push rbp
+push rbx
+sub rsp, 0x1b0
+mov rax, qword ptr fs:[0x28]
+mov qword ptr [rsp + 0x1a8], rax
+xor eax, eax
+lea rbp, [rsp + 0x10]
+lea r12, [rsp + 0x90]
+mov rdi, rbp
+call 0x2480 <function_2480>
+mov rdi, rbp
+mov esi, 0x14
+call 0x2600 <function_2600>
+mov rdx, r12
+mov rsi, rbp
+xor edi, edi
+call 0x2350 <function_2350>
+xor esi, esi
+mov rdi, rsp
+movabs rax, 0xffffffff0000
+mov qword ptr [rsp], rax
+lea rbp, [rsp + 0x110]
+call 0x3d30 <Gpm_Open>
+xor edx, edx
+mov rsi, r12
+mov edi, 2
+mov ebx, eax
+call 0x2350 <function_2350>
+xor edx, edx
+mov edi, 0x14
+lea rsi, [rip + 0x2d10]
+call 0x23a0 <function_23a0>
+call 0x23c0 <function_23c0>
+mov esi, 0x14
+mov edi, eax
+call 0x24c0 <function_24c0>
+lea rdi, [rsp + 0x118]
+call 0x2480 <function_2480>
+xor edx, edx
+mov rsi, rbp
+mov edi, 0x14
+lea rax, [rip - 0xc4]
+mov dword ptr [rsp + 0x198], 0x40000000
+mov qword ptr [rsp + 0x110], rax
+call 0x23a0 <function_23a0>
+test ebx, ebx
+js 0x4625 <function_4543+0xe2>
+call 0x3280 <Gpm_Close>
+mov rax, qword ptr [rsp + 0x1a8]
+sub rax, qword ptr fs:[0x28]
+jne 0x4644 <function_4543+0x101>
+add rsp, 0x1b0
+pop rbx
+pop rbp
+pop r12
+ret 
+call 0x23e0 <function_23e0>
+nop dword ptr [rax]

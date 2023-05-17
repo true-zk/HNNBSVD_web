@@ -1,0 +1,21 @@
+digraph "Control-flow graph for function '__do_global_dtors_aux()'." {
+  label="Control-flow graph for function '__do_global_dtors_aux()'.";
+  node [shape=record];
+
+  Node0774B430 [label="{entry:\l}"];
+  Node0774B430 -> Node0774B598;
+  Node0774B598 [label="{0x980:\l  if (*(BitCastExpr\<ptr\>(&(g4))) != 0):\l}"];
+  Node0774B598 -> Node0774B700 [label="*(BitCastExpr\<ptr\>(&(g4))) != 0"];
+  Node0774B598 -> Node0774B5E0 [label="*(BitCastExpr\<ptr\>(&(g4))) == 0"];
+  Node0774B700 [label="{0x9b8:\l  result\l  return result\l}"];
+  Node0774B700 -> Node0774B8F8;
+  Node0774B5E0 [label="{0x989:\l  if (*(IntToPtrCastExpr\<ptr\>(2105336)) != 0):\l}"];
+  Node0774B5E0 -> Node0774B748 [label="*(IntToPtrCastExpr\<ptr\>(2105336)) != 0"];
+  Node0774B5E0 -> Node0774B670 [label="*(IntToPtrCastExpr\<ptr\>(2105336)) == 0"];
+  Node0774B8F8 [label="{exit:\l}"];
+  Node0774B748 [label="{0x997:\l  __cxa_finalize(IntToPtrCastExpr\<ptr\>(*(IntToPtrCastExpr\<ptr\>(2105352))))\l}"];
+  Node0774B748 -> Node0774B670;
+  Node0774B670 [label="{  result2 = deregister_tm_clones()\l  *(BitCastExpr\<ptr\>(&(g4))) = 1\l  return result2\l}"];
+  Node0774B670 -> Node0774B8F8;
+
+}

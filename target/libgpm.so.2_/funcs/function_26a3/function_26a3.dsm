@@ -1,0 +1,33 @@
+cli 
+cmp byte ptr [rip + 0x49b5], 0
+jne 0x2728 <function_26a3+0x85>
+push rbp
+cmp qword ptr [rip + 0x493a], 0
+mov rbp, rsp
+push r12
+push rbx
+je 0x26ca <function_26a3+0x27>
+mov rdi, qword ptr [rip + 0x493b]
+call 0x2330 <function_2330>
+lea rax, [rip + 0x4507]
+lea rbx, [rip + 0x4508]
+sub rbx, rax
+mov r12, rax
+mov rax, qword ptr [rip + 0x4983]
+sar rbx, 3
+sub rbx, 1
+cmp rax, rbx
+jae 0x2713 <function_26a3+0x70>
+nop word ptr [rax + rax]
+add rax, 1
+mov qword ptr [rip + 0x4965], rax
+call qword ptr [r12 + rax*8]
+mov rax, qword ptr [rip + 0x495a]
+cmp rax, rbx
+jb 0x26f8 <function_26a3+0x55>
+call 0x2630 <function_2630>
+pop rbx
+pop r12
+mov byte ptr [rip + 0x493e], 1
+pop rbp
+ret 

@@ -1,0 +1,18 @@
+push rbp
+mov rbp, rsp
+sub rsp, 0x10
+mov dword ptr [rbp - 4], edi
+mov qword ptr [rbp - 0x10], rsi
+mov edi, 0
+call 0x860 <time>
+mov edi, eax
+call 0x840 <srand>
+lea rdi, [rip + 0x67f]
+call 0xb5d <printLine>
+mov eax, 0
+call 0xa6d <CWE127_Buffer_Underread__char_alloca_loop_65_good>
+lea rdi, [rip + 0x67b]
+call 0xb5d <printLine>
+mov eax, 0
+leave 
+ret 

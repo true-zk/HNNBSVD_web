@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'Gpm_LowerRoi()'." {
+  label="Control-flow graph for function 'Gpm_LowerRoi()'.";
+  node [shape=record];
+
+  Node07718FF8 [label="{entry:\l}"];
+  Node07718FF8 -> Node07719088;
+  Node07719088 [label="{0x2ef0:\l  result\l  return result\l}"];
+  Node07719088 -> Node07718F20;
+  Node07718F20 [label="{exit:\l}"];
+
+}

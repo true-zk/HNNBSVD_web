@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'printSizeTLine(a1)'." {
+  label="Control-flow graph for function 'printSizeTLine(a1)'.";
+  node [shape=record];
+
+  Node0730F6E0 [label="{entry:\l  a1\l}"];
+  Node0730F6E0 -> Node0730FA88;
+  Node0730FA88 [label="{0xbff:\l  return printf(\"%zu\\n\", a1)\l}"];
+  Node0730FA88 -> Node0730F578;
+  Node0730F578 [label="{exit:\l}"];
+
+}

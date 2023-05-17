@@ -1,0 +1,43 @@
+digraph "Control-flow graph for function 'function_2953()'." {
+  label="Control-flow graph for function 'function_2953()'.";
+  node [shape=record];
+
+  Node07716CD0 [label="{entry:\l}"];
+  Node07716CD0 -> Node077172B8;
+  Node077172B8 [label="{  v1 = __readfsqword(40)\l  v2\l  v3\l  v4 = function_2420(*(g22), &(g4), BitCastExpr\<ptr\>(&(v2)), v3)\l  v5\l  v6\l}"];
+  Node077172B8 -> Node07716E38;
+  Node07716E38 [label="{  if (TruncCastExpr\<int32\>(v4) == -1):\l  else:\l}"];
+  Node07716E38 -> Node07717348 [label="TruncCastExpr\<int32\>(v4) == -1"];
+  Node07716E38 -> Node07717300 [label="TruncCastExpr\<int32\>(v4) != -1"];
+  Node07717348 [label="{  goto 0x29c7\l}"];
+  Node07717348 -> Node07717270;
+  Node07717300 [label="{0x2992:\l  v7\l}"];
+  Node07717300 -> Node07717030;
+  Node07717270 [label="{0x29c7:\l  result = (v1 - __readfsqword(40))\l}"];
+  Node07717270 -> Node07716F10;
+  Node07717030 [label="{  if (TruncCastExpr\<int16\>(v7) != 0):\l  else:\l}"];
+  Node07717030 -> Node07716FA0 [label="TruncCastExpr\<int16\>(v7) != 0"];
+  Node07717030 -> Node07716B20 [label="TruncCastExpr\<int16\>(v7) == 0"];
+  Node07716F10 [label="{  if (result != 0):\l}"];
+  Node07716F10 -> Node07717390 [label="result != 0"];
+  Node07716F10 -> Node07716F58 [label="result == 0"];
+  Node07716FA0 [label="{0x29e0:\l  v5 = (v7 % 65536)\l  v6 = (v2 % 65536)\l}"];
+  Node07716FA0 -> Node07716FE8;
+  Node07716B20 [label="{0x299c:\l  v5 = 80\l  v6 = 25\l  goto 0x29a6\l}"];
+  Node07716B20 -> Node077170C0;
+  Node07717390 [label="{0x29eb:\l  return function_23e0()\l}"];
+  Node07717390 -> Node07716E80;
+  Node07716F58 [label="{0x29d7:\l  return result\l}"];
+  Node07716F58 -> Node07716E80;
+  Node07716FE8 [label="{  if (TruncCastExpr\<int16\>(v2) == 0):\l  else:\l}"];
+  Node07716FE8 -> Node07717078 [label="TruncCastExpr\<int16\>(v2) == 0"];
+  Node07716FE8 -> Node07716DF0 [label="TruncCastExpr\<int16\>(v2) != 0"];
+  Node077170C0 [label="{0x29a6:\l  v8 = *(g23)\l  *(g15) = (v5 - v8)\l  *(g28) = (v6 - v8)\l  goto 0x29c7\l}"];
+  Node077170C0 -> Node07717270;
+  Node07716E80 [label="{exit:\l}"];
+  Node07717078 [label="{0x299c:\l  v5 = 80\l  v6 = 25\l  goto 0x29a6\l}"];
+  Node07717078 -> Node077170C0;
+  Node07716DF0 [label="{  goto 0x29a6\l}"];
+  Node07716DF0 -> Node077170C0;
+
+}

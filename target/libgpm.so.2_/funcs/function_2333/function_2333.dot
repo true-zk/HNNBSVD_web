@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2333(*d)'." {
+  label="Control-flow graph for function 'function_2333(*d)'.";
+  node [shape=record];
+
+  Node0770F6B0 [label="{entry:\l  d\l}"];
+  Node0770F6B0 -> Node0770FE00;
+  Node0770FE00 [label="{0x2333:\l  __cxa_finalize(d)\l}"];
+  Node0770FE00 -> Node0770FA58;
+  Node0770FA58 [label="{exit:\l}"];
+
+}

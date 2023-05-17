@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_4bb0()'." {
+  label="Control-flow graph for function 'function_4bb0()'.";
+  node [shape=record];
+
+  Node0771F8E0 [label="{entry:\l}"];
+  Node0771F8E0 -> Node0771F580;
+  Node0771F580 [label="{0x4bb0:\l  result\l  return result\l}"];
+  Node0771F580 -> Node0771F970;
+  Node0771F970 [label="{exit:\l}"];
+
+}

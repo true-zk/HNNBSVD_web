@@ -1,0 +1,39 @@
+digraph "Control-flow graph for function 'function_5293(a1)'." {
+  label="Control-flow graph for function 'function_5293(a1)'.";
+  node [shape=record];
+
+  Node081A61D0 [label="{entry:\l  a1\l}"];
+  Node081A61D0 -> Node081A6770;
+  Node081A6770 [label="{  v1 = function_27e0(3)\l}"];
+  Node081A6770 -> Node081A6698;
+  Node081A6698 [label="{  if (v1 == 0):\l}"];
+  Node081A6698 -> Node081A6800 [label="v1 == 0"];
+  Node081A6698 -> Node081A6C80 [label="v1 != 0"];
+  Node081A6800 [label="{0x5320:\l  return 0\l}"];
+  Node081A6800 -> Node081A5D98;
+  Node081A6C80 [label="{0x52af:\l  v2\l  v3 = function_2750(v1, v2)\l}"];
+  Node081A6C80 -> Node081A6C38;
+  Node081A5D98 [label="{exit:\l}"];
+  Node081A6C38 [label="{  if (v3 == 0):\l}"];
+  Node081A6C38 -> Node081A66E0 [label="v3 == 0"];
+  Node081A6C38 -> Node081A64E8 [label="v3 != 0"];
+  Node081A66E0 [label="{0x5330:\l  function_28f0(v1)\l  return 0\l}"];
+  Node081A66E0 -> Node081A5D98;
+  Node081A64E8 [label="{  v4 = TruncCastExpr\<int32\>(a1)\l  *(IntToPtrCastExpr\<ptr\>((v3 + 32))) = 1\l  *(IntToPtrCastExpr\<ptr\>((v3 + 48))) = -1\l  *(IntToPtrCastExpr\<ptr\>((v3 + 64))) = ((v4 / 64) % 8)\l  v5 = function_2750(v1, v2)\l}"];
+  Node081A64E8 -> Node081A5B58;
+  Node081A5B58 [label="{  if (v5 == 0):\l}"];
+  Node081A5B58 -> Node081A6530 [label="v5 == 0"];
+  Node081A5B58 -> Node081A6890 [label="v5 != 0"];
+  Node081A6530 [label="{0x5330:\l  function_28f0(v1)\l  return 0\l}"];
+  Node081A6530 -> Node081A5D98;
+  Node081A6890 [label="{0x52e2:\l  *(IntToPtrCastExpr\<ptr\>((v5 + 32))) = 4\l  *(IntToPtrCastExpr\<ptr\>((v5 + 48))) = -1\l  *(IntToPtrCastExpr\<ptr\>((v5 + 64))) = ((v4 / 8) % 8)\l  v6 = function_2750(v1, v2)\l}"];
+  Node081A6890 -> Node081A68D8;
+  Node081A68D8 [label="{  if (v6 == 0):\l}"];
+  Node081A68D8 -> Node081A64A0 [label="v6 == 0"];
+  Node081A68D8 -> Node081A6BA8 [label="v6 != 0"];
+  Node081A64A0 [label="{0x5330:\l  function_28f0(v1)\l  return 0\l}"];
+  Node081A64A0 -> Node081A5D98;
+  Node081A6BA8 [label="{0x5308:\l  *(IntToPtrCastExpr\<ptr\>((v6 + 32))) = 32\l  *(IntToPtrCastExpr\<ptr\>((v6 + 48))) = -1\l  *(IntToPtrCastExpr\<ptr\>((v6 + 64))) = (v4 % 8)\l  return (v1 + 8)\l}"];
+  Node081A6BA8 -> Node081A5D98;
+
+}

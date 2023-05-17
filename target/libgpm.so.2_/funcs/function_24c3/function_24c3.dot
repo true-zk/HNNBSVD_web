@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_24c3(pid, sig)'." {
+  label="Control-flow graph for function 'function_24c3(pid, sig)'.";
+  node [shape=record];
+
+  Node07711A68 [label="{entry:\l  pid\l  sig\l}"];
+  Node07711A68 -> Node07712AB8;
+  Node07712AB8 [label="{0x24c3:\l  return kill(pid, sig)\l}"];
+  Node07712AB8 -> Node07711CA8;
+  Node07711CA8 [label="{exit:\l}"];
+
+}

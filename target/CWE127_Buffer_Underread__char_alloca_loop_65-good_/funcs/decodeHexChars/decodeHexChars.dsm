@@ -1,0 +1,68 @@
+push rbp
+mov rbp, rsp
+sub rsp, 0x40
+mov qword ptr [rbp - 0x28], rdi
+mov qword ptr [rbp - 0x30], rsi
+mov qword ptr [rbp - 0x38], rdx
+mov rax, qword ptr fs:[0x28]
+mov qword ptr [rbp - 8], rax
+xor eax, eax
+mov qword ptr [rbp - 0x10], 0
+jmp 0xe82 <decodeHexChars+0x6d>
+mov rax, qword ptr [rbp - 0x10]
+lea rdx, [rax + rax]
+mov rax, qword ptr [rbp - 0x38]
+lea rcx, [rdx + rax]
+lea rax, [rbp - 0x14]
+mov rdx, rax
+lea rsi, [rip + 0x330]
+mov rdi, rcx
+mov eax, 0
+call 0x880 <sscanf>
+mov edx, dword ptr [rbp - 0x14]
+mov rcx, qword ptr [rbp - 0x28]
+mov rax, qword ptr [rbp - 0x10]
+add rax, rcx
+mov byte ptr [rax], dl
+add qword ptr [rbp - 0x10], 1
+mov rax, qword ptr [rbp - 0x10]
+cmp rax, qword ptr [rbp - 0x30]
+jae 0xef9 <decodeHexChars+0xe4>
+call 0x8a0 <__ctype_b_loc>
+mov rax, qword ptr [rax]
+mov rdx, qword ptr [rbp - 0x10]
+lea rcx, [rdx + rdx]
+mov rdx, qword ptr [rbp - 0x38]
+add rdx, rcx
+movzx edx, byte ptr [rdx]
+movsx rdx, dl
+add rdx, rdx
+add rax, rdx
+movzx eax, word ptr [rax]
+movzx eax, ax
+and eax, 0x1000
+test eax, eax
+je 0xef9 <decodeHexChars+0xe4>
+call 0x8a0 <__ctype_b_loc>
+mov rax, qword ptr [rax]
+mov rdx, qword ptr [rbp - 0x10]
+add rdx, rdx
+lea rcx, [rdx + 1]
+mov rdx, qword ptr [rbp - 0x38]
+add rdx, rcx
+movzx edx, byte ptr [rdx]
+movsx rdx, dl
+add rdx, rdx
+add rax, rdx
+movzx eax, word ptr [rax]
+movzx eax, ax
+and eax, 0x1000
+test eax, eax
+jne 0xe42 <decodeHexChars+0x2d>
+mov rax, qword ptr [rbp - 0x10]
+mov rsi, qword ptr [rbp - 8]
+xor rsi, qword ptr fs:[0x28]
+je 0xf11 <decodeHexChars+0xfc>
+call 0x810 <__stack_chk_fail>
+leave 
+ret 

@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_5283()'." {
+  label="Control-flow graph for function 'function_5283()'.";
+  node [shape=record];
+
+  Node081A60F8 [label="{entry:\l}"];
+  Node081A60F8 -> Node081A6410;
+  Node081A6410 [label="{0x5283:\l  v1\l  v2\l  v3\l  return function_26c0(v1, *(IntToPtrCastExpr\<ptr\>(33552)), v2, v3)\l}"];
+  Node081A6410 -> Node081A6140;
+  Node081A6140 [label="{exit:\l}"];
+
+}

@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'main(argc, **argv)'." {
+  label="Control-flow graph for function 'main(argc, **argv)'.";
+  node [shape=record];
+
+  Node06F9F380 [label="{entry:\l  argc\l  argv\l}"];
+  Node06F9F380 -> Node06F9F020;
+  Node06F9F020 [label="{0xb96:\l  srand(time(NULL))\l  printLine(BitCastExpr\<ptr\>(\"Calling bad()...\"))\l  CWE126_Buffer_Overread__char_alloca_loop_05_bad()\l  printLine(BitCastExpr\<ptr\>(\"Finished bad()\"))\l  return 0\l}"];
+  Node06F9F020 -> Node06F9ED98;
+  Node06F9ED98 [label="{exit:\l}"];
+
+}

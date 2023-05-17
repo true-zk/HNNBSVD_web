@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2323(fd, *name, *value, size)'." {
+  label="Control-flow graph for function 'function_2323(fd, *name, *value, size)'.";
+  node [shape=record];
+
+  Node07C7EDA0 [label="{entry:\l  fd\l  name\l  value\l  size\l}"];
+  Node07C7EDA0 -> Node07C7F028;
+  Node07C7F028 [label="{0x2323:\l  return fgetxattr(fd, name, value, size)\l}"];
+  Node07C7F028 -> Node07C7F5C8;
+  Node07C7F5C8 [label="{exit:\l}"];
+
+}

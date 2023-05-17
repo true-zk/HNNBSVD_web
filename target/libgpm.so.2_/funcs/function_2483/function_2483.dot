@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2483(*set)'." {
+  label="Control-flow graph for function 'function_2483(*set)'.";
+  node [shape=record];
+
+  Node077121B8 [label="{entry:\l  set\l}"];
+  Node077121B8 -> Node07711AF8;
+  Node07711AF8 [label="{0x2483:\l  return sigemptyset(set)\l}"];
+  Node07711AF8 -> Node07711D80;
+  Node07711D80 [label="{exit:\l}"];
+
+}

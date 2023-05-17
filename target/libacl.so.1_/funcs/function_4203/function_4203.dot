@@ -1,0 +1,31 @@
+digraph "Control-flow graph for function 'function_4203(a1)'." {
+  label="Control-flow graph for function 'function_4203(a1)'.";
+  node [shape=record];
+
+  Node07972DA8 [label="{entry:\l  a1\l}"];
+  Node07972DA8 -> Node079730C0;
+  Node079730C0 [label="{0x4203:\l  v1\l  v2\l  v3\l  v4\l  v5\l}"];
+  Node079730C0 -> Node07973108;
+  Node07973108 [label="{  if ((a1 == 0) or (*(IntToPtrCastExpr\<ptr\>((a1 - 8))) != -25237)):\l}"];
+  Node07973108 -> Node07972BF8 [label="(a1 == 0) or (*(IntToPtrCastExpr\<ptr\>((a1 - 8))) != -25237)"];
+  Node07973108 -> Node07972F10 [label="(a1 != 0) and (*(IntToPtrCastExpr\<ptr\>((a1 - 8))) == -25237)"];
+  Node07972BF8 [label="{0x4222:\l  v5 = function_2200(a1, IntToPtrCastExpr\<ptr\>(v2), TruncCastExpr\<int32\>(v3), TruncCastExpr\<int32\>(v4), v1)\l  *(IntToPtrCastExpr\<ptr\>(v5)) = 22\l  return 0\l}"];
+  Node07972BF8 -> Node07973030;
+  Node07972F10 [label="{0x4215:\l  switch *(IntToPtrCastExpr\<ptr\>((a1 + 24))):\l  case 2:\l  case 8:\l}"];
+  Node07972F10 -> Node07972928 [label="*(IntToPtrCastExpr\<ptr\>((a1 + 24))) == 8"];
+  Node07972F10 -> Node07972A48;
+  Node07972F10 -> Node07972928 [label="*(IntToPtrCastExpr\<ptr\>((a1 + 24))) == 2"];
+  Node07973030 [label="{exit:\l}"];
+  Node07972928 [label="{  v6 = function_2310(16)\l}"];
+  Node07972928 -> Node07972970;
+  Node07972A48 [label="{0x4222:\l  v5 = function_2200(a1, IntToPtrCastExpr\<ptr\>(v2), TruncCastExpr\<int32\>(v3), TruncCastExpr\<int32\>(v4), v1)\l  *(IntToPtrCastExpr\<ptr\>(v5)) = 22\l  return 0\l}"];
+  Node07972A48 -> Node07973030;
+  Node07972970 [label="{  if (v6 == 0):\l}"];
+  Node07972970 -> Node07973420 [label="v6 == 0"];
+  Node07972970 -> Node07972A00 [label="v6 != 0"];
+  Node07973420 [label="{0x422f:\l  return 0\l}"];
+  Node07973420 -> Node07973030;
+  Node07972A00 [label="{0x4247:\l  *(IntToPtrCastExpr\<ptr\>(v6)) = 72743\l  result = (v6 + 8)\l  *(IntToPtrCastExpr\<ptr\>(result)) = *(IntToPtrCastExpr\<ptr\>((a1 + 40)))\l  return result\l}"];
+  Node07972A00 -> Node07973030;
+
+}

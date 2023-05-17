@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_890(seed)'." {
+  label="Control-flow graph for function 'function_890(seed)'.";
+  node [shape=record];
+
+  Node06F9E1C8 [label="{entry:\l  seed\l}"];
+  Node06F9E1C8 -> Node06F9E960;
+  Node06F9E960 [label="{0x890:\l  srand(seed)\l}"];
+  Node06F9E960 -> Node06F9E2E8;
+  Node06F9E2E8 [label="{exit:\l}"];
+
+}

@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_4c73(a1, a2, a3)'." {
+  label="Control-flow graph for function 'function_4c73(a1, a2, a3)'.";
+  node [shape=record];
+
+  Node081A2750 [label="{entry:\l  a1\l  a2\l  a3\l}"];
+  Node081A2750 -> Node081A2BD0;
+  Node081A2BD0 [label="{0x4c73:\l  return function_2f60(a1, a2, 0, 10, &(g2), 1, PtrToIntCastExpr\<int64\>(&(g10)))\l}"];
+  Node081A2BD0 -> Node081A2798;
+  Node081A2798 [label="{exit:\l}"];
+
+}

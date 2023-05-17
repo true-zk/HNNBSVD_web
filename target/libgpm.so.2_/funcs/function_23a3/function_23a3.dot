@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_23a3(sig, *act, *oact)'." {
+  label="Control-flow graph for function 'function_23a3(sig, *act, *oact)'.";
+  node [shape=record];
+
+  Node0770FFF8 [label="{entry:\l  sig\l  act\l  oact\l}"];
+  Node0770FFF8 -> Node07710700;
+  Node07710700 [label="{0x23a3:\l  return sigaction(sig, act, oact)\l}"];
+  Node07710700 -> Node07710280;
+  Node07710280 [label="{exit:\l}"];
+
+}

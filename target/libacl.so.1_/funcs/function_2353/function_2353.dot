@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2353(*file, mode)'." {
+  label="Control-flow graph for function 'function_2353(*file, mode)'.";
+  node [shape=record];
+
+  Node07C7F6A0 [label="{entry:\l  file\l  mode\l}"];
+  Node07C7F6A0 -> Node07C7F6E8;
+  Node07C7F6E8 [label="{0x2353:\l  return chmod(file, mode)\l}"];
+  Node07C7F6E8 -> Node07C7F0B8;
+  Node07C7F0B8 [label="{exit:\l}"];
+
+}

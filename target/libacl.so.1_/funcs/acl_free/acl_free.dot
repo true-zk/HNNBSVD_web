@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'acl_free(a1, a2)'." {
+  label="Control-flow graph for function 'acl_free(a1, a2)'.";
+  node [shape=record];
+
+  Node07970E28 [label="{entry:\l  a1\l  a2\l}"];
+  Node07970E28 -> Node07971380;
+  Node07971380 [label="{0x4010:\l  result\l  return result\l}"];
+  Node07971380 -> Node07971140;
+  Node07971140 [label="{exit:\l}"];
+
+}

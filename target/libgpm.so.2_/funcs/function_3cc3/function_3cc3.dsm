@@ -1,0 +1,12 @@
+cli 
+mov eax, 1
+test esi, esi
+je 0x3ce8 <function_3cc3+0x25>
+mov eax, 0
+js 0x3ce8 <function_3cc3+0x25>
+mov eax, 1
+nop dword ptr [rax]
+imul eax, edi
+sub esi, 1
+jne 0x3ce0 <function_3cc3+0x1d>
+ret 

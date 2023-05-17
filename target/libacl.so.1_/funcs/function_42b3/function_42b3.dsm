@@ -1,0 +1,10 @@
+cli 
+sub rsp, 8
+test edi, edi
+js 0x42d8 <function_42b3+0x25>
+call 0x27e0 <function_27e0>
+test rax, rax
+lea rdx, [rax + 8]
+cmovne rax, rdx
+add rsp, 8
+ret 

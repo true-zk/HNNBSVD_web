@@ -1,0 +1,40 @@
+digraph "Control-flow graph for function 'function_5063(a1, a2, a3, a4, a5, a6)'." {
+  label="Control-flow graph for function 'function_5063(a1, a2, a3, a4, a5, a6)'.";
+  node [shape=record];
+
+  Node081A56D8 [label="{entry:\l  a1\l  a2\l  a3\l  a4\l  a5\l  a6\l}"];
+  Node081A56D8 -> Node081A5600;
+  Node081A5600 [label="{  v1 = a4\l  v2 = a2\l  v3 = 0\l  v4 = a5\l}"];
+  Node081A5600 -> Node081A4DD8;
+  Node081A4DD8 [label="{  if (a1 != 0):\l}"];
+  Node081A4DD8 -> Node081A50F0 [label="a1 != 0"];
+  Node081A4DD8 -> Node081A4A30 [label="a1 == 0"];
+  Node081A50F0 [label="{  v5 = (a1 - 8)\l  v1 = a4\l  v2 = a2\l  v3 = a1\l  v4 = a5\l}"];
+  Node081A50F0 -> Node081A5138;
+  Node081A4A30 [label="{  v6 = function_2200(v3, IntToPtrCastExpr\<ptr\>(v2), TruncCastExpr\<int32\>(a3), TruncCastExpr\<int32\>(v1), v4)\l  *(IntToPtrCastExpr\<ptr\>(v6)) = 22\l  return 4294967295\l}"];
+  Node081A4A30 -> Node081A5B10;
+  Node081A5138 [label="{  if (*(IntToPtrCastExpr\<ptr\>(v5)) == 28972):\l}"];
+  Node081A5138 -> Node081A4AC0 [label="*(IntToPtrCastExpr\<ptr\>(v5)) == 28972"];
+  Node081A5138 -> Node081A4A30 [label="*(IntToPtrCastExpr\<ptr\>(v5)) != 28972"];
+  Node081A5B10 [label="{exit:\l}"];
+  Node081A4AC0 [label="{  result = *(IntToPtrCastExpr\<ptr\>((a1 + 8)))\l}"];
+  Node081A4AC0 -> Node081A5A80;
+  Node081A5A80 [label="{  if (result == v5):\l}"];
+  Node081A5A80 -> Node081A5888 [label="result == v5"];
+  Node081A5A80 -> Node081A54E0 [label="result != v5"];
+  Node081A5888 [label="{0x5150:\l  if (a2 == 0):\l}"];
+  Node081A5888 -> Node081A52A0 [label="a2 == 0"];
+  Node081A5888 -> Node081A5498 [label="a2 != 0"];
+  Node081A54E0 [label="{0x5089:\l  v1 = &(g4)\l  v2 = 0\l  v3 = 0\l  v4 = v5\l}"];
+  Node081A54E0 -> Node081A5648;
+  Node081A52A0 [label="{0x509d:\l  return 0\l}"];
+  Node081A52A0 -> Node081A5B10;
+  Node081A5498 [label="{0x50f9:\l  *(IntToPtrCastExpr\<ptr\>(a2)) = 0\l  return 0\l}"];
+  Node081A5498 -> Node081A5B10;
+  Node081A5648 [label="{  if (*(IntToPtrCastExpr\<ptr\>((result + 32))) \< 33):\l}"];
+  Node081A5648 -> Node081A5720 [label="*(IntToPtrCastExpr\<ptr\>((result + 32))) \< 33"];
+  Node081A5648 -> Node081A4A30;
+  Node081A5720 [label="{0x509d:\l  return result\l}"];
+  Node081A5720 -> Node081A5B10;
+
+}

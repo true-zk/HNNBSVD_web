@@ -1,0 +1,18 @@
+digraph "Control-flow graph for function 'function_2a03(a1, a2, a3)'." {
+  label="Control-flow graph for function 'function_2a03(a1, a2, a3)'.";
+  node [shape=record];
+
+  Node07716C40 [label="{entry:\l  a1\l  a2\l  a3\l}"];
+  Node07716C40 -> Node07716DA8;
+  Node07716DA8 [label="{  v1 = __readfsqword(40)\l  v2 = 0\l  v3 = *(BitCastExpr\<ptr\>(g11))\l  v4 = (v3 if (v3 \> 0) else 0)\l  v5\l  __asm_rep_stosq_memset(BitCastExpr\<ptr\>(&(v5)), 0, 16)\l  v6 = function_23f0(ExtCastExpr\<int64\>(v4))\l  v7 = (v4 % 64)\l  v8 = IntToPtrCastExpr\<ptr\>(((PtrToIntCastExpr\<int64\>(&(v2)) + 16) + (8 * v6)))\l  *(v8) = ((1 if (v7 == 0) else (1 \<\< ExtCastExpr\<int64\>(v7))) \| *(v8))\l  v9 = function_24e0(ExtCastExpr\<int64\>((v4 + 1)), &(v5), 0, 0, &(v2))\l}"];
+  Node07716DA8 -> Node07716D18;
+  Node07716D18 [label="{  if (v1 != __readfsqword(40)):\l}"];
+  Node07716D18 -> Node07717C90 [label="v1 != __readfsqword(40)"];
+  Node07716D18 -> Node07717420 [label="v1 == __readfsqword(40)"];
+  Node07717C90 [label="{0x2aa8:\l  return function_23e0()\l}"];
+  Node07717C90 -> Node07716D60;
+  Node07717420 [label="{0x2a9b:\l  return (TruncCastExpr\<int32\>(v9) == 0)\l}"];
+  Node07717420 -> Node07716D60;
+  Node07716D60 [label="{exit:\l}"];
+
+}

@@ -1,0 +1,41 @@
+digraph "Control-flow graph for function 'function_4b03(a1, a2)'." {
+  label="Control-flow graph for function 'function_4b03(a1, a2)'.";
+  node [shape=record];
+
+  Node081A1940 [label="{entry:\l  a1\l  a2\l}"];
+  Node081A1940 -> Node081A1A18;
+  Node081A1A18 [label="{0x4b03:\l  v1\l  v2\l  v3\l  v4\l}"];
+  Node081A1A18 -> Node081A1868;
+  Node081A1868 [label="{  if (a1 != 0):\l}"];
+  Node081A1868 -> Node081A14C0 [label="a1 != 0"];
+  Node081A1868 -> Node081A1598 [label="a1 == 0"];
+  Node081A14C0 [label="{0x4b0d:\l  if (*(IntToPtrCastExpr\<ptr\>((a1 - 8))) == -25237):\l}"];
+  Node081A14C0 -> Node081A20D8 [label="*(IntToPtrCastExpr\<ptr\>((a1 - 8))) == -25237"];
+  Node081A14C0 -> Node081A1598 [label="*(IntToPtrCastExpr\<ptr\>((a1 - 8))) != -25237"];
+  Node081A1598 [label="{  v5 = function_2200(a1, IntToPtrCastExpr\<ptr\>(a2), TruncCastExpr\<int32\>(v2), TruncCastExpr\<int32\>(v3), v1)\l  *(IntToPtrCastExpr\<ptr\>(v5)) = 22\l}"];
+  Node081A1598 -> Node081A1478;
+  Node081A20D8 [label="{  if (a2 == 0):\l}"];
+  Node081A20D8 -> Node081A2120 [label="a2 == 0"];
+  Node081A20D8 -> Node081A2510 [label="a2 != 0"];
+  Node081A1478 [label="{  if (a2 != 0):\l}"];
+  Node081A1478 -> Node081A15E0 [label="a2 != 0"];
+  Node081A1478 -> Node081A19D0 [label="a2 == 0"];
+  Node081A2120 [label="{0x4b48:\l  v4 = function_2200(a1, IntToPtrCastExpr\<ptr\>(a2), TruncCastExpr\<int32\>(v2), TruncCastExpr\<int32\>(v3), v1)\l  *(IntToPtrCastExpr\<ptr\>(v4)) = 22\l  return 4294967295\l}"];
+  Node081A2120 -> Node081A1790;
+  Node081A2510 [label="{0x4b1a:\l  if (*(IntToPtrCastExpr\<ptr\>((a2 - 8))) == 7893):\l}"];
+  Node081A2510 -> Node081A23A8 [label="*(IntToPtrCastExpr\<ptr\>((a2 - 8))) == 7893"];
+  Node081A2510 -> Node081A21F8 [label="*(IntToPtrCastExpr\<ptr\>((a2 - 8))) != 7893"];
+  Node081A15E0 [label="{0x4b40:\l  if (*(IntToPtrCastExpr\<ptr\>((a2 - 8))) == 7893):\l}"];
+  Node081A15E0 -> Node081A1F28 [label="*(IntToPtrCastExpr\<ptr\>((a2 - 8))) == 7893"];
+  Node081A15E0 -> Node081A19D0 [label="*(IntToPtrCastExpr\<ptr\>((a2 - 8))) != 7893"];
+  Node081A19D0 [label="{0x4b48:\l  v4 = function_2200(a1, IntToPtrCastExpr\<ptr\>(a2), TruncCastExpr\<int32\>(v2), TruncCastExpr\<int32\>(v3), v1)\l  *(IntToPtrCastExpr\<ptr\>(v4)) = 22\l  return 4294967295\l}"];
+  Node081A19D0 -> Node081A1790;
+  Node081A1790 [label="{exit:\l}"];
+  Node081A23A8 [label="{0x4b22:\l  *(IntToPtrCastExpr\<ptr\>((a1 + 56))) = TruncCastExpr\<int32\>(a2)\l  return 0\l}"];
+  Node081A23A8 -> Node081A1790;
+  Node081A21F8 [label="{0x4b48:\l  v4 = function_2200(a1, IntToPtrCastExpr\<ptr\>(a2), TruncCastExpr\<int32\>(v2), TruncCastExpr\<int32\>(v3), v1)\l  *(IntToPtrCastExpr\<ptr\>(v4)) = 22\l  return 4294967295\l}"];
+  Node081A21F8 -> Node081A1790;
+  Node081A1F28 [label="{0x4b53:\l  return 4294967295\l}"];
+  Node081A1F28 -> Node081A1790;
+
+}

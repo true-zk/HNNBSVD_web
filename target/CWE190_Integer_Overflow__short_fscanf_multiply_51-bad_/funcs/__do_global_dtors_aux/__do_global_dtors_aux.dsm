@@ -1,0 +1,12 @@
+cmp byte ptr [rip + 0x201651], 0
+jne 0xa08 <__do_global_dtors_aux+0x38>
+cmp qword ptr [rip + 0x201617], 0
+push rbp
+mov rbp, rsp
+je 0x9f3 <__do_global_dtors_aux+0x23>
+mov rdi, qword ptr [rip + 0x20161a]
+call 0x900 <__cxa_finalize>
+call 0x940 <deregister_tm_clones>
+mov byte ptr [rip + 0x201629], 1
+pop rbp
+ret 

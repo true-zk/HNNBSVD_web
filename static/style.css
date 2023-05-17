@@ -1,0 +1,262 @@
+
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+}
+
+.whole {
+  width: 100%;
+  height: 1024px;
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.words {
+  width: 462px;
+  color: rgba(0,0,0,0.44999998807907104);
+  position: absolute;
+  top: 687px;
+  left: 480px;
+  font-family: Inter;
+  font-weight: Regular;
+  font-size: 20px;
+  opacity: 1;
+  text-align: center;
+}
+.HBVD {
+  width: 55%;
+  margin: 0 auto;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 429px;
+  left: 391px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Inter;
+  font-weight: Medium;
+  font-size: 48px;
+  opacity: 1;
+  text-align: left;
+}
+.HBVD-b {
+  width: 40%;
+  margin: 0 auto;
+  color: #5AB1EF;
+  position: absolute;
+  top:500px;
+  left:600px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Inter;
+  font-weight: Medium;
+  font-size: 48px;
+  opacity: 1;
+  text-align: left;
+}
+
+
+.se-button{
+  align-items: flex-start;
+  border: 5px solid;
+  border-color: #5AB1EF;
+  border-radius: 60px;
+  box-shadow: 0px 4px 4px #00000040;
+  display: flex;
+  height: 162px;
+  line-height: 162px;
+  justify-content: flex-end;
+  margin-right: 1px;
+  margin-top: 1px;
+  min-width: 531px;
+}
+
+.text-1{
+  color: #5AB1EF;
+  font-size: 48px;
+  height:198px;
+  margin-top:-23px;
+  width:634px;
+}
+input {
+  display: inline-block;
+}
+
+.label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+
+.valign-middle{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.text-result{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: rgba(0,0,0,1);
+  font-size: 25px;
+  top:580px;
+  width:634px;
+  margin-left:auto;
+  margin-right:auto;
+  position: absolute;
+}
+
+.text-result-detailed{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: rgba(0,0,0,1);
+  font-size: 20px;
+  top:600px;
+  width:634px;
+  left:440px;
+  position: absolute;
+}
+
+.button-container {
+  position: absolute;
+  top:610px;
+  
+  width: 50%;
+}
+.button-container label {
+  position: absolute;
+  top:60px;
+  left:390px;
+  transform:translate(0%, -80%);
+  text-align:center;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+label{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+
+input[type="submit"] {
+  color: #fff;
+  font-size: 20px;
+  height:44px;
+  min-width:72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+
+.my-submit{
+  align-items:flex-end;
+  background-color: #4592ec;
+  border-radius: 50px;
+  display: flex;
+  height: 62px;
+  padding: 7px 28px;
+  top:800px;
+  left:660px;
+  position:absolute
+}
+
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.file-name {
+  position: absolute;
+  bottom: 0px;
+  left: 1030px;
+  font-size: 25px;
+  color: #5AB1EF;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 80%;
+  margin-top: -450px;
+  /* 设置表格水平居中 */
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+  position: relative;
+}
+
+.table-detailed {
+  border-collapse: collapse;
+  width: 140%;
+  margin-top: 40px;
+  /* 设置表格水平居中 */
+  margin-left: -120px;
+  margin-right: auto;
+  z-index: 1;
+  position: relative;
+  top: 50%; /* 让表格垂直居中 */
+  transform: translateY(-50%); /* 让表格垂直居中 */
+}
+
+th {
+  font-weight: bold;
+}
+
+td {
+  text-align: center;
+  padding: 8px;
+  border: 1px solid black;
+}
+
+
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.png {
+  width: auto;
+  height: auto;
+  max-width: 800px; 
+}
+
+.pic{
+  width: 100%;
+  height: 372px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+
+
+
+
+

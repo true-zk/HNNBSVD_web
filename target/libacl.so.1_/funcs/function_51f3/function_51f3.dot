@@ -1,0 +1,37 @@
+digraph "Control-flow graph for function 'function_51f3(a1, a2, a3, a4)'." {
+  label="Control-flow graph for function 'function_51f3(a1, a2, a3, a4)'.";
+  node [shape=record];
+
+  Node081A6338 [label="{entry:\l  a1\l  a2\l  a3\l  a4\l}"];
+  Node081A6338 -> Node081A6260;
+  Node081A6260 [label="{0x51f3:\l  v1\l  v2 = function_2320(a1, \"system.posix_acl_access\", 0, 0, v1)\l  v3\l}"];
+  Node081A6260 -> Node081A5C30;
+  Node081A5C30 [label="{  if (v2 \< 0):\l  else:\l}"];
+  Node081A5C30 -> Node081A5C78 [label="v2 \< 0"];
+  Node081A5C30 -> Node081A63C8 [label="v2 \>= 0"];
+  Node081A5C78 [label="{  v4 = *(IntToPtrCastExpr\<ptr\>(function_2200(a1, \"system.posix_acl_access\", 0, 0, v1)))\l  v3 = 4294967295\l}"];
+  Node081A5C78 -> Node081A5F90;
+  Node081A63C8 [label="{0x520b:\l  v3 = 1\l}"];
+  Node081A63C8 -> Node081A5FD8;
+  Node081A5F90 [label="{  if (v4 != 61):\l}"];
+  Node081A5F90 -> Node081A6020 [label="v4 != 61"];
+  Node081A5F90 -> Node081A5D08 [label="v4 == 61"];
+  Node081A5FD8 [label="{  if (v2 \>= 29):\l}"];
+  Node081A5FD8 -> Node081A5E70 [label="v2 \>= 29"];
+  Node081A5FD8 -> Node081A5D08 [label="v2 \< 29"];
+  Node081A6020 [label="{0x5216:\l  return 4294967295\l}"];
+  Node081A6020 -> Node081A5CC0;
+  Node081A5D08 [label="{  v5 = (a1 & 4294967295)\l  v6 = function_2320(v5, \"system.posix_acl_default\", 0, 0, v3)\l  v7 = (v6 - 27)\l  result = (((v7 \< 0) == (((26 - v6) & v6) \< 0)) == (v7 != 0))\l}"];
+  Node081A5D08 -> Node081A6380;
+  Node081A5E70 [label="{0x5216:\l  return 1\l}"];
+  Node081A5E70 -> Node081A5CC0;
+  Node081A5CC0 [label="{exit:\l}"];
+  Node081A6380 [label="{  if (v6 \>= 0):\l}"];
+  Node081A6380 -> Node081A5D50 [label="v6 \>= 0"];
+  Node081A6380 -> Node081A5E28 [label="v6 \< 0"];
+  Node081A5D50 [label="{0x5216:\l  return result\l}"];
+  Node081A5D50 -> Node081A5CC0;
+  Node081A5E28 [label="{  v8 = *(IntToPtrCastExpr\<ptr\>(function_2200(v5, \"system.posix_acl_default\", 0, 0, result)))\l  return (4294967295 if (v8 != 61) else 0)\l}"];
+  Node081A5E28 -> Node081A5CC0;
+
+}

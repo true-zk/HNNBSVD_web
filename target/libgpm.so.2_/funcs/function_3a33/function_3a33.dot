@@ -1,0 +1,54 @@
+digraph "Control-flow graph for function 'function_3a33(a1)'." {
+  label="Control-flow graph for function 'function_3a33(a1)'.";
+  node [shape=record];
+
+  Node0771C370 [label="{entry:\l  a1\l}"];
+  Node0771C370 -> Node0771C0A0;
+  Node0771C0A0 [label="{  v1 = __readfsqword(40)\l  v2 = 0\l  v3\l  v4\l}"];
+  Node0771C0A0 -> Node0771BCB0;
+  Node0771BCB0 [label="{  if (g45 == 0):\l}"];
+  Node0771BCB0 -> Node0771BF38 [label="g45 == 0"];
+  Node0771BCB0 -> Node0771C1C0 [label="g45 != 0"];
+  Node0771BF38 [label="{0x3b48:\l  if (Gpm_GetServerVersion(0) == 0):\l}"];
+  Node0771BF38 -> Node0771C688 [label="Gpm_GetServerVersion(0) == 0"];
+  Node0771BF38 -> Node0771C6D0 [label="Gpm_GetServerVersion(0) != 0"];
+  Node0771C1C0 [label="{0x3a74:\l  result\l}"];
+  Node0771C1C0 -> Node0771BEA8;
+  Node0771C688 [label="{0x3b97:\l  v5\l  gpm_report(97, \"lib/libxtra.c\", 5, \"can\'t get gpm server version\", v5, v4)\l}"];
+  Node0771C688 -> Node0771C6D0;
+  Node0771C6D0 [label="{  v6 = g45\l  gpm_report(99, \"lib/libxtra.c\", 3, \"libgpm: got server version as %i\", v6, v4)\l  v3 = v6\l}"];
+  Node0771C6D0 -> Node0771C1C0;
+  Node0771BEA8 [label="{  if (g45 \< 9802):\l  else:\l}"];
+  Node0771BEA8 -> Node0771CA78 [label="g45 \< 9802"];
+  Node0771BEA8 -> Node0771C640 [label="g45 \>= 9802"];
+  Node0771CA78 [label="{0x3bc0:\l  gpm_report(102, \"lib/libxtra.c\", 3, \"gpm server version too old to obtain status info\", v3, v4)\l  result = 4294967295\l}"];
+  Node0771CA78 -> Node0771C490;
+  Node0771C640 [label="{  v7 = *(BitCastExpr\<ptr\>(g11))\l}"];
+  Node0771C640 -> Node0771C7A8;
+  Node0771C490 [label="{0x3b1f:\l  if (v1 != __readfsqword(40)):\l}"];
+  Node0771C490 -> Node0771C718 [label="v1 != __readfsqword(40)"];
+  Node0771C490 -> Node0771BC20 [label="v1 == __readfsqword(40)"];
+  Node0771C7A8 [label="{  if (v7 \< 1):\l  else:\l}"];
+  Node0771C7A8 -> Node0771C838 [label="v7 \< 1"];
+  Node0771C7A8 -> Node0771C880 [label="v7 \>= 1"];
+  Node0771C718 [label="{0x3c12:\l  return function_23e0()\l}"];
+  Node0771C718 -> Node0771C3B8;
+  Node0771BC20 [label="{0x3b36:\l  return result\l}"];
+  Node0771BC20 -> Node0771C3B8;
+  Node0771C838 [label="{0x3be9:\l  gpm_report(107, \"lib/libxtra.c\", 3, \"gpm connection must be open to obtain status info\", v3, v4)\l  result = 4294967295\l}"];
+  Node0771C838 -> Node0771C490;
+  Node0771C880 [label="{0x3a91:\l  v8\l  __asm_rep_stosq_memset(BitCastExpr\<ptr\>(&(v8)), 0, 16)\l  v9 = function_23f0(ExtCastExpr\<int64\>(v7))\l  v10 = *(BitCastExpr\<ptr\>(g11))\l  v11 = (v10 % 64)\l  v12 = IntToPtrCastExpr\<ptr\>(((PtrToIntCastExpr\<int64\>(&(v2)) + 64) + (8 * v9)))\l  *(v12) = ((1 if (v11 == 0) else (1 \<\< ExtCastExpr\<int64\>(v11))) \| *(v12))\l  v13 = function_24e0(ExtCastExpr\<int64\>((v10 + 1)), &(v8), 0, 0, &(v2))\l  result = 0\l}"];
+  Node0771C880 -> Node0771C568;
+  Node0771C3B8 [label="{exit:\l}"];
+  Node0771C568 [label="{  if (TruncCastExpr\<int32\>(v13) != 1):\l}"];
+  Node0771C568 -> Node0771CCB8 [label="TruncCastExpr\<int32\>(v13) != 1"];
+  Node0771C568 -> Node0771C490;
+  Node0771CCB8 [label="{0x3af2:\l  v14\l  v15 = (PtrToIntCastExpr\<int64\>(&(v14)) if (a1 == 0) else a1)\l  v16\l  v17 = &(v16)\l  function_23b0(*(BitCastExpr\<ptr\>(g11)), v17, 16)\l  result = 4294967295\l}"];
+  Node0771CCB8 -> Node0771CD00;
+  Node0771CD00 [label="{  if (TruncCastExpr\<int32\>(Gpm_GetEvent(IntToPtrCastExpr\<ptr\>(v15), v17)) == 1):\l}"];
+  Node0771CD00 -> Node0771CA30 [label="TruncCastExpr\<int32\>(Gpm_GetEvent(IntToPtrCastExpr\<ptr\>(v15), v17)) == 1"];
+  Node0771CD00 -> Node0771C490;
+  Node0771CA30 [label="{  v18 = IntToPtrCastExpr\<ptr\>((v15 + 12))\l  *(v18) = 0\l  result = ExtCastExpr\<int64\>(*(v18))\l}"];
+  Node0771CA30 -> Node0771C490;
+
+}

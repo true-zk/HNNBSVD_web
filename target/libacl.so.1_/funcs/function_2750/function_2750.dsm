@@ -1,0 +1,25 @@
+push rbx
+mov rbx, rdi
+mov rdx, qword ptr [rdi + 0x28]
+cmp qword ptr [rdi + 0x20], rdx
+je 0x27c0 <function_2750+0x70>
+lea rax, [rdx - 0x48]
+mov ecx, 0xffff9d6b
+xor esi, esi
+mov qword ptr [rdi + 0x28], rax
+mov word ptr [rdx - 0x48], cx
+mov word ptr [rdx - 0x46], si
+mov rdx, qword ptr [rbx + 8]
+add qword ptr [rbx + 0x30], 1
+mov qword ptr [rax + 0x10], rbx
+mov qword ptr [rax + 8], rdx
+mov qword ptr [rdx + 0x10], rax
+mov qword ptr [rbx + 8], rax
+mov qword ptr [rax + 0x18], rbx
+mov dword ptr [rax + 0x20], 0
+mov dword ptr [rax + 0x38], 0x1ed5
+mov dword ptr [rax + 0x40], 0
+mov dword ptr [rax + 0x28], 0x1c27
+mov dword ptr [rax + 0x30], 0xffffffff
+pop rbx
+ret 

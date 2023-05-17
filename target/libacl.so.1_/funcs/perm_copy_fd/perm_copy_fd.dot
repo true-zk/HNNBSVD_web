@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'perm_copy_fd()'." {
+  label="Control-flow graph for function 'perm_copy_fd()'.";
+  node [shape=record];
+
+  Node081A8150 [label="{entry:\l}"];
+  Node081A8150 -> Node081A87C8;
+  Node081A87C8 [label="{0x5730:\l  result\l  return result\l}"];
+  Node081A87C8 -> Node081A83D8;
+  Node081A83D8 [label="{exit:\l}"];
+
+}

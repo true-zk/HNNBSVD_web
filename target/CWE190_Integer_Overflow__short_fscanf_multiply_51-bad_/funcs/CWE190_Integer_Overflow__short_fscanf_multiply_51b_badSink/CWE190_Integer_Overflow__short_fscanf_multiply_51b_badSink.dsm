@@ -1,0 +1,16 @@
+push rbp
+mov rbp, rsp
+sub rsp, 0x20
+mov eax, edi
+mov word ptr [rbp - 0x14], ax
+cmp word ptr [rbp - 0x14], 0
+jle 0xaec <CWE190_Integer_Overflow__short_fscanf_multiply_51b_badSink+0x2a>
+movzx eax, word ptr [rbp - 0x14]
+add eax, eax
+mov word ptr [rbp - 2], ax
+movsx eax, word ptr [rbp - 2]
+mov edi, eax
+call 0xb3f <printIntLine>
+nop 
+leave 
+ret 

@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_880(*s, c, n)'." {
+  label="Control-flow graph for function 'function_880(*s, c, n)'.";
+  node [shape=record];
+
+  Node06F9D9A0 [label="{entry:\l  s\l  c\l  n\l}"];
+  Node06F9D9A0 -> Node06F9E3C0;
+  Node06F9E3C0 [label="{0x880:\l  return memset(s, c, n)\l}"];
+  Node06F9E3C0 -> Node06F9E648;
+  Node06F9E648 [label="{exit:\l}"];
+
+}

@@ -1,0 +1,18 @@
+cli 
+mov rax, qword ptr [rip + 0x200d]
+cmp rax, -1
+je 0x4bf0 <function_4bb3+0x3d>
+push rbp
+mov rbp, rsp
+push rbx
+lea rbx, [rip + 0x1ffb]
+sub rsp, 8
+nop dword ptr [rax]
+call rax
+mov rax, qword ptr [rbx - 8]
+sub rbx, 8
+cmp rax, -1
+jne 0x4bd8 <function_4bb3+0x25>
+mov rbx, qword ptr [rbp - 8]
+leave 
+ret 

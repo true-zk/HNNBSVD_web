@@ -1,0 +1,34 @@
+digraph "Control-flow graph for function 'function_33f3(a1)'." {
+  label="Control-flow graph for function 'function_33f3(a1)'.";
+  node [shape=record];
+
+  Node0771B368 [label="{entry:\l  a1\l}"];
+  Node0771B368 -> Node0771B638;
+  Node0771B638 [label="{0x33f3:\l  if (*(g25) == 0):\l}"];
+  Node0771B638 -> Node0771B440 [label="*(g25) == 0"];
+  Node0771B638 -> Node0771B518 [label="*(g25) != 0"];
+  Node0771B440 [label="{0x3474:\l  return 0\l}"];
+  Node0771B440 -> Node0771B710;
+  Node0771B518 [label="{  v1 = *(BitCastExpr\<ptr\>(g11))\l  v2 = function_2460(v1, a1, 28)\l  result = (v2 & 4294967295)\l  v3 = v2\l}"];
+  Node0771B518 -> Node0771B758;
+  Node0771B710 [label="{exit:\l}"];
+  Node0771B758 [label="{  switch v3:\l  case 28:\l  case 0:\l}"];
+  Node0771B758 -> Node0771B560 [label="v3 == 28"];
+  Node0771B758 -> Node0771B6C8 [label="v3 == 0"];
+  Node0771B758 -> Node0771B7A0;
+  Node0771B560 [label="{  v4 = IntToPtrCastExpr\<ptr\>((a1 + 8))\l  v5 = TruncCastExpr\<int16\>(*(g23))\l  *(v4) = (*(v4) - v5)\l  v6 = IntToPtrCastExpr\<ptr\>((a1 + 10))\l  *(v6) = (*(v6) - v5)\l  return 1\l}"];
+  Node0771B560 -> Node0771B710;
+  Node0771B6C8 [label="{0x34a0:\l  v7\l  v8\l  gpm_report(478, \"lib/liblow.c\", 3, \"Warning: closing connection\", v8, v7)\l  Gpm_Close()\l  return result\l}"];
+  Node0771B6C8 -> Node0771B710;
+  Node0771B7A0 [label="{  if (v3 == -1):\l}"];
+  Node0771B7A0 -> Node0771BB00 [label="v3 == -1"];
+  Node0771B7A0 -> Node0771BA70 [label="v3 != -1"];
+  Node0771BB00 [label="{0x3434:\l  if (*(IntToPtrCastExpr\<ptr\>(function_2370(ExtCastExpr\<int64\>(v1)))) == 11):\l}"];
+  Node0771BB00 -> Node0771B5A8 [label="*(IntToPtrCastExpr\<ptr\>(function_2370(ExtCastExpr\<int64\>(v1)))) == 11"];
+  Node0771BB00 -> Node0771BA70 [label="*(IntToPtrCastExpr\<ptr\>(function_2370(ExtCastExpr\<int64\>(v1)))) != 11"];
+  Node0771BA70 [label="{0x343e:\l  gpm_report(489, \"lib/liblow.c\", 3, \"Read too few bytes (%i) at %s:%d\", result, PtrToIntCastExpr\<int64\>(\"lib/liblow.c\"))\l  return 4294967295\l}"];
+  Node0771BA70 -> Node0771B710;
+  Node0771B5A8 [label="{0x3474:\l  return result\l}"];
+  Node0771B5A8 -> Node0771B710;
+
+}

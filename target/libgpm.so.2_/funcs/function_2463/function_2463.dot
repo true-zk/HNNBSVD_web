@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2463(fd, *buf, nbytes)'." {
+  label="Control-flow graph for function 'function_2463(fd, *buf, nbytes)'.";
+  node [shape=record];
+
+  Node07711510 [label="{entry:\l  fd\l  buf\l  nbytes\l}"];
+  Node07711510 -> Node077117E0;
+  Node077117E0 [label="{0x2463:\l  return read(fd, buf, nbytes)\l}"];
+  Node077117E0 -> Node07711438;
+  Node07711438 [label="{exit:\l}"];
+
+}

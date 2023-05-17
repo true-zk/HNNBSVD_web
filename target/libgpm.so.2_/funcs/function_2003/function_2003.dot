@@ -1,0 +1,16 @@
+digraph "Control-flow graph for function 'function_2003()'." {
+  label="Control-flow graph for function 'function_2003()'.";
+  node [shape=record];
+
+  Node0770F110 [label="{entry:\l}"];
+  Node0770F110 -> Node0770FB30;
+  Node0770FB30 [label="{0x2003:\l  if (*(IntToPtrCastExpr\<ptr\>(28544)) != 0):\l}"];
+  Node0770FB30 -> Node0770FDB8 [label="*(IntToPtrCastExpr\<ptr\>(28544)) != 0"];
+  Node0770FB30 -> Node0770FCE0 [label="*(IntToPtrCastExpr\<ptr\>(28544)) == 0"];
+  Node0770FDB8 [label="{0x2014:\l  __gmon_start__()\l}"];
+  Node0770FDB8 -> Node0770FCE0;
+  Node0770FCE0 [label="{0x2016:\l  function_2730()\l  return function_4bb0()\l}"];
+  Node0770FCE0 -> Node0770FBC0;
+  Node0770FBC0 [label="{exit:\l}"];
+
+}

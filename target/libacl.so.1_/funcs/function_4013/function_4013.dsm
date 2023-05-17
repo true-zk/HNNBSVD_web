@@ -1,0 +1,17 @@
+cli 
+sub rsp, 0x18
+test rdi, rdi
+je 0x4037 <function_4013+0x24>
+movzx eax, word ptr [rdi - 8]
+lea r8, [rdi - 8]
+cmp ax, 0x712c
+je 0x4078 <function_4013+0x65>
+cmp ax, 0xd5f2
+je 0x4050 <function_4013+0x3d>
+cmp ax, 0x1c27
+je 0x4050 <function_4013+0x3d>
+call 0x2200 <function_2200>
+mov dword ptr [rax], 0x16
+mov eax, 0xffffffff
+add rsp, 0x18
+ret 

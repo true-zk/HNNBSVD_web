@@ -1,0 +1,18 @@
+digraph "Control-flow graph for function 'CWE190_Integer_Overflow__short_fscanf_multiply_51_bad()'." {
+  label="Control-flow graph for function 'CWE190_Integer_Overflow__short_fscanf_multiply_51_bad()'.";
+  node [shape=record];
+
+  Node0730F218 [label="{entry:\l}"];
+  Node0730F218 -> Node0730F188;
+  Node0730F188 [label="{  v1 = __readfsqword(40)\l  v2 = 0\l  fscanf(g4, \"%hd\", &(v2))\l  CWE190_Integer_Overflow__short_fscanf_multiply_51b_badSink((ExtCastExpr\<int64\>(v2) & 4294967295))\l  result = 0\l}"];
+  Node0730F188 -> Node0730ED98;
+  Node0730ED98 [label="{  if (v1 != __readfsqword(40)):\l}"];
+  Node0730ED98 -> Node0730F410 [label="v1 != __readfsqword(40)"];
+  Node0730ED98 -> Node0730ECC0 [label="v1 == __readfsqword(40)"];
+  Node0730F410 [label="{0xa72:\l  __stack_chk_fail()\l  result = &(g6)\l}"];
+  Node0730F410 -> Node0730ECC0;
+  Node0730ECC0 [label="{0xa77:\l  return result\l}"];
+  Node0730ECC0 -> Node0730F2A8;
+  Node0730F2A8 [label="{exit:\l}"];
+
+}

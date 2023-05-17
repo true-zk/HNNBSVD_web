@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function '_start(a1, a2, a3, a4)'." {
+  label="Control-flow graph for function '_start(a1, a2, a3, a4)'.";
+  node [shape=record];
+
+  Node0730E408 [label="{entry:\l  a1\l  a2\l  a3\l  a4\l}"];
+  Node0730E408 -> Node0730E7F8;
+  Node0730E7F8 [label="{0x910:\l  v1\l  __libc_start_main(2681, TruncCastExpr\<int32\>(a4), BitCastExpr\<ptr\>(&(v1)), IntToPtrCastExpr\<ptr\>(4144), IntToPtrCastExpr\<ptr\>(4256), IntToPtrCastExpr\<ptr\>(a3))\l  __asm_hlt()\l  # UNREACHABLE\l}"];
+  Node0730E7F8 -> Node0730EAC8;
+  Node0730EAC8 [label="{exit:\l}"];
+
+}

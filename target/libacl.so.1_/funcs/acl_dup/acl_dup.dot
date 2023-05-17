@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'acl_dup()'." {
+  label="Control-flow graph for function 'acl_dup()'.";
+  node [shape=record];
+
+  Node07970570 [label="{entry:\l}"];
+  Node07970570 -> Node07970888;
+  Node07970888 [label="{0x3ec0:\l  result\l  return result\l}"];
+  Node07970888 -> Node07970BE8;
+  Node07970BE8 [label="{exit:\l}"];
+
+}

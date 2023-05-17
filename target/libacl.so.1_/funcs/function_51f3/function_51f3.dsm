@@ -1,0 +1,15 @@
+cli 
+push rbp
+xor ecx, ecx
+xor edx, edx
+lea rsi, [rip + 0xe00]
+mov ebp, edi
+call 0x2320 <function_2320>
+test eax, eax
+js 0x5220 <function_51f3+0x2d>
+mov r8d, 1
+cmp eax, 0x1c
+jle 0x5230 <function_51f3+0x3d>
+mov eax, r8d
+pop rbp
+ret 

@@ -1,0 +1,18 @@
+digraph "Control-flow graph for function 'goodG2B()'." {
+  label="Control-flow graph for function 'goodG2B()'.";
+  node [shape=record];
+
+  Node0774B940 [label="{entry:\l}"];
+  Node0774B940 -> Node0774C168;
+  Node0774C168 [label="{  v1 = __readfsqword(40)\l  v2 = 2759\l  v3 = ((PtrToIntCastExpr\<int64\>(&(v2)) - 113) & -16)\l  memset(IntToPtrCastExpr\<ptr\>(v3), 65, 99)\l  *(IntToPtrCastExpr\<ptr\>((v3 + 99))) = 0\l  result = 0\l}"];
+  Node0774C168 -> Node0774C318;
+  Node0774C318 [label="{  if (v1 != __readfsqword(40)):\l}"];
+  Node0774C318 -> Node0774BE08 [label="v1 != __readfsqword(40)"];
+  Node0774C318 -> Node0774BC58 [label="v1 == __readfsqword(40)"];
+  Node0774BE08 [label="{0xa66:\l  __stack_chk_fail()\l  result = &(g5)\l}"];
+  Node0774BE08 -> Node0774BC58;
+  Node0774BC58 [label="{0xa6b:\l  return result\l}"];
+  Node0774BC58 -> Node0774C000;
+  Node0774C000 [label="{exit:\l}"];
+
+}

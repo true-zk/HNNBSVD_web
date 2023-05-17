@@ -1,0 +1,44 @@
+digraph "Control-flow graph for function 'decodeHexWChars(a1, a2, a3)'." {
+  label="Control-flow graph for function 'decodeHexWChars(a1, a2, a3)'.";
+  node [shape=record];
+
+  Node07310E80 [label="{entry:\l  a1\l  a2\l  a3\l}"];
+  Node07310E80 -> Node07310928;
+  Node07310928 [label="{  v1 = __readfsqword(40)\l  v2 = 0\l}"];
+  Node07310928 -> Node07310970;
+  Node07310970 [label="{  if (a2 != 0):\l}"];
+  Node07310970 -> Node073106A0 [label="a2 != 0"];
+  Node07310970 -> Node07310C88 [label="a2 == 0"];
+  Node073106A0 [label="{  v3 = 0\l  v4 = (8 * v3)\l  wc = IntToPtrCastExpr\<ptr\>((v4 + a3))\l  v2 = v3\l}"];
+  Node073106A0 -> Node07310778;
+  Node07310C88 [label="{  result = v2\l}"];
+  Node07310C88 -> Node073109B8;
+  Node07310778 [label="{  while (iswxdigit(*(wc)) != 0):\l}"];
+  Node07310778 -> Node07310D18 [label="iswxdigit(*(wc)) != 0"];
+  Node07310778 -> Node07310AD8 [label="iswxdigit(*(wc)) == 0"];
+  Node073109B8 [label="{  if (v1 != __readfsqword(40)):\l}"];
+  Node073109B8 -> Node07310C40 [label="v1 != __readfsqword(40)"];
+  Node073109B8 -> Node07310A48 [label="v1 == __readfsqword(40)"];
+  Node07310D18 [label="{0xf40:\l  v2 = v3\l}"];
+  Node07310D18 -> Node073106E8;
+  Node07310AD8 [label="{exit:\l}"];
+  Node07310C40 [label="{0xf77:\l  __stack_chk_fail()\l  result = &(g6)\l}"];
+  Node07310C40 -> Node07310A48;
+  Node07310A48 [label="{0xf7c:\l  return result\l}"];
+  Node07310A48 -> Node07310AD8;
+  Node073106E8 [label="{  if (iswxdigit(*(IntToPtrCastExpr\<ptr\>(((v4 or 4) + a3)))) == 0):\l}"];
+  Node073106E8 -> Node07310808 [label="iswxdigit(*(IntToPtrCastExpr\<ptr\>(((v4 or 4) + a3)))) == 0"];
+  Node073106E8 -> Node07310A90 [label="iswxdigit(*(IntToPtrCastExpr\<ptr\>(((v4 or 4) + a3)))) != 0"];
+  Node07310808 [label="{break -\> 0xf64:\l  break\l}"];
+  Node07310808 -> Node07310AD8;
+  Node07310A90 [label="{0xed2:\l  swscanf(wc, \"%02x\")\l  v5\l  *(IntToPtrCastExpr\<ptr\>((v3 + a1))) = TruncCastExpr\<int8\>(v5)\l  v3 = (v3 + 1)\l  v2 = v3\l}"];
+  Node07310A90 -> Node07310B20;
+  Node07310B20 [label="{  if (v3 \>= a2):\l}"];
+  Node07310B20 -> Node07310B68 [label="v3 \>= a2"];
+  Node07310B20 -> Node07310850 [label="v3 \< a2"];
+  Node07310B68 [label="{break -\> 0xf64:\l  break\l}"];
+  Node07310B68 -> Node07310AD8;
+  Node07310850 [label="{  v4 = (8 * v3)\l  wc = IntToPtrCastExpr\<ptr\>((v4 + a3))\l  v2 = v3\l}"];
+  Node07310850 -> Node07310778;
+
+}

@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2413(*tv, *tz)'." {
+  label="Control-flow graph for function 'function_2413(*tv, *tz)'.";
+  node [shape=record];
+
+  Node077109D0 [label="{entry:\l  tv\l  tz\l}"];
+  Node077109D0 -> Node07710AF0;
+  Node07710AF0 [label="{0x2413:\l  return gettimeofday(tv, tz)\l}"];
+  Node07710AF0 -> Node07710A18;
+  Node07710A18 [label="{exit:\l}"];
+
+}

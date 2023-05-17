@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2253(fd, *name, *value, size, flags)'." {
+  label="Control-flow graph for function 'function_2253(fd, *name, *value, size, flags)'.";
+  node [shape=record];
+
+  Node07C7D600 [label="{entry:\l  fd\l  name\l  value\l  size\l  flags\l}"];
+  Node07C7D600 -> Node07C7D888;
+  Node07C7D888 [label="{0x2253:\l  return fsetxattr(fd, name, value, size, flags)\l}"];
+  Node07C7D888 -> Node07C7DB58;
+  Node07C7DB58 [label="{exit:\l}"];
+
+}

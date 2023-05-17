@@ -1,0 +1,32 @@
+cli 
+push rbp
+push rbx
+mov rbx, rsi
+sub rsp, 8
+test rdi, rdi
+je 0x3e18 <function_3db3+0x65>
+cmp word ptr [rdi - 8], 0x712c
+mov rbp, rdi
+jne 0x3e18 <function_3db3+0x65>
+lea rdi, [rsi - 8]
+test rsi, rsi
+je 0x3e30 <function_3db3+0x7d>
+cmp word ptr [rsi - 8], 0x9d6b
+jne 0x3e30 <function_3db3+0x7d>
+cmp qword ptr [rbp + 0x10], rdi
+je 0x3e60 <function_3db3+0xad>
+mov rax, qword ptr [rbx]
+mov rdx, qword ptr [rbx + 8]
+mov qword ptr [rax + 0x10], rdx
+mov rdx, qword ptr [rbx + 8]
+mov qword ptr [rdx + 8], rax
+xor eax, eax
+mov word ptr [rbx - 8], ax
+test byte ptr [rbx - 6], 1
+jne 0x3e50 <function_3db3+0x9d>
+sub qword ptr [rbp + 0x28], 1
+add rsp, 8
+xor eax, eax
+pop rbx
+pop rbp
+ret 

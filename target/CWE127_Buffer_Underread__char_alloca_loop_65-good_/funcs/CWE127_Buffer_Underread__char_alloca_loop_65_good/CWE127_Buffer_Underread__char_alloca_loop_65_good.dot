@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'CWE127_Buffer_Underread__char_alloca_loop_65_good()'." {
+  label="Control-flow graph for function 'CWE127_Buffer_Underread__char_alloca_loop_65_good()'.";
+  node [shape=record];
+
+  Node0774C240 [label="{entry:\l}"];
+  Node0774C240 -> Node0774BBC8;
+  Node0774BBC8 [label="{0xa6d:\l  return goodG2B()\l}"];
+  Node0774BBC8 -> Node0774BB38;
+  Node0774BB38 [label="{exit:\l}"];
+
+}

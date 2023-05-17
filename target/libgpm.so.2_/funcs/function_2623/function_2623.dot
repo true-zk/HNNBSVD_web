@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2623(domain, type, protocol)'." {
+  label="Control-flow graph for function 'function_2623(domain, type, protocol)'.";
+  node [shape=record];
+
+  Node07714570 [label="{entry:\l  domain\l  type\l  protocol\l}"];
+  Node07714570 -> Node07714C30;
+  Node07714C30 [label="{0x2623:\l  return socket(domain, type, protocol)\l}"];
+  Node07714C30 -> Node07714E28;
+  Node07714E28 [label="{exit:\l}"];
+
+}

@@ -1,0 +1,57 @@
+digraph "Control-flow graph for function 'function_3db3(a1, a2)'." {
+  label="Control-flow graph for function 'function_3db3(a1, a2)'.";
+  node [shape=record];
+
+  Node0796FF40 [label="{entry:\l  a1\l  a2\l}"];
+  Node0796FF40 -> Node07970408;
+  Node07970408 [label="{0x3db3:\l  v1\l  v2\l  v3\l  v4\l}"];
+  Node07970408 -> Node0796FF88;
+  Node0796FF88 [label="{  if (a1 != 0):\l}"];
+  Node0796FF88 -> Node0796FFD0 [label="a1 != 0"];
+  Node0796FF88 -> Node0796FEB0 [label="a1 == 0"];
+  Node0796FFD0 [label="{0x3dc2:\l  if (*(IntToPtrCastExpr\<ptr\>((a1 - 8))) == 28972):\l}"];
+  Node0796FFD0 -> Node079703C0 [label="*(IntToPtrCastExpr\<ptr\>((a1 - 8))) == 28972"];
+  Node0796FFD0 -> Node0796FEB0 [label="*(IntToPtrCastExpr\<ptr\>((a1 - 8))) != 28972"];
+  Node0796FEB0 [label="{  v10 = function_2200(a1, IntToPtrCastExpr\<ptr\>(a2), TruncCastExpr\<int32\>(v2), TruncCastExpr\<int32\>(v3), v1)\l  *(IntToPtrCastExpr\<ptr\>(v10)) = 22\l}"];
+  Node0796FEB0 -> Node0796FC70;
+  Node079703C0 [label="{0x3dcd:\l  if (a2 == 0):\l}"];
+  Node079703C0 -> Node07970C30 [label="a2 == 0"];
+  Node079703C0 -> Node079701C8 [label="a2 != 0"];
+  Node0796FC70 [label="{  if (a2 != 0):\l}"];
+  Node0796FC70 -> Node0796FC28 [label="a2 != 0"];
+  Node0796FC70 -> Node0796FD48 [label="a2 == 0"];
+  Node07970C30 [label="{0x3e30:\l  v4 = function_2200(-8, IntToPtrCastExpr\<ptr\>(a2), TruncCastExpr\<int32\>(v2), TruncCastExpr\<int32\>(v3), v1)\l  *(IntToPtrCastExpr\<ptr\>(v4)) = 22\l  return 4294967295\l}"];
+  Node07970C30 -> Node07970180;
+  Node079701C8 [label="{  v5 = (a2 - 8)\l  v6 = IntToPtrCastExpr\<ptr\>(v5)\l}"];
+  Node079701C8 -> Node0796FD00;
+  Node0796FC28 [label="{0x3e28:\l  if (*(IntToPtrCastExpr\<ptr\>((a2 - 8))) == -25237):\l}"];
+  Node0796FC28 -> Node079708D0 [label="*(IntToPtrCastExpr\<ptr\>((a2 - 8))) == -25237"];
+  Node0796FC28 -> Node0796FD48 [label="*(IntToPtrCastExpr\<ptr\>((a2 - 8))) != -25237"];
+  Node0796FD48 [label="{0x3e30:\l  v4 = function_2200(a1, IntToPtrCastExpr\<ptr\>(a2), TruncCastExpr\<int32\>(v2), TruncCastExpr\<int32\>(v3), v1)\l  *(IntToPtrCastExpr\<ptr\>(v4)) = 22\l  return 4294967295\l}"];
+  Node0796FD48 -> Node07970180;
+  Node07970180 [label="{exit:\l}"];
+  Node0796FD00 [label="{  if (*(v6) != -25237):\l}"];
+  Node0796FD00 -> Node07970960 [label="*(v6) != -25237"];
+  Node0796FD00 -> Node07970210 [label="*(v6) == -25237"];
+  Node079708D0 [label="{0x3e3b:\l  return 4294967295\l}"];
+  Node079708D0 -> Node07970180;
+  Node07970960 [label="{0x3e30:\l  v4 = function_2200(v5, IntToPtrCastExpr\<ptr\>(a2), TruncCastExpr\<int32\>(v2), TruncCastExpr\<int32\>(v3), v1)\l  *(IntToPtrCastExpr\<ptr\>(v4)) = 22\l  return 4294967295\l}"];
+  Node07970960 -> Node07970180;
+  Node07970210 [label="{  v7 = IntToPtrCastExpr\<ptr\>((a1 + 16))\l}"];
+  Node07970210 -> Node07970258;
+  Node07970258 [label="{  if (*(v7) == v5):\l}"];
+  Node07970258 -> Node079704E0 [label="*(v7) == v5"];
+  Node07970258 -> Node07970378 [label="*(v7) != v5"];
+  Node079704E0 [label="{0x3e60:\l  *(v7) = *(IntToPtrCastExpr\<ptr\>(a2))\l}"];
+  Node079704E0 -> Node07970378;
+  Node07970378 [label="{  v8 = IntToPtrCastExpr\<ptr\>((a2 + 8))\l  *(IntToPtrCastExpr\<ptr\>((a2 + 16))) = *(v8)\l  *(IntToPtrCastExpr\<ptr\>((*(v8) + 8))) = a2\l  *(v6) = 0\l}"];
+  Node07970378 -> Node0796FB98;
+  Node0796FB98 [label="{  if ((*(IntToPtrCastExpr\<ptr\>((a2 - 6))) % 2) != 0):\l}"];
+  Node0796FB98 -> Node07970C78 [label="(*(IntToPtrCastExpr\<ptr\>((a2 - 6))) % 2) != 0"];
+  Node0796FB98 -> Node079706D8 [label="(*(IntToPtrCastExpr\<ptr\>((a2 - 6))) % 2) == 0"];
+  Node07970C78 [label="{0x3e50:\l  function_21f0(v5)\l}"];
+  Node07970C78 -> Node079706D8;
+  Node079706D8 [label="{  v9 = IntToPtrCastExpr\<ptr\>((a1 + 40))\l  *(v9) = (*(v9) - 1)\l  return 0\l}"];
+  Node079706D8 -> Node07970180;
+
+}

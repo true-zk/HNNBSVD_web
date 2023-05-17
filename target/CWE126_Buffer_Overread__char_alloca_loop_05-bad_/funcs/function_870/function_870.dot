@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_870(*format, ...)'." {
+  label="Control-flow graph for function 'function_870(*format, ...)'.";
+  node [shape=record];
+
+  Node06F9DEF8 [label="{entry:\l  format\l}"];
+  Node06F9DEF8 -> Node06F9E180;
+  Node06F9E180 [label="{0x870:\l  return printf(format)\l}"];
+  Node06F9E180 -> Node06F9DF88;
+  Node06F9DF88 [label="{exit:\l}"];
+
+}

@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_5713(a1, a2, a3, a4, a5)'." {
+  label="Control-flow graph for function 'function_5713(a1, a2, a3, a4, a5)'.";
+  node [shape=record];
+
+  Node081A8030 [label="{entry:\l  a1\l  a2\l  a3\l  a4\l  a5\l}"];
+  Node081A8030 -> Node081A8618;
+  Node081A8618 [label="{  result = function_2f60(a1, 0, TruncCastExpr\<int32\>(a2), ((72057594037927936 * a3) / 72057594037927936), NULL, (a4 & 4294967295), PtrToIntCastExpr\<int64\>(&(g10)))\l  return result\l}"];
+  Node081A8618 -> Node081A85D0;
+  Node081A85D0 [label="{exit:\l}"];
+
+}

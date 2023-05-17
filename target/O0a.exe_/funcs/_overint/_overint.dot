@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function '_overint(a1)'." {
+  label="Control-flow graph for function '_overint(a1)'.";
+  node [shape=record];
+
+  Node06C7A648 [label="{entry:\l  a1\l}"];
+  Node06C7A648 -> Node06C7B020;
+  Node06C7B020 [label="{0x401460:\l  return (2 * a1)\l}"];
+  Node06C7B020 -> Node06C7A7F8;
+  Node06C7A7F8 [label="{exit:\l}"];
+
+}

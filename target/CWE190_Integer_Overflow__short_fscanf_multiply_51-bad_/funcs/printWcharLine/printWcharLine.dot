@@ -1,0 +1,18 @@
+digraph "Control-flow graph for function 'printWcharLine(a1)'." {
+  label="Control-flow graph for function 'printWcharLine(a1)'.";
+  node [shape=record];
+
+  Node0730FCC8 [label="{entry:\l  a1\l}"];
+  Node0730FCC8 -> Node0730F920;
+  Node0730F920 [label="{  v1 = __readfsqword(40)\l  v2 = ((4294967296 * a1) / 4294967296)\l  printf(\"%ls\\n\", &(v2))\l  result = 0\l}"];
+  Node0730F920 -> Node0730F4A0;
+  Node0730F4A0 [label="{  if (v1 != __readfsqword(40)):\l}"];
+  Node0730F4A0 -> Node0730F698 [label="v1 != __readfsqword(40)"];
+  Node0730F4A0 -> Node0730F4E8 [label="v1 == __readfsqword(40)"];
+  Node0730F698 [label="{0xc9c:\l  __stack_chk_fail()\l  result = &(g6)\l}"];
+  Node0730F698 -> Node0730F4E8;
+  Node0730F4E8 [label="{0xca1:\l  return result\l}"];
+  Node0730F4E8 -> Node0730FD10;
+  Node0730FD10 [label="{exit:\l}"];
+
+}

@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_22a3(*s, c)'." {
+  label="Control-flow graph for function 'function_22a3(*s, c)'.";
+  node [shape=record];
+
+  Node07C7E188 [label="{entry:\l  s\l  c\l}"];
+  Node07C7E188 -> Node07C7E698;
+  Node07C7E698 [label="{0x22a3:\l  return strchr(s, c)\l}"];
+  Node07C7E698 -> Node07C7E5C0;
+  Node07C7E5C0 [label="{exit:\l}"];
+
+}

@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'globalReturnsFalse()'." {
+  label="Control-flow graph for function 'globalReturnsFalse()'.";
+  node [shape=record];
+
+  Node06FA1780 [label="{entry:\l}"];
+  Node06FA1780 -> Node06FA1468;
+  Node06FA1468 [label="{0x1079:\l  return 0\l}"];
+  Node06FA1468 -> Node06FA15D0;
+  Node06FA15D0 [label="{exit:\l}"];
+
+}

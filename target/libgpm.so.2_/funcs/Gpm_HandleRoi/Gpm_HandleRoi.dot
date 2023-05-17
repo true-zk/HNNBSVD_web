@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'Gpm_HandleRoi()'." {
+  label="Control-flow graph for function 'Gpm_HandleRoi()'.";
+  node [shape=record];
+
+  Node07714D98 [label="{entry:\l}"];
+  Node07714D98 -> Node077150F8;
+  Node077150F8 [label="{0x2740:\l  result\l  return result\l}"];
+  Node077150F8 -> Node07715770;
+  Node07715770 [label="{exit:\l}"];
+
+}

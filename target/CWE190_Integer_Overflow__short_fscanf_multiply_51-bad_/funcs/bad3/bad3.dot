@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'bad3()'." {
+  label="Control-flow graph for function 'bad3()'.";
+  node [shape=record];
+
+  Node07311C00 [label="{entry:\l}"];
+  Node07311C00 -> Node07311A08;
+  Node07311A08 [label="{0xfff:\l  result\l  return result\l}"];
+  Node07311A08 -> Node07311978;
+  Node07311978 [label="{exit:\l}"];
+
+}

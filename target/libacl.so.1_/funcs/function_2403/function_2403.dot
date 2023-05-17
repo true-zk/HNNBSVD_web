@@ -1,0 +1,21 @@
+digraph "Control-flow graph for function 'function_2403()'." {
+  label="Control-flow graph for function 'function_2403()'.";
+  node [shape=record];
+
+  Node07C7FB20 [label="{entry:\l}"];
+  Node07C7FB20 -> Node07C7FDF0;
+  Node07C7FDF0 [label="{0x2403:\l  if (*(BitCastExpr\<ptr\>(&(g6))) != 0):\l}"];
+  Node07C7FDF0 -> Node07C7FE38 [label="*(BitCastExpr\<ptr\>(&(g6))) != 0"];
+  Node07C7FDF0 -> Node07C7FC88 [label="*(BitCastExpr\<ptr\>(&(g6))) == 0"];
+  Node07C7FE38 [label="{0x2438:\l  result\l  return result\l}"];
+  Node07C7FE38 -> Node07C7FBB0;
+  Node07C7FC88 [label="{0x240d:\l  if (*(IntToPtrCastExpr\<ptr\>(33584)) != 0):\l}"];
+  Node07C7FC88 -> Node07C80078 [label="*(IntToPtrCastExpr\<ptr\>(33584)) != 0"];
+  Node07C7FC88 -> Node07C7FDA8 [label="*(IntToPtrCastExpr\<ptr\>(33584)) == 0"];
+  Node07C7FBB0 [label="{exit:\l}"];
+  Node07C80078 [label="{0x241b:\l  function_21e0(*(IntToPtrCastExpr\<ptr\>(36864)))\l}"];
+  Node07C80078 -> Node07C7FDA8;
+  Node07C7FDA8 [label="{  result2 = function_2390()\l  *(BitCastExpr\<ptr\>(&(g6))) = 1\l  return result2\l}"];
+  Node07C7FDA8 -> Node07C7FBB0;
+
+}

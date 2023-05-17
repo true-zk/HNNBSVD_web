@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2503(*stream)'." {
+  label="Control-flow graph for function 'function_2503(*stream)'.";
+  node [shape=record];
+
+  Node077127E8 [label="{entry:\l  stream\l}"];
+  Node077127E8 -> Node077129E0;
+  Node077129E0 [label="{0x2503:\l  return fflush(stream)\l}"];
+  Node077129E0 -> Node07712878;
+  Node07712878 [label="{exit:\l}"];
+
+}

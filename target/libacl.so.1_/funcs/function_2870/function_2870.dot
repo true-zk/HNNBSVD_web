@@ -1,0 +1,50 @@
+digraph "Control-flow graph for function 'function_2870(a1, *a2)'." {
+  label="Control-flow graph for function 'function_2870(a1, *a2)'.";
+  node [shape=record];
+
+  Node07C7A438 [label="{entry:\l  a1\l  a2\l}"];
+  Node07C7A438 -> Node07C79FB8;
+  Node07C79FB8 [label="{  v1 = ((8 * *(IntToPtrCastExpr\<ptr\>((a1 + 48)))) \| 4)\l  *(a2) = v1\l  result = function_2310(v1)\l}"];
+  Node07C79FB8 -> Node07C7AC18;
+  Node07C7AC18 [label="{  if (result == 0):\l}"];
+  Node07C7AC18 -> Node07C65FF0 [label="result == 0"];
+  Node07C7AC18 -> Node07C7C298 [label="result != 0"];
+  Node07C65FF0 [label="{0x28e7:\l  return result\l}"];
+  Node07C65FF0 -> Node07C7A4C8;
+  Node07C7C298 [label="{  v2 = *(IntToPtrCastExpr\<ptr\>((a1 + 16)))\l  *(IntToPtrCastExpr\<ptr\>(result)) = 2\l}"];
+  Node07C7C298 -> Node07C61B98;
+  Node07C7A4C8 [label="{exit:\l}"];
+  Node07C61B98 [label="{  if (v2 == a1):\l}"];
+  Node07C61B98 -> Node07BB8CA8 [label="v2 == a1"];
+  Node07C61B98 -> Node07C7A240 [label="v2 != a1"];
+  Node07BB8CA8 [label="{0x28e7:\l  return result\l}"];
+  Node07BB8CA8 -> Node07C7A4C8;
+  Node07C7A240 [label="{  v3 = (result + 4)\l  v4 = v2\l}"];
+  Node07C7A240 -> Node07C61328;
+  Node07C61328 [label="{  while True:\l}"];
+  Node07C61328 -> Node07BC1C60 [label="True"];
+  Node07BC1C60 [label="{  v5 = v4\l  v6 = v3\l  v7 = *(IntToPtrCastExpr\<ptr\>((v5 + 32)))\l  *(IntToPtrCastExpr\<ptr\>(v6)) = TruncCastExpr\<int16\>(v7)\l  *(IntToPtrCastExpr\<ptr\>((v6 + 2))) = TruncCastExpr\<int16\>(*(IntToPtrCastExpr\<ptr\>((v5 + 64))))\l}"];
+  Node07BC1C60 -> Node07BC1B88;
+  Node07BC1B88 [label="{  if ((v7 != 2) == (v7 != 8)):\l  else:\l}"];
+  Node07BC1B88 -> Node07BC27A0 [label="(v7 != 2) == (v7 != 8)"];
+  Node07BC1B88 -> Node07BC2AB8 [label="(v7 != 2) != (v7 != 8)"];
+  Node07BC27A0 [label="{  v8 = *(IntToPtrCastExpr\<ptr\>((v5 + 16)))\l  *(IntToPtrCastExpr\<ptr\>((v6 + 4))) = -1\l  v4 = v8\l}"];
+  Node07BC27A0 -> Node07BC29E0;
+  Node07BC2AB8 [label="{  v9 = *(IntToPtrCastExpr\<ptr\>((v5 + 16)))\l  *(IntToPtrCastExpr\<ptr\>((v6 + 4))) = *(IntToPtrCastExpr\<ptr\>((v5 + 48)))\l  v4 = v9\l}"];
+  Node07BC2AB8 -> Node075536C8;
+  Node07BC29E0 [label="{  if (v8 == a1):\l}"];
+  Node07BC29E0 -> Node0755C3F8 [label="v8 == a1"];
+  Node07BC29E0 -> Node07BC2758 [label="v8 != a1"];
+  Node075536C8 [label="{  if (v9 == a1):\l}"];
+  Node075536C8 -> Node0755D1C0 [label="v9 == a1"];
+  Node075536C8 -> Node07BC2758 [label="v9 != a1"];
+  Node0755C3F8 [label="{break -\> 0x28e7:\l  break\l}"];
+  Node0755C3F8 -> Node07C65F60;
+  Node07BC2758 [label="{0x28b8:\l  v3 = (v6 + 8)\l}"];
+  Node07BC2758 -> Node07C61328;
+  Node0755D1C0 [label="{break -\> 0x28e7:\l  break\l}"];
+  Node0755D1C0 -> Node07C65F60;
+  Node07C65F60 [label="{0x28e7:\l  return result\l}"];
+  Node07C65F60 -> Node07C7A4C8;
+
+}

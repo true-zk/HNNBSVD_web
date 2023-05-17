@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_24d3(*stream)'." {
+  label="Control-flow graph for function 'function_24d3(*stream)'.";
+  node [shape=record];
+
+  Node07712998 [label="{entry:\l  stream\l}"];
+  Node07712998 -> Node07712830;
+  Node07712830 [label="{0x24d3:\l  return fileno(stream)\l}"];
+  Node07712830 -> Node07712BD8;
+  Node07712BD8 [label="{exit:\l}"];
+
+}

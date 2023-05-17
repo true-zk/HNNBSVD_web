@@ -1,0 +1,9 @@
+push ebp
+mov ebp, esp
+sub esp, 0x10
+mov eax, dword ptr [ebp + 8]
+add eax, eax
+mov dword ptr [ebp - 4], eax
+mov eax, dword ptr [ebp - 4]
+leave 
+ret 

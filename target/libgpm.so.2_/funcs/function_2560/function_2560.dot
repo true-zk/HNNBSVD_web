@@ -1,0 +1,11 @@
+digraph "Control-flow graph for function 'function_2560(a1)'." {
+  label="Control-flow graph for function 'function_2560(a1)'.";
+  node [shape=record];
+
+  Node07712DD0 [label="{entry:\l  a1\l}"];
+  Node07712DD0 -> Node077131C0;
+  Node077131C0 [label="{0x2560:\l  result\l  return result\l}"];
+  Node077131C0 -> Node077130A0;
+  Node077130A0 [label="{exit:\l}"];
+
+}

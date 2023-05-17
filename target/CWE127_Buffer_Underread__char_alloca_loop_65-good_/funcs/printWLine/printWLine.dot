@@ -1,0 +1,18 @@
+digraph "Control-flow graph for function 'printWLine(a1)'." {
+  label="Control-flow graph for function 'printWLine(a1)'.";
+  node [shape=record];
+
+  Node0774BD30 [label="{entry:\l  a1\l}"];
+  Node0774BD30 -> Node0774C0D8;
+  Node0774C0D8 [label="{  result\l}"];
+  Node0774C0D8 -> Node0774C1F8;
+  Node0774C1F8 [label="{  if (a1 != 0):\l}"];
+  Node0774C1F8 -> Node0774CC18 [label="a1 != 0"];
+  Node0774C1F8 -> Node0774CB88 [label="a1 == 0"];
+  Node0774CC18 [label="{0xb92:\l  result = wprintf(\"%ls\\n\")\l}"];
+  Node0774CC18 -> Node0774CB88;
+  Node0774CB88 [label="{0xbaa:\l  return result\l}"];
+  Node0774CB88 -> Node0774C048;
+  Node0774C048 [label="{exit:\l}"];
+
+}

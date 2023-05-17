@@ -1,0 +1,33 @@
+cli 
+push rbx
+test rdi, rdi
+je 0x397c <function_3923+0x59>
+mov rax, qword ptr [rdi]
+lea rdi, [rax - 8]
+test rax, rax
+je 0x397c <function_3923+0x59>
+cmp word ptr [rax - 8], 0x712c
+jne 0x397c <function_3923+0x59>
+mov rdx, qword ptr [rax + 8]
+xor ebx, ebx
+cmp rdx, rdi
+je 0x39b8 <function_3923+0x95>
+xor r10d, r10d
+mov r8d, 1
+movabs r9, 0x100000002
+mov ecx, dword ptr [rdx + 0x20]
+cmp ecx, 0x20
+ja 0x397c <function_3923+0x59>
+mov rsi, r8
+shl rsi, cl
+test esi, 0x114
+jne 0x3990 <function_3923+0x6d>
+test rsi, r9
+jne 0x3993 <function_3923+0x70>
+cmp ecx, 0x10
+je 0x39b0 <function_3923+0x8d>
+call 0x2200 <function_2200>
+mov dword ptr [rax], 0x16
+mov eax, 0xffffffff
+pop rbx
+ret 

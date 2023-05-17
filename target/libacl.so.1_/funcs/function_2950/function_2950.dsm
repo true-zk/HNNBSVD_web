@@ -1,0 +1,39 @@
+push r13
+push r12
+mov r12, rsi
+push rbp
+mov rbp, rdi
+mov rdi, rsi
+push rbx
+sub rsp, 8
+call 0x2280 <function_2280>
+mov rbx, qword ptr [rbp]
+mov r13, rax
+movzx eax, byte ptr [rbx]
+cmp al, 0x20
+ja 0x2992 <function_2950+0x42>
+movabs rdx, 0xfffffffeffffd9ff
+bt rdx, rax
+jb 0x2996 <function_2950+0x46>
+movzx eax, byte ptr [rbx + 1]
+add rbx, 1
+cmp al, 0x20
+jbe 0x2980 <function_2950+0x30>
+cmp al, 0x23
+je 0x29cc <function_2950+0x7c>
+mov rdx, r13
+mov rsi, r12
+mov rdi, rbx
+call 0x2220 <function_2220>
+test eax, eax
+je 0x29e0 <function_2950+0x90>
+movzx ecx, byte ptr [r12]
+xor eax, eax
+cmp byte ptr [rbx], cl
+je 0x2a42 <function_2950+0xf2>
+add rsp, 8
+pop rbx
+pop rbp
+pop r12
+pop r13
+ret 

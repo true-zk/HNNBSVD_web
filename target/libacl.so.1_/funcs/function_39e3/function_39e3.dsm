@@ -1,0 +1,10 @@
+cli 
+sub rsp, 8
+test rdi, rdi
+je 0x3a08 <function_39e3+0x25>
+cmp word ptr [rdi - 8], 0x1ed5
+jne 0x3a08 <function_39e3+0x25>
+mov dword ptr [rdi], 0
+xor eax, eax
+add rsp, 8
+ret 
