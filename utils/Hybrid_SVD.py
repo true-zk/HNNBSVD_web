@@ -7,7 +7,7 @@ from torch_geometric.loader import DataLoader as Dataloader_dot
 from utils.loaddata import load_data
 from utils.model import HybridNet
 
-model_path = r'D:\Desktop\H-BVD_web1\model\best_model.para'
+model_path = r'D:\Desktop\项目管理\H-BVD_web1\model\best_model.para'
 
 
 class MyDataset(Dataset):

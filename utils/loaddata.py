@@ -36,7 +36,7 @@ def gen_token(string: str):
 
 
 def dot2data(dot):
-    model_path = r'D:\Desktop\hybrid-SVD\w2v_cfg\model_out\w2v_multi.model'
+    model_path = r'D:\Desktop\项目管理\H-BVD_web1\model\w2v_multi_cfg.model'
     w2vmodel = gensim.models.Word2Vec.load(model_path)
 
     nodes = dot[0].get_nodes()
@@ -102,7 +102,7 @@ def dot2data(dot):
 
 
 def dsm2data(file):
-    model_path = r'D:\Desktop\hybrid-SVD\w2v_token\model_out\w2v_multi.model'
+    model_path = r'D:\Desktop\项目管理\H-BVD_web1\model\w2v_multi_token.model'
     w2vmodel = gensim.models.Word2Vec.load(model_path)
     data = []
     with open(file, 'r') as f:

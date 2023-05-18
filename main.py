@@ -6,7 +6,7 @@ import utils.Hybrid_SVD as svd
 
 template_path = 'templates'
 static_path = 'static'
-target_path = r'D:\Desktop\H-BVD_web1\target'
+target_path = r'D:\Desktop\项目管理\H-BVD_web1\target'
 app = Flask(__name__,template_folder=template_path, static_folder=static_path)
 res_list = []
 
