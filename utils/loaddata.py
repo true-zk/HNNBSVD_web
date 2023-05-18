@@ -35,6 +35,7 @@ def gen_token(string: str):
     return tokens
 
 
+
 def dot2data(dot):
     model_path = r'D:\Desktop\项目管理\H-BVD_web1\model\w2v_multi_cfg.model'
     w2vmodel = gensim.models.Word2Vec.load(model_path)

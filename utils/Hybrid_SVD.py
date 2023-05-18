@@ -33,7 +33,7 @@ class MyDataset(Dataset):
 def pred(target):
 	device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 	# model = torch.load(r'D:\Desktop\H-BVD_web\model\multi_model.model')
-	m_state_dict = torch.load(model_path)
+	m_state_dict = torch.load(model_path, device)
 	model = HybridNet(175, 45).to(device)
 	model.load_state_dict(m_state_dict)
 
