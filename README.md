@@ -15,5 +15,6 @@ usage：
 1. 把venv文件夹放到项目文件夹下，然后用pycharm打开，用venv作为虚拟环境
 2. 更改venv的基本解释器路径
 3. 更改utils\\Hybrid_SVD.py里的model的路径
-4. 由于你们电脑上没下retdec反汇编软件，所以不能反汇编新的二进制文件，测试的时候只用e.g里面的O0a.exe即可
-5. 运行main.py然后在浏览器打开看即可
+4. 更改utils\\loaddata.py里的dot2data和dsm2data的两个model的路径
+5. 由于你们电脑上没下retdec反汇编软件，所以不能反汇编新的二进制文件，测试的时候只用e.g里面的O0a.exe即可
+6. 运行main.py然后在浏览器打开看即可
